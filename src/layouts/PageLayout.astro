@@ -23,7 +23,7 @@ import Footer from '../components/Footer.astro';
     <!-- Global Metadata -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="generator" content="Blogster" />
+    <meta name="generator" content={Astro.generator} />
     <Favicon />
     <slot name="meta" />
     <GoogleFont />
