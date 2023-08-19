@@ -10,6 +10,7 @@ My website and blog where I document my journey by occasionally posting articles
 - [ ] Add RTL languages support as well as internationalization.
 - [ ] Make all external links open a new tab.
 - [ ] Get rid of fontawesome, it's too bloated.
+- [ ] Improve SEO image previews. Check [opengraph](https://www.opengraph.xyz/) for this.
 
 ## Credits
 
