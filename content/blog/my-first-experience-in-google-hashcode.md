@@ -2,6 +2,7 @@
 external: false
 title: 'My First Experience in Google Hash Code'
 description: ''
+canonicalUrl: 'https://yamanidev.hashnode.dev/my-first-experience-in-google-hash-code'
 date: 2021-03-12
 ---
 

@@ -2,6 +2,7 @@
 external: false
 title: 'What is HTML? 🤔'
 description: ''
+canonicalUrl: 'https://yamanidev.hashnode.dev/what-is-html'
 date: 2021-03-14
 ---
 

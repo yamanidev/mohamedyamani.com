@@ -2,6 +2,7 @@
 external: false
 title: 'Helping Older Browsers Understand HTML5'
 description: ''
+canonicalUrl: 'https://yamanidev.hashnode.dev/helping-older-browsers-understand-html5'
 date: 2021-08-06
 ---
 

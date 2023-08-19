@@ -2,6 +2,7 @@
 external: false
 title: 'What is Programming? 👩‍💻'
 description: ''
+canonicalUrl: 'https://yamanidev.hashnode.dev/what-is-programming'
 date: 2021-01-29
 ---
 
