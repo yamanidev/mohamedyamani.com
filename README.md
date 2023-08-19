@@ -9,6 +9,7 @@ My website and blog where I document my journey by occasionally posting articles
 - [ ] Change the font into serif, I hate this childish font.
 - [ ] Add RTL languages support as well as internationalization.
 - [ ] Make all external links open a new tab.
+- [ ] Get rid of fontawesome, it's too bloated.
 
 ## Credits
 
