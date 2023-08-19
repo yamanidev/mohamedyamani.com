@@ -9,6 +9,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint src/",
+    "prettify": "prettier --write \"src/**/*.{astro,js,jsx,ts,tsx,json,css}\"",
     "clean": "rm -rf dist"
   },
   "dependencies": {
