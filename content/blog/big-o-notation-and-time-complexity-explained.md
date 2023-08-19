@@ -1,7 +1,7 @@
 ---
 external: false
-title: "Big-O Notation and Time Complexity Explained!"
-description: ""
+title: 'Big-O Notation and Time Complexity Explained!'
+description: ''
 date: 2021-02-22
 ---
 
@@ -28,14 +28,14 @@ It all depends on the given situation, you get the point.
 And for that, familiarity with Time Complexity is required.
 
 ## What is Big-O Notation and Time Complexity?
- 
+
 ### Time Complexity:
 
 It is an **estimation** of the efficiency of an algorithm for a given input.
 
 ### Big-O Notation:
 
-It is a notation for **Time Complexity**, denoted **O(something)**. 
+It is a notation for **Time Complexity**, denoted **O(something)**.
 
 Also known as "Bachmann-Landau notation" or "asymptotic notation" for readers who are interested in math.
 
@@ -45,8 +45,7 @@ Whereas "something" is a mathematical function of **n**.
 
 **n** is the input size. For example, if the input is a string, **n** would be the length of it (number of characters). And if it is an array, it is the number of elements in it.
 
-I recommend  [Wikipedia](https://en.wikipedia.org/wiki/Bachmann-Landau_notation) for a detailed definition.
-
+I recommend [Wikipedia](https://en.wikipedia.org/wiki/Bachmann-Landau_notation) for a detailed definition.
 
 ## Why should I care?
 
@@ -57,7 +56,6 @@ With **Time Complexity** you will have solid knowledge of how efficient your alg
 You will also have an idea of which approach to take through the size of the input.
 
 Additionally, if you're into competitive programming, this will help you greatly with avoiding Time Limit Exceeded flags.
-
 
 ## How to calculate it?
 
@@ -75,7 +73,7 @@ The following code has **O(n)** complexity:
 for (int i = 0; i <= n;  ++i){
      //code
 }
-``` 
+```
 
 ### Order of magnitude
 
@@ -113,7 +111,7 @@ for (int i = 1; i <= n; i++) {
 for (int i = 1; i <= m; i++) {
      // code (phase 3)
 }
-``` 
+```
 
 So how do we calculate the time complexity of such code with multiple phases?
 
@@ -123,7 +121,7 @@ Why?
 
 Remember, that we're looking for an **estimation** and since the phase with the largest time complexity is the slowest to execute, its complexity is the overall time complexity of our code.
 
-To follow up with the previous code snippet, the time complexity of it is the 2nd phase's time complexity, which is **O(n*m)**
+To follow up with the previous code snippet, the time complexity of it is the 2nd phase's time complexity, which is **O(n\*m)**
 
 Sometimes, time complexity depends on **additional factors** to the input size **n**, like for example **m** in the previous example.
 
@@ -141,8 +139,6 @@ These are some complexities you will most likely frequent:
 
 - **O(n!):** it often means that the algorithm goes through all possible permutations of the input.
 
-
-
 ## Thank you for reading!
 
 That was it ladies and gentlemen, I hope you enjoyed the article!
@@ -152,8 +148,3 @@ Any feedback or constructive critique is warmly welcomed and appreciated, so ple
 Follow my blog and my [Twitter](https://twitter.com/yamanidev) for more!
 
 Have a nice one!
-
-
-
-
-

@@ -1,7 +1,7 @@
 ---
 external: false
-title: "My First Experience in Google Hash Code"
-description: ""
+title: 'My First Experience in Google Hash Code'
+description: ''
 date: 2021-03-12
 ---
 
@@ -83,8 +83,3 @@ Follow my blog and my [Twitter](https://twitter.com/yamanidev) for more!
 Have a nice one!
 
 Photo by <a href="https://unsplash.com/@mitchel3uo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mitchell Luo</a> on <a href="/s/photos/google?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  
-
-
-
-

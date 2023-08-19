@@ -1,7 +1,7 @@
 ---
 external: false
-title: "Underscores and Naming Conventions in Python"
-description: ""
+title: 'Underscores and Naming Conventions in Python'
+description: ''
 date: 2021-03-21
 ---
 
@@ -11,7 +11,7 @@ Software engineers are known for having heated debates with each other on the di
 
 Lack of the latter causes unpleasant troubles within teams (and even with one’s self) that makes everyone’s days a living hell.
 
-**Picture this**: person A names their variables with *styleA*, person B with *styleB* and so on and so fourth.
+**Picture this**: person A names their variables with _styleA_, person B with _styleB_ and so on and so fourth.
 
 Can you imagine how the code base would look like? It would be a wild jungle, making readability and maintainability pure fantasy!
 
@@ -24,7 +24,6 @@ PEP8 is a style guideline that provides conventions for Python code which helps 
 This style guide is kept up-to-date as the language evolves, adding conventions and removing other ones that became obsolete. So you should always be tuned in.
 
 This is the official [PEP8 Documentation](https://www.python.org/dev/peps/pep-0008/) and I highly recommend you take a look at it from time to time.
-
 
 ## General conventions in Python
 
@@ -119,7 +118,6 @@ The Python interpreter performs name mangling in such a way that makes it seem a
 
 Let’s look at the namespace (attributes and methods) of the object **x** of class **SomethingElse** using the **dir()** method:
 
-
 ![Screenshot from 2021-03-21 19-52-15.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1616364854286/gUHT-n-pEm.png)
 
 Look at the first element of the list!
@@ -147,7 +145,6 @@ Oh any by the way, if you wish to view all Python’s keywords:
 from keyword import kwlist
 print(kwlist)
 ```
-
 
 ## Underscores and magic methods
 

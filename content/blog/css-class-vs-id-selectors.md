@@ -1,7 +1,7 @@
 ---
 external: false
-title: "CSS Class vs ID Selectors — Understanding the Difference!"
-description: ""
+title: 'CSS Class vs ID Selectors — Understanding the Difference!'
+description: ''
 date: 2021-03-21
 ---
 
@@ -11,7 +11,7 @@ Today I’ll try to explain that in a way that I wished someone would to my youn
 
 ## The magnificent CSS
 
-All CSS does is ***apply style*** rules to certain HTML elements. With that being said, we can distinguish two steps:
+All CSS does is **_apply style_** rules to certain HTML elements. With that being said, we can distinguish two steps:
 
 1. Selecting HTML element(s)
 
@@ -23,18 +23,16 @@ In this article we will be focusing on the first part.
 
 One of the many ways we can select HTML elements is by using the attributes **class** and **id**:
 
-
 ```html
 <h1 id="cool-heading">Big banana</h1>
 <p class="cool-text">I shall be selected</p>
-``` 
+```
 
 And the way we can reference them in CSS is by prefixing:
 
 - The ID name with “#”
 
 - The class name with “.”
-
 
 ```css
 #cool-heading {
@@ -43,7 +41,7 @@ And the way we can reference them in CSS is by prefixing:
 .cool-text {
    // CSS styles
 }
-``` 
+```
 
 ## The fight: ID vs Class
 
@@ -66,14 +64,13 @@ Adding an anchor that takes you to the contacts section:
 <a href="#contacts">Show me da wey</a>
 <!-- other HTML -->
 <div id="contacts">
-   <!-- Contacts section -->
+  <!-- Contacts section -->
 </div>
-``` 
+```
 
 - an ID has a higher specificity than a class.
 
 The best definition I found of **specificity** is [W3S’s](https://www.w3schools.com/css/css_specificity.asp) (you can learn more about it there):
-
 
 > If there are two or more conflicting CSS rules that point to the same element, the browser follows some rules to determine which one is most specific and therefore wins out.
 
@@ -81,19 +78,18 @@ The best definition I found of **specificity** is [W3S’s](https://www.w3school
 
 For example if you apply to the same element (selected once by ID and then by class) conflicting styles, the styles applied via ID will win:
 
-
 ```html
 <p class="weak" id="stronk">What's my color?</p>
-``` 
+```
 
-```css 
+```css
 #stronk {
-   color: brown;
+  color: brown;
 }
 .weak {
-   color: black;
+  color: black;
 }
-``` 
+```
 
 Due to the cascading nature of CSS (last rule applied overrides) we expect that the styles for the class **weak** are the ones applied. But that is not the case!
 
@@ -109,11 +105,10 @@ Learning about it is crucial and it will save you a lot of time in the future un
 
 - We can assign many classes to an HTML element:
 
-
 ```html
 <!-- assigning class1 class2 and class3 to p -->
 <p class="class1 class2 class3">I am popular</p>
-``` 
+```
 
 - A class has an inferior **specificity** (as we saw in previous examples)
 
@@ -123,16 +118,15 @@ One of the things I love the most about programming is that the questions you ra
 
 If you are familiar with JavaScript, you will notice that it points out some differences between IDs and Classes!
 
-
 ```javascript
 // Notice that
 // the method's name says Elements and not Element
 // It returns therefore an HTMLCollection
 // And not an individual HTML element
-console.log(document.getElementsByClassName("some-class"));
+console.log(document.getElementsByClassName('some-class'));
 // While this method says Element
-console.log(document.getElementById("some-id"));
-``` 
+console.log(document.getElementById('some-id'));
+```
 
 ## Thank you for reading!
 
@@ -143,5 +137,3 @@ Any feedback or constructive critique is warmly welcomed and appreciated, so ple
 Follow my blog and my [Twitter](https://twitter.com/yamanidev) for more.
 
 Have a nice one!
-
-
