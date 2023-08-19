@@ -8,6 +8,7 @@ My website and blog where I document my journey by occasionally posting articles
 - [ ] Make sure ESLint is properly configured. What ticked me off about this was it not raising warnings to the lack of `rel="noreferrer"` when using `target="_blank"`
 - [ ] Change the font into serif, I hate this childish font.
 - [ ] Add RTL languages support as well as internationalization.
+- [ ] Make all external links open a new tab.
 
 ## Credits
 
