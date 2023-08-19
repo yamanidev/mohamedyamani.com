@@ -4,6 +4,8 @@ My website and blog where I document my journey by occasionally posting articles
 
 ## Done
 
+- [x] Add canonical links to articles, since they were posted elsewhere initially.
+
 ## To do
 
 - [ ] Improve the project structure semantically.
@@ -15,7 +17,6 @@ My website and blog where I document my journey by occasionally posting articles
 - [ ] Improve SEO image previews. Check [opengraph](https://www.opengraph.xyz/) for this.
 - [ ] Migrate the project to pnpm.
 - [ ] Add a 404 page.
-- [ ] Add canonical links to articles, since they were posted elsewhere initially.
 
 ## Credits
 
