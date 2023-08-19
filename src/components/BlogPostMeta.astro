@@ -5,6 +5,7 @@ import { SITE_TITLE, SITE_DESCRIPTION, SITE_URL, TWITTER_HANDLE, MY_NAME } from 
 export interface Props {
   title?: string;
   description?: string;
+  canonicalUrl?: string;
   publishDate: string;
   pagePath?: string;
   ogImageAbsoluteUrl?: string;
@@ -17,6 +18,7 @@ const {
   pagePath,
   title,
   description,
+  canonicalUrl,
   publishDate,
   ogImageAbsoluteUrl,
   ogImageAltText,
@@ -27,6 +29,7 @@ const {
 const { meta, og, twitter } = getBlogPostMeta({
   title: title || SITE_TITLE,
   description: description || SITE_DESCRIPTION,
+  canonicalUrl,
   pageUrl: pagePath ? new URL(pagePath, SITE_URL).toString() : undefined,
   authorName: MY_NAME,
   publishDate,

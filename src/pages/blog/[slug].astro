@@ -43,6 +43,7 @@ const ogImageAbsoluteUrl =
   <BlogPostMeta
     title={frontmatter.title}
     description={frontmatter.external ? undefined : frontmatter.description}
+    canonicalUrl={frontmatter.canonicalUrl}
     publishDate={frontmatter.date.toISOString()}
     pagePath={`/blog/${slug}`}
     ogImageAbsoluteUrl={ogImageAbsoluteUrl}
