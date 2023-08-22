@@ -9,13 +9,13 @@ As I was migrating a client's project from CRA to Vite I encountered plenty of i
 
 That wasn't a smart move, migrating to another build tool as well as another package manager at once. So I switched back to using `npm` to finish my Vite migration, fixed the errors, all good.
 
-When I tried using `pnpm` again and installed the packages using it, it kept throwing many errors that package X, Y, Z are not installed, which is weird, because the npm version works just fine!
+When I tried using `pnpm` again and installed the packages using it, it kept throwing many errors that package X, Y, Z are not installed, which is weird, because the `npm` version works just fine!
 
 Via `pnpm import`, the existing lock files are parsed and `pnpm-lock.yaml` gets generated, so the lock files should have the same content.
 
 It is true that all the dependencies that are mentioned in the lock files will be installed by `pnpm` without fault. However, due to how `npm` installs packages and their dependencies, you will find yourself being able to use a dependency of a package without explicitly installing.
 
-That's exactly what happened, notably with `date-fns` and some other packages. How npm structures your `node_modules/` allows you to import `date-fns` even if it wasn't present as a dependency in your `package.json`, as long as some other package depends on it.
+That's exactly what happened, notably with `date-fns` and some other packages. How `npm` structures your `node_modules/` allows you to import `date-fns` even if it wasn't present as a dependency in your `package.json`, as long as some other package depends on it.
 
 Bottom line, explicit is better than implicit.
 
