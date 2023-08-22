@@ -50,15 +50,13 @@ const formattedDate = new Date(date).toLocaleDateString('en-us', {
         <slot name="content" />
       </section>
     </main>
-    <Footer />
     <style>
       body {
         display: grid;
         grid-template-areas:
           'header'
-          'main'
-          'footer';
-        grid-template-rows: 5rem minmax(0, 1fr) 5rem;
+          'main';
+        grid-template-rows: 5rem minmax(0, 1fr);
         grid-template-columns: minmax(0, 1fr);
       }
       main {
