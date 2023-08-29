@@ -4,7 +4,7 @@ My website and blog where I document my journey by occasionally posting articles
 
 ## Done
 
-- [x] Add canonical links to articles, since they were posted elsewhere initially.
+- [x] Add canonical links to articles, since they were posted elsewhere initially. Edit: I misunderstood how canonicalization works. You provide the link you want to leverage among links of duplicate contents. Thus in my case, I should provide the canonical URLs of my website posts to the same posts on different platforms, not the other way around.
 - [x] Add a 404 page.
 
 ## To do
