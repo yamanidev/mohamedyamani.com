@@ -2,7 +2,6 @@
 external: false
 title: 'Primitive Types in Java'
 description: ''
-canonicalUrl: 'https://yamanidev.hashnode.dev/primitive-types-in-java'
 date: 2021-05-05
 ---
 

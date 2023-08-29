@@ -2,7 +2,6 @@
 external: false
 title: 'Understanding the Box Model in CSS'
 description: ''
-canonicalUrl: 'https://dev.to/yamanidev/understanding-the-box-model-in-css-1af'
 date: 2021-11-06
 ---
 

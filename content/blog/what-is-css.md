@@ -2,7 +2,6 @@
 external: false
 title: 'What is CSS? 🤔'
 description: ''
-canonicalUrl: 'https://yamanidev.hashnode.dev/what-is-css'
 date: 2021-03-17
 ---
 

@@ -2,7 +2,6 @@
 external: false
 title: 'Your Best Friend Before Google in Python! 👩‍💻'
 description: ''
-canonicalUrl: 'https://yamanidev.hashnode.dev/your-best-friend-before-google-in-python'
 date: 2021-01-29
 ---
 

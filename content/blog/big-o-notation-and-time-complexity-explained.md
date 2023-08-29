@@ -2,7 +2,6 @@
 external: false
 title: 'Big-O Notation and Time Complexity Explained!'
 description: ''
-canonicalUrl: 'https://yamanidev.hashnode.dev/big-o-notation-explained'
 date: 2021-02-22
 ---
 

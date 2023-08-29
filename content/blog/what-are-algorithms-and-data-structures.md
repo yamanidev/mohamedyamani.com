@@ -2,7 +2,6 @@
 external: false
 title: 'What are Algorithms and Data Structures?'
 description: ''
-canonicalUrl: 'https://yamanidev.hashnode.dev/what-are-algorithms-and-data-structures'
 date: 2021-02-15
 ---
 
