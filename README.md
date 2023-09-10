@@ -6,6 +6,7 @@ My website and blog where I document my journey by occasionally posting articles
 
 - [x] Add canonical links to articles, since they were posted elsewhere initially. Edit: I misunderstood how canonicalization works. You provide the link you want to leverage among links of duplicate contents. Thus in my case, I should provide the canonical URLs of my website posts to the same posts on different platforms, not the other way around.
 - [x] Add a 404 page.
+- [x] Add `robots.txt`.
 
 ## To do
 
@@ -17,7 +18,6 @@ My website and blog where I document my journey by occasionally posting articles
 - [ ] Get rid of fontawesome, it's too bloated.
 - [ ] Improve SEO image previews. Check [opengraph](https://www.opengraph.xyz/) for this.
 - [ ] Migrate the project to pnpm.
-- [ ] Add `robots.txt`.
 
 ## Credits
 
