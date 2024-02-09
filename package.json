@@ -9,8 +9,7 @@
     "astro": "astro",
     "lint": "eslint src/",
     "prettify": "prettier --write \"src/**/*.{astro,js,jsx,ts,tsx,json,css}\"",
-    "clean": "rm -rf dist",
-    "sync": "./script.sh"
+    "clean": "rm -rf dist"
   },
   "dependencies": {
     "@astrojs/prism": "^1.0.2",
