@@ -17,21 +17,17 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html class="theme-sleek" lang="en">
   <head>
-    <!-- Global Metadata -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="generator" content={Astro.generator} />
     <Favicon />
-    <slot name="meta" />
     <GoogleFont />
     <ThemeScript />
     <FontAwesome />
+    <slot name="meta" />
   </head>
 
-  <body class="min-h-screen max-w-3xl mx-auto px-6 sm:px-8">
+  <body class="mx-auto min-h-screen max-w-3xl px-6 sm:px-8">
     <Header />
     <main id="main">
       <slot name="main" />

@@ -1,0 +1,48 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import Header from '../components/Header.astro';
+import Favicon from './Favicon.astro';
+import FontAwesome from './FontAwesome.astro';
+import GoogleFont from './GoogleFont.astro';
+import ThemeScript from './ThemeScript.astro';
+
+type Props = CollectionEntry<'blog'>['data'];
+
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+---
+
+<html class="theme-sleek" lang="en">
+  <head>
+    <Favicon />
+    <GoogleFont />
+    <ThemeScript />
+    <FontAwesome />
+    <BaseHead title={title} description={description} slot="meta" />
+  </head>
+
+  <body class="mx-auto min-h-screen max-w-3xl px-6 sm:px-8">
+    <Header />
+    <main id="main">
+      <article class="blog-post prose prose-sleek max-w-none">
+        <h1 class="m-0 mb-[0.25em]">{title}</h1>
+        <FormattedDate date={pubDate} className="mb-[2em] block text-text-muted" />
+        <slot name="content" />
+      </article>
+    </main>
+    <style>
+      body {
+        display: grid;
+        grid-template-areas:
+          'header'
+          'main';
+        grid-template-rows: 5rem minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1fr);
+      }
+      main {
+        grid-area: main;
+      }
+    </style>
+  </body>
+</html>

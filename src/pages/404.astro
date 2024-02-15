@@ -1,18 +1,18 @@
 ---
-import PageMeta from '../components/PageMeta.astro';
-import { SITE_TITLE } from '../config';
+import BaseHead from '../components/BaseHead.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 import PageLayout from '../layouts/PageLayout.astro';
 ---
 
 <PageLayout>
-  <PageMeta title={`${SITE_TITLE} | Page not found`} slot="meta" />
+  <BaseHead title={`${SITE_TITLE} | Page not found`} description={SITE_DESCRIPTION} slot="meta" />
   <Fragment slot="main">
-    <h1 class="font-extrabold text-5xl md:text-6xl tracking-tight pt-4 pb-2 overflow-hidden">
+    <h1 class="overflow-hidden pb-2 pt-4 text-5xl font-extrabold tracking-tight md:text-6xl">
       <span
-        class="bg-gradient-to-br from-[#fb923c] via-[#f97316] to-[#ea580c] dark:from-primary-main dark:via-primary-main dark:to-primary-main bg-clip-text text-transparent">
+        class="bg-gradient-to-br from-[#fb923c] via-[#f97316] to-[#ea580c] bg-clip-text text-transparent dark:from-primary-main dark:via-primary-main dark:to-primary-main">
         Page not found
       </span>
     </h1>
-    <p class="text-2xl pb-4">Stop playing around.</p>
+    <p class="pb-4 text-2xl">Stop playing around.</p>
   </Fragment>
 </PageLayout>
