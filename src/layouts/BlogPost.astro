@@ -19,7 +19,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
     <GoogleFont />
     <ThemeScript />
     <FontAwesome />
-    <BaseHead title={title} description={description} slot="meta" />
+    <BaseHead title={title} description={description} image={heroImage} slot="meta" />
   </head>
 
   <body class="mx-auto min-h-screen max-w-3xl px-6 sm:px-8">
