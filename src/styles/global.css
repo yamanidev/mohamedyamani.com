@@ -2,6 +2,76 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Lora';
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src:
+    url('/fonts/lora-italic.woff2') format('woff2'),
+    url('/fonts/lora-italic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Lora';
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url('/fonts/lora-bold.woff2') format('woff2'),
+    url('/fonts/lora-bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Lora';
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+  src:
+    url('/fonts/lora-bold-italic.woff2') format('woff2'),
+    url('/fonts/lora-bold-italic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Vollkorn';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url('/fonts/vollkorn-regular.woff2') format('woff2'),
+    url('/fonts/vollkorn-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Vollkorn';
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src:
+    url('/fonts/vollkorn-italic.woff2') format('woff2'),
+    url('/fonts/vollkorn-italic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Vollkorn';
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url('/fonts/vollkorn-bold.woff2') format('woff2'),
+    url('/fonts/vollkorn-bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Vollkorn';
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+  src:
+    url('/fonts/vollkorn-bold-italic.woff2') format('woff2'),
+    url('/fonts/vollkorn-bold-italic.woff') format('woff');
+}
+
 /* 
     Tailwind colors listed here: https://tailwindcss.com/docs/customizing-colors
     

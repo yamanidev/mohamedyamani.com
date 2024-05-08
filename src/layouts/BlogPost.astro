@@ -5,7 +5,6 @@ import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
 import Favicon from './Favicon.astro';
 import FontAwesome from './FontAwesome.astro';
-import GoogleFont from './GoogleFont.astro';
 import ThemeScript from './ThemeScript.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
@@ -16,7 +15,6 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 <html class="theme-sleek" lang="en">
   <head>
     <Favicon />
-    <GoogleFont />
     <ThemeScript />
     <FontAwesome />
     <BaseHead title={title} description={description} image={heroImage} slot="meta" />

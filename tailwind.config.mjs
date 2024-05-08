@@ -5,8 +5,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Open Sans', 'sans-serif'],
-        heading: ['Open Sans', 'sans-serif']
+        body: ['Vollkorn', 'serif'],
+        heading: ['Lora', 'serif']
       },
       colors: {
         transparent: 'transparent',
