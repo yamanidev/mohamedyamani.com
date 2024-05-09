@@ -1,13 +1,13 @@
 ---
-import type { CollectionEntry } from 'astro:content';
-import BaseHead from '../components/BaseHead.astro';
-import FormattedDate from '../components/FormattedDate.astro';
-import Header from '../components/Header.astro';
-import Favicon from './Favicon.astro';
-import FontAwesome from './FontAwesome.astro';
-import ThemeScript from './ThemeScript.astro';
+import type { CollectionEntry } from "astro:content";
+import BaseHead from "../components/BaseHead.astro";
+import FormattedDate from "../components/FormattedDate.astro";
+import Header from "../components/Header.astro";
+import Favicon from "./Favicon.astro";
+import FontAwesome from "./FontAwesome.astro";
+import ThemeScript from "./ThemeScript.astro";
 
-type Props = CollectionEntry<'blog'>['data'];
+type Props = CollectionEntry<"blog">["data"];
 
 const { title, description, pubDate, updatedDate, image, imageAlt } = Astro.props;
 ---
@@ -27,7 +27,7 @@ const { title, description, pubDate, updatedDate, image, imageAlt } = Astro.prop
         <h1 class="m-0 mb-[0.25em]">{title}</h1>
         <FormattedDate
           date={pubDate}
-          className={`block text-text-muted ${image ? 'mb-4' : 'mb-8'}`}
+          className={`block text-text-muted ${image ? "mb-4" : "mb-8"}`}
         />
         {
           image && (
@@ -47,8 +47,8 @@ const { title, description, pubDate, updatedDate, image, imageAlt } = Astro.prop
       body {
         display: grid;
         grid-template-areas:
-          'header'
-          'main';
+          "header"
+          "main";
         grid-template-rows: 5rem minmax(0, 1fr);
         grid-template-columns: minmax(0, 1fr);
       }

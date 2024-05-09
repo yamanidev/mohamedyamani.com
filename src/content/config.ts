@@ -1,7 +1,7 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection, z } from "astro:content";
 
 const blog = defineCollection({
-  type: 'content',
+  type: "content",
   // Type-check frontmatter using a schema
   schema: z
     .object({
@@ -15,7 +15,7 @@ const blog = defineCollection({
     })
     .refine((data) => {
       if (data.image && !data.imageAlt) {
-        throw new Error('Missing alt property for image');
+        throw new Error("Missing alt property for image");
       }
       return true;
     })
