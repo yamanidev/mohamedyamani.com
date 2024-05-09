@@ -4,6 +4,7 @@
   "printWidth": 100,
   "trailingComma": "none",
   "bracketSameLine": true,
+  "htmlWhitespaceSensitivity": "ignore",
   "plugins": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
   "overrides": [
     {
