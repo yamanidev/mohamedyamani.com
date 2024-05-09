@@ -9,10 +9,9 @@
 // Import the global.css file here so that it is included on
 import "../styles/global.css";
 
-import FontAwesome from "./FontAwesome.astro";
-import ThemeScript from "./ThemeScript.astro";
-import Favicon from "./Favicon.astro";
 import Header from "../components/Header.astro";
+import Favicon from "./Favicon.astro";
+import ThemeScript from "./ThemeScript.astro";
 ---
 
 <!doctype html>
@@ -20,7 +19,6 @@ import Header from "../components/Header.astro";
   <head>
     <Favicon />
     <ThemeScript />
-    <FontAwesome />
     <slot name="meta" />
   </head>
 
