@@ -25,14 +25,21 @@ const { title, description, pubDate, updatedDate, image, imageAlt } = Astro.prop
     <main id="main">
       <article class="blog-post prose prose-sleek max-w-none">
         <h1 class="m-0 mb-[0.25em]">{title}</h1>
-        <FormattedDate date={pubDate} className="mb-4 block text-text-muted" />
-        <img
-          src={image}
-          width="748"
-          height="384"
-          alt={imageAlt}
-          class="m-0 mb-8 h-60 w-full rounded-md object-cover sm:h-96"
+        <FormattedDate
+          date={pubDate}
+          className={`block text-text-muted ${image ? 'mb-4' : 'mb-8'}`}
         />
+        {
+          image && (
+            <img
+              src={image}
+              width="748"
+              height="384"
+              alt={imageAlt}
+              class="m-0 mb-8 h-60 w-full rounded-md object-cover sm:h-96"
+            />
+          )
+        }
         <slot name="content" />
       </article>
     </main>
