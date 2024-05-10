@@ -5,8 +5,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ["Vollkorn", "serif"],
-        heading: ["Lora", "serif"]
+        vollkorn: ["Vollkorn", "serif"],
+        lora: ["Lora", "serif"]
       },
       colors: {
         transparent: "transparent",
