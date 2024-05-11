@@ -7,12 +7,14 @@ import PageLayout from "../layouts/PageLayout.astro";
 <PageLayout>
   <BaseHead title={`${SITE_TITLE} | Page not found`} description={SITE_DESCRIPTION} slot="meta" />
   <Fragment slot="main">
-    <h1 class="overflow-hidden pb-2 pt-4 text-5xl font-extrabold tracking-tight md:text-6xl">
-      <span
-        class="bg-gradient-to-br from-[#fb923c] via-[#f97316] to-[#ea580c] bg-clip-text text-transparent dark:from-primary-main dark:via-primary-main dark:to-primary-main">
-        Page not found
-      </span>
-    </h1>
-    <p class="pb-4 text-2xl">Stop playing around.</p>
+    <div class="mx-auto max-w-6xl px-6 sm:px-8">
+      <h1 class="overflow-hidden pb-2 pt-4 text-5xl font-extrabold tracking-tight md:text-6xl">
+        <span
+          class="bg-gradient-to-br from-[#fb923c] via-[#f97316] to-[#ea580c] bg-clip-text text-transparent dark:from-primary-main dark:via-primary-main dark:to-primary-main">
+          Page not found
+        </span>
+      </h1>
+      <p class="pb-4 text-2xl">Stop playing around.</p>
+    </div>
   </Fragment>
 </PageLayout>
