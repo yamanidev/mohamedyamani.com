@@ -21,24 +21,10 @@ import ThemeScript from "./ThemeScript.astro";
     <ThemeScript />
     <slot name="meta" />
   </head>
-
-  <body class="mx-auto min-h-screen max-w-3xl px-6 sm:px-8">
+  <body>
     <Header />
     <main id="main">
       <slot name="main" />
     </main>
-    <style>
-      body {
-        display: grid;
-        grid-template-areas:
-          "header"
-          "main";
-        grid-template-rows: 5rem minmax(0, 1fr);
-        grid-template-columns: minmax(0, 1fr);
-      }
-      main {
-        grid-area: main;
-      }
-    </style>
   </body>
 </html>

@@ -18,28 +18,30 @@ const { title, description, pubDate, updatedDate, image, imageAlt } = Astro.prop
     <BaseHead title={title} description={description} image={image} slot="meta" />
   </head>
 
-  <body class="mx-auto min-h-screen max-w-3xl px-6 sm:px-8">
+  <body>
     <Header />
     <main id="main">
-      <article class="blog-post prose prose-sleek max-w-none">
-        <h1 class="m-0 mb-[0.25em]">{title}</h1>
-        <FormattedDate
-          date={pubDate}
-          className={`block text-text-muted ${image ? "mb-4" : "mb-8"}`}
-        />
-        {
-          image && (
-            <img
-              src={image}
-              width="748"
-              height="392"
-              alt={imageAlt}
-              class="m-0 mb-8 w-full rounded-md object-cover"
-            />
-          )
-        }
-        <slot name="content" />
-      </article>
+      <div class="mx-auto min-h-screen max-w-3xl px-6 sm:px-8">
+        <article class="blog-post prose prose-sleek max-w-none">
+          <h1 class="m-0 mb-[0.25em]">{title}</h1>
+          <FormattedDate
+            date={pubDate}
+            className={`block text-text-muted ${image ? "mb-4" : "mb-8"}`}
+          />
+          {
+            image && (
+              <img
+                src={image}
+                width="748"
+                height="392"
+                alt={imageAlt}
+                class="m-0 mb-8 w-full rounded-md object-cover"
+              />
+            )
+          }
+          <slot name="content" />
+        </article>
+      </div>
     </main>
     <style>
       body {

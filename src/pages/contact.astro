@@ -1,0 +1,15 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import PageLayout from "../layouts/PageLayout.astro";
+---
+
+<PageLayout>
+  <BaseHead title={`Contact | ${SITE_TITLE}`} description={SITE_DESCRIPTION} slot="meta" />
+  <section class="py-20" slot="main">
+    <div class="mx-auto max-w-6xl px-6 sm:px-8">
+      <h1 class="text-2xl font-bold sm:text-4xl md:text-5xl">Contact</h1>
+      <p class="mt-2">I am mostly friendly, I promise.</p>
+    </div>
+  </section>
+</PageLayout>

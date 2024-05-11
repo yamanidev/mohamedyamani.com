@@ -13,23 +13,25 @@ const posts = (await getCollection("blog")).sort(
 <PageLayout>
   <BaseHead title={`Blog | ${SITE_TITLE}`} description={SITE_DESCRIPTION} slot="meta" />
   <section slot="main">
-    <ul>
-      {
-        posts.map((post) => {
-          return (
-            <li class="mb-3 grid grid-cols-[1fr] items-start md:grid-cols-[1fr_auto] md:gap-2">
-              <div class="title">
-                <a href={`/blog/${post.slug}/`} class="unset hover:text-text-link">
-                  {post.data.title}
-                </a>
-              </div>
-              <div class="text-sm italic text-text-muted">
-                <FormattedDate date={post.data.pubDate} />
-              </div>
-            </li>
-          );
-        })
-      }
-    </ul>
+    <div class="mx-auto max-w-6xl px-6 sm:px-8">
+      <ul>
+        {
+          posts.map((post) => {
+            return (
+              <li class="mb-3 grid grid-cols-[1fr] items-start md:grid-cols-[1fr_auto] md:gap-2">
+                <div class="title">
+                  <a href={`/blog/${post.slug}/`} class="unset hover:text-text-link">
+                    {post.data.title}
+                  </a>
+                </div>
+                <div class="text-sm italic text-text-muted">
+                  <FormattedDate date={post.data.pubDate} />
+                </div>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </div>
   </section>
 </PageLayout>

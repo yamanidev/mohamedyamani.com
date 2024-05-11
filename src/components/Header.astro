@@ -1,48 +1,33 @@
 ---
 import DarkModeToggle from "./DarkModeToggle.astro";
 import HeaderLink from "./HeaderLink.astro";
-import GitHubLogo from "./svg/GitHubLogo.astro";
-import XLogo from "./svg/XLogo.astro";
 ---
 
-<header>
-  <a
-    class="unset absolute -top-[100rem] left-[50%] z-10 translate-x-[-50%] bg-white px-8 py-2 text-black focus:top-[initial]"
-    href="#main">
-    Skip to content
-  </a>
-  <nav>
-    <section class="text-text-bold">
-      <ul class="unset flex gap-4 [&>li]:p-0">
-        <li><HeaderLink href="/">Home</HeaderLink></li>
-        <li><HeaderLink href="/blog/">Blog</HeaderLink></li>
-      </ul>
-    </section>
-  </nav>
-  <div
-    class="flex content-center items-center justify-self-end py-2 text-text-bold max-[375px]:hidden">
+<header class="py-8">
+  <div class="mx-auto flex max-w-6xl justify-between px-6 sm:px-8">
     <a
-      class="unset ml-4 text-xl hover:text-text-link"
-      href="https://github.com/yamanidev"
-      target="_blank"
-      rel="noreferrer">
-      <GitHubLogo width="21" height="20" />
+      class="unset absolute -top-[100rem] left-[50%] z-10 translate-x-[-50%] bg-white px-8 py-2 text-black focus:top-[initial]"
+      href="#main">
+      Skip to content
     </a>
-    <a
-      class="unset ml-4 text-xl hover:text-text-link"
-      href="https://twitter.com/yamanidev"
-      target="_blank"
-      rel="noreferrer">
-      <XLogo width="20" height="20" />
-    </a>
+    <a href="/" class="unset font-lora font-bold">MY</a>
+    <div class="flex gap-8">
+      <div class="flex items-center gap-4 text-text-bold max-[375px]:hidden">
+        <nav class="text-text-bold">
+          <ul class="unset flex gap-4 [&>li]:p-0">
+            <li>
+              <HeaderLink href="/">Home</HeaderLink>
+            </li>
+            <li>
+              <HeaderLink href="/blog/">Blog</HeaderLink>
+            </li>
+            <li>
+              <HeaderLink href="/contact/">Contact</HeaderLink>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <DarkModeToggle />
+    </div>
   </div>
-  <DarkModeToggle />
 </header>
-<style>
-  header {
-    grid-area: header;
-    display: grid;
-    align-items: center;
-    grid-template-columns: minmax(0, 1fr) minmax(0, max-content) minmax(0, max-content);
-  }
-</style>
