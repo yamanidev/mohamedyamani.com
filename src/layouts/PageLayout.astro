@@ -9,7 +9,7 @@
 // Import the global.css file here so that it is included on
 import "../styles/global.css";
 
-import Header from "../components/Header.astro";
+import Navbar from "../components/Navbar.astro";
 import Favicon from "./Favicon.astro";
 import ThemeScript from "./ThemeScript.astro";
 ---
@@ -22,7 +22,7 @@ import ThemeScript from "./ThemeScript.astro";
     <slot name="meta" />
   </head>
   <body>
-    <Header />
+    <Navbar />
     <main id="main">
       <slot name="main" />
     </main>

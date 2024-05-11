@@ -2,7 +2,7 @@
 import type { CollectionEntry } from "astro:content";
 import BaseHead from "../components/BaseHead.astro";
 import FormattedDate from "../components/FormattedDate.astro";
-import Header from "../components/Header.astro";
+import Navbar from "../components/Navbar.astro";
 import Favicon from "./Favicon.astro";
 import ThemeScript from "./ThemeScript.astro";
 
@@ -19,7 +19,7 @@ const { title, description, pubDate, updatedDate, image, imageAlt } = Astro.prop
   </head>
 
   <body>
-    <Header />
+    <Navbar />
     <main id="main">
       <div class="mx-auto min-h-screen max-w-3xl px-6 sm:px-8">
         <article class="blog-post prose prose-sleek max-w-none">
@@ -43,18 +43,5 @@ const { title, description, pubDate, updatedDate, image, imageAlt } = Astro.prop
         </article>
       </div>
     </main>
-    <style>
-      body {
-        display: grid;
-        grid-template-areas:
-          "header"
-          "main";
-        grid-template-rows: 5rem minmax(0, 1fr);
-        grid-template-columns: minmax(0, 1fr);
-      }
-      main {
-        grid-area: main;
-      }
-    </style>
   </body>
 </html>
