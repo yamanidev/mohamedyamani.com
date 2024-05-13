@@ -22,7 +22,7 @@ import Footer from "../components/Footer.astro";
     <ThemeScript />
     <slot name="meta" />
   </head>
-  <body>
+  <body class="flex min-h-[100dvh] flex-col">
     <Navbar />
     <main id="main">
       <slot name="main" />
