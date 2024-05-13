@@ -12,7 +12,7 @@ const posts = (await getCollection("blog")).sort(
 
 <PageLayout>
   <BaseHead title={`Blog | ${SITE_TITLE}`} description={SITE_DESCRIPTION} slot="meta" />
-  <section slot="main">
+  <section slot="main" class="py-10">
     <div class="mx-auto max-w-6xl px-6 sm:px-8">
       <ul>
         {
