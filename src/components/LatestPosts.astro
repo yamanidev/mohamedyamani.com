@@ -1,0 +1,52 @@
+---
+import { getCollection } from "astro:content";
+import FormattedDate from "./FormattedDate.astro";
+
+// Latest 3 posts
+const latestPosts = (await getCollection("blog"))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
+---
+
+<section class="pb-20">
+  <div class="mx-auto max-w-6xl px-6 sm:px-8">
+    <h2 class="text-xl font-bold sm:text-2xl">Latest posts</h2>
+    <div class="mx-auto mt-6 grid max-w-3xl gap-x-6 gap-y-8 sm:grid-cols-2">
+      {
+        latestPosts.map((post, index) => (
+          <article
+            class={`group overflow-hidden rounded-md bg-slate-100 dark:bg-slate-900 ${
+              index === 0 ? "sm:col-span-2" : "col-span-1"
+            }`}>
+            <a href={`/blog/${post.slug}/`}>
+              <img
+                src={post.data.image}
+                width="748"
+                height="392"
+                alt={post.data.imageAlt}
+                loading="lazy"
+                class="w-full"
+              />
+            </a>
+            <div class="p-2">
+              <h3 class="text-md leading-5 sm:text-xl sm:leading-6">
+                <a href={`/blog/${post.slug}/`} class="unset group-hover:underline">
+                  {post.data.title}
+                </a>
+              </h3>
+              <FormattedDate
+                date={post.data.pubDate}
+                className="block text-sm sm:text-base text-text-muted"
+              />
+            </div>
+          </article>
+        ))
+      }
+    </div>
+    <a
+      href="/blog/"
+      class="unset mx-auto mt-10 block max-w-fit rounded-md bg-primary-main px-4 py-2 text-bg-body">
+      More posts
+    </a>
+  </div>
+</section>
