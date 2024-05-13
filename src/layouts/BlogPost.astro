@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
 import FormattedDate from "../components/FormattedDate.astro";
 import Navbar from "../components/Navbar.astro";
 import Favicon from "./Favicon.astro";
@@ -20,7 +21,7 @@ const { title, description, pubDate, updatedDate, image, imageAlt } = Astro.prop
 
   <body>
     <Navbar />
-    <main id="main">
+    <main id="main" class="py-20">
       <div class="mx-auto min-h-screen max-w-3xl px-6 sm:px-8">
         <article class="blog-post prose prose-sleek max-w-none">
           <h1 class="m-0 mb-[0.25em]">{title}</h1>
@@ -43,5 +44,6 @@ const { title, description, pubDate, updatedDate, image, imageAlt } = Astro.prop
         </article>
       </div>
     </main>
+    <Footer />
   </body>
 </html>

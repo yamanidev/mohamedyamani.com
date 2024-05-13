@@ -12,6 +12,7 @@ import "../styles/global.css";
 import Navbar from "../components/Navbar.astro";
 import Favicon from "./Favicon.astro";
 import ThemeScript from "./ThemeScript.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
@@ -26,5 +27,6 @@ import ThemeScript from "./ThemeScript.astro";
     <main id="main">
       <slot name="main" />
     </main>
+    <Footer />
   </body>
 </html>
