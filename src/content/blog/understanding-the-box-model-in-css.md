@@ -1,6 +1,6 @@
 ---
-title: 'Understanding the Box Model in CSS'
-description: 'I explain in this article on of the fundamental concepts in CSS, the box model. What are the different types of boxes as well as the box sizing behavior.'
+title: "Understanding the Box Model in CSS"
+description: "I explain in this article on of the fundamental concepts in CSS, the box model. What are the different types of boxes as well as the box sizing behavior."
 canonicalUrl: "https://mohamedyamani.com/blog/understanding-the-box-model-in-css/"
 pubDate: 2021-11-06
 image: "/images/thumbnails/understanding-the-box-model-in-css.jpg"
@@ -211,5 +211,5 @@ Follow my blog and my [Twitter](https://twitter.com/yamanidev) for more!
 Have a nice one.
 
 ---
- 
+
 Thumbnail picture by [Kelli McClintock](https://unsplash.com/@kelli_mcclintock?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/white-box-on-white-table-GopRYASfsOc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)

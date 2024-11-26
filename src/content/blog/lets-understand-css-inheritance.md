@@ -1,7 +1,7 @@
 ---
 title: "Let's Understand CSS: Inheritance"
-description: 'Most CSS bugs come from conflicting styles. Understanding how CSS deals with them can help you avoid them. In this article, I explain one of the fundamental concepts for resolving them: inheritance.'
-canonicalUrl: 'https://mohamedyamani.com/blog/lets-understand-css-inheritance/'
+description: "Most CSS bugs come from conflicting styles. Understanding how CSS deals with them can help you avoid them. In this article, I explain one of the fundamental concepts for resolving them: inheritance."
+canonicalUrl: "https://mohamedyamani.com/blog/lets-understand-css-inheritance/"
 pubDate: 2023-10-16
 image: "/images/thumbnails/lets-understand-css-inheritance.jpg"
 imageAlt: "a close up of a red and blue object"
@@ -90,7 +90,10 @@ Instead of having to style each HTML element separately, you can style a parent 
       <h1>Some cool title I bet</h1>
     </header>
 
-    <p>Bla bla bla <span>special bla bla</span></p>
+    <p>
+      Bla bla bla
+      <span>special bla bla</span>
+    </p>
   </main>
 </body>
 ```
@@ -127,7 +130,10 @@ The algorithm to pick the inherited styles is pretty straightforward: we pick th
       <h1>Some cool title I bet</h1>
     </header>
 
-    <p>Bla bla bla <span>special bla bla</span></p>
+    <p>
+      Bla bla bla
+      <span>special bla bla</span>
+    </p>
   </main>
 </body>
 ```
@@ -157,5 +163,5 @@ Hope you learned something!
 Don't relate to CSS memes.
 
 ---
- 
+
 Thumbnail picture by [Jr Korpa](https://unsplash.com/@jrkorpa?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/a-close-up-of-a-red-and-blue-object-oOqNQCIlt94?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)

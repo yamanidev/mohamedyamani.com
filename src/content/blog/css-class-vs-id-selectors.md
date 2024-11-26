@@ -1,6 +1,6 @@
 ---
-title: 'CSS Class vs ID Selectors — Understanding the Difference!'
-description: 'In this article I break down two CSS selectors, classes and ids, how to use them to select HTML elements as well the difference between them.'
+title: "CSS Class vs ID Selectors — Understanding the Difference!"
+description: "In this article I break down two CSS selectors, classes and ids, how to use them to select HTML elements as well the difference between them."
 canonicalUrl: "https://mohamedyamani.com/blog/css-class-vs-id-selectors/"
 pubDate: 2021-03-21
 image: "/images/thumbnails/css-class-vs-id-selectors.jpg"
@@ -125,9 +125,9 @@ If you are familiar with JavaScript, you will notice that it points out some dif
 // the method's name says Elements and not Element
 // It returns therefore an HTMLCollection
 // And not an individual HTML element
-console.log(document.getElementsByClassName('some-class'));
+console.log(document.getElementsByClassName("some-class"));
 // While this method says Element
-console.log(document.getElementById('some-id'));
+console.log(document.getElementById("some-id"));
 ```
 
 ## Thank you for reading!

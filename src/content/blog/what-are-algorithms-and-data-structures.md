@@ -1,6 +1,6 @@
 ---
-title: 'What are Algorithms and Data Structures?'
-description: 'I briefly explain in this article what algorithms and data structures are with some real world examples.'
+title: "What are Algorithms and Data Structures?"
+description: "I briefly explain in this article what algorithms and data structures are with some real world examples."
 canonicalUrl: "https://mohamedyamani.com/blog/what-are-algorithms-and-data-structures/"
 pubDate: 2021-02-15
 image: "/images/thumbnails/what-are-algorithms-and-data-structures.jpg"
@@ -114,5 +114,5 @@ Follow me on [Twitter](https://twitter.com/yamanidev) for more!
 Have a nice one!
 
 ---
- 
+
 Thumbnail picture by [Jukan Tateisi](https://unsplash.com/@tateisimikito?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/toddlers-standing-in-front-of-beige-concrete-stair-bJhT_8nbUA0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)

@@ -1,6 +1,6 @@
 ---
-title: 'What is HTML? 🤔'
-description: 'I briefly introduce in this article what HTML is and the role it plays in web pages with some code snippet examples.'
+title: "What is HTML? 🤔"
+description: "I briefly introduce in this article what HTML is and the role it plays in web pages with some code snippet examples."
 canonicalUrl: "https://mohamedyamani.com/blog/what-is-html/"
 pubDate: 2021-03-14
 image: "/images/thumbnails/what-is-html.jpg"
@@ -96,5 +96,5 @@ Follow my blog and my [Twitter](https://twitter.com/yamanidev) for more!
 Have a nice one!
 
 ---
- 
+
 Thumbnail picture by [Ana GG](https://unsplash.com/@garnicanetworks?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/person-in-white-and-black-stripe-hoodie-standing-on-gray-rocky-shore-during-daytime-qUvfEBl5baI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)

@@ -1,6 +1,6 @@
 ---
-title: 'What is CSS? 🤔'
-description: 'I briefly explain in this article what CSS is showcasing its presentational part for web pages with a code snippet.'
+title: "What is CSS? 🤔"
+description: "I briefly explain in this article what CSS is showcasing its presentational part for web pages with a code snippet."
 canonicalUrl: "https://mohamedyamani.com/blog/what-is-css/"
 pubDate: 2021-03-17
 image: "/images/thumbnails/what-is-css.jpg"
@@ -140,5 +140,5 @@ Follow my blog and my [Twitter](https://twitter.com/yamanidev) for more!
 Have a nice one!
 
 ---
- 
+
 Thumbnail picture by [ActionVance](https://unsplash.com/@actionvance?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/brown-blue-and-yellow-abstract-painting-vjUokUWbFOs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)

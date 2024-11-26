@@ -1,6 +1,6 @@
 ---
-title: 'My First Experience in Google Hash Code'
-description: 'I share in this article the story of my first experience in the Google Hash Code competition and how I got obliterated.'
+title: "My First Experience in Google Hash Code"
+description: "I share in this article the story of my first experience in the Google Hash Code competition and how I got obliterated."
 canonicalUrl: "https://mohamedyamani.com/blog/my-first-experience-in-google-hashcode/"
 pubDate: 2021-03-12
 image: "/images/thumbnails/my-first-experience-in-google-hashcode.jpg"
@@ -83,5 +83,5 @@ Follow my blog and my [Twitter](https://twitter.com/yamanidev) for more!
 Have a nice one!
 
 ---
- 
+
 Thumbnail picture by [Mitchell Luo](https://unsplash.com/@mitchel3uo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/google-logo-neon-light-signage-jz4ca36oJ_M?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)

@@ -1,6 +1,6 @@
 ---
-title: 'Difference Between var and let in JavaScript'
-description: 'In this article I explain two binding keywords in JavaScript that are used to declare variables: var and let, what is the difference between them and which one to use.'
+title: "Difference Between var and let in JavaScript"
+description: "In this article I explain two binding keywords in JavaScript that are used to declare variables: var and let, what is the difference between them and which one to use."
 canonicalUrl: "https://mohamedyamani.com/blog/difference-between-var-and-let-in-js/"
 pubDate: 2021-03-19
 image: "/images/thumbnails/difference-between-var-and-let-in-js.jpg"
@@ -17,7 +17,7 @@ Variables declared with **var** are said to be function scoped. They are only kn
 
 ```javascript
 function test() {
-  var something = 'Banana man';
+  var something = "Banana man";
   console.log(something);
 }
 
@@ -52,7 +52,7 @@ But what if...
 
 ```javascript
 console.log(something); // undefined
-var something = 'Banana boy';
+var something = "Banana boy";
 ```
 
 We wouldn't expect such result because it doesn't make sense, how the hell would it recognize the variable **something** if it was not declared yet?
@@ -72,14 +72,14 @@ It is "equivalent" to:
 ```javascript
 var something; // declaration "moved" to the top
 console.log(something); // undefined
-something = 'Banana boy';
+something = "Banana boy";
 ```
 
 Now when it comes to variables declared with **let** we do not encounter such result:
 
 ```javascript
 console.log(something); // ReferenceError
-let something = 'banana';
+let something = "banana";
 ```
 
 We cannot access or use variables declared with **let** before initialization.
@@ -99,14 +99,14 @@ No. They are indeed hoisted, in a different way. I will explain how that is the 
 When a variable is defined globally with **var**, it becomes a property of the window object:
 
 ```javascript
-var x = 'Banana girl';
+var x = "Banana girl";
 console.log(window.x); // "Banana girl"
 ```
 
 That is not the case with global variables defined with **let** though:
 
 ```javascript
-let y = 'boi';
+let y = "boi";
 console.log(window.y); // undefined
 ```
 
@@ -119,8 +119,8 @@ But when you try to do that with **let**, it raises SyntaxError:
 ```javascript
 var x = 30;
 var x = 300; // Valid
-let boo = 'cacao';
-let boo = 'never mind'; // Uncaught SyntaxError
+let boo = "cacao";
+let boo = "never mind"; // Uncaught SyntaxError
 ```
 
 ### Why was "let" introduced?
@@ -140,5 +140,5 @@ Follow my blog and my [Twitter](https://twitter.com/yamanidev) for more!
 Have a nice one!
 
 ---
- 
+
 Thumbnail picture by [Pankaj Patel](https://unsplash.com/@pankajpatel?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/person-sitting-in-front-of-computer-1IW4HQuauSU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)

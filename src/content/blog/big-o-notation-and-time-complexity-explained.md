@@ -1,6 +1,6 @@
 ---
-title: 'Big-O Notation and Time Complexity Explained!'
-description: 'I explain in this article what is the Big-O Notation, why it is important for engineers and the estimation of some common logic.'
+title: "Big-O Notation and Time Complexity Explained!"
+description: "I explain in this article what is the Big-O Notation, why it is important for engineers and the estimation of some common logic."
 canonicalUrl: "https://mohamedyamani.com/blog/big-o-notation-and-time-complexity-explained/"
 pubDate: 2021-02-22
 image: "/images/thumbnails/big-o-notation-and-time-complexity-explained.jpg"
@@ -150,5 +150,5 @@ Follow my blog and my [Twitter](https://twitter.com/yamanidev) for more!
 Have a nice one!
 
 ---
- 
+
 Thumbnail picture by [JJ Ying](https://unsplash.com/@jjying?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/white-and-gray-optical-illusion-7JX0-bfiuxQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)

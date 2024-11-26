@@ -1,6 +1,6 @@
 ---
-title: 'Helping Older Browsers Understand HTML5'
-description: 'In this blog article I explain how older verions of web browsers interpret unknown HTML5 elements, how to help them with that, and the recommended approach to that.'
+title: "Helping Older Browsers Understand HTML5"
+description: "In this blog article I explain how older verions of web browsers interpret unknown HTML5 elements, how to help them with that, and the recommended approach to that."
 canonicalUrl: "https://mohamedyamani.com/blog/helping-older-browsers-understand-html5/"
 pubDate: 2021-08-06
 image: "/images/thumbnails/helping-older-browsers-understand-html5.jpg"
@@ -78,9 +78,9 @@ This is not the optimal solution nor the recommended one, it's meh.
 We get JavaScript involved in the play by fundamentally creating the elements from scratch as such:
 
 ```javascript
-document.createElement('nav');
-document.createElement('header');
-document.createElement('article');
+document.createElement("nav");
+document.createElement("header");
+document.createElement("article");
 // etc
 ```
 
@@ -117,5 +117,5 @@ Follow my blog and my [Twitter](https://twitter.com/yamanidev) for more!
 Have a nice one.
 
 ---
- 
+
 Thumbnail picture by [Hans Eiskonen](https://unsplash.com/@eiskonen?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/black-sedan-D9TK2X0Nj-U?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)

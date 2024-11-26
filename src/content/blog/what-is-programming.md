@@ -1,6 +1,6 @@
 ---
-title: 'What is Programming? 👩‍💻'
-description: 'My first blog article where I introduce what programming is in practical terms as well as some valuable tips.'
+title: "What is Programming? 👩‍💻"
+description: "My first blog article where I introduce what programming is in practical terms as well as some valuable tips."
 canonicalUrl: "https://mohamedyamani.com/blog/what-is-programming/"
 pubDate: 2021-01-29
 image: "/images/thumbnails/what-is-programming.jpg"
@@ -49,5 +49,5 @@ I hope you liked my introductory post. More articles coming up next so make sure
 Follow me on [Twitter](https://twitter.com/yamanidev) for more!
 
 ---
- 
+
 Thumbnail picture by [Pakata Goh](https://unsplash.com/@pakata?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/laptop-computer-beside-monitor-with-keyboard-and-mouse-EJMTKCZ00I0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
