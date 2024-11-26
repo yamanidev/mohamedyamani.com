@@ -6,6 +6,8 @@ pubDate: 2024-11-12
 thumbnail:
   url: "/images/thumbnails/i-finally-graduated-reflections-on-the-journey.jpg"
   alt: "shallow focus photo of car side mirror"
+  creditText: "Picture by Tim Trad on Unsplash"
+  creditLink: "https://unsplash.com/photos/shallow-focus-photo-of-car-side-mirror--TcTakRTNfM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
 ---
 
 Last month, I finally got my Master's, after a long 5 years of school.
@@ -99,7 +101,3 @@ In retrospect, you can claim you should've or shouldn't have done this and that,
 You can only make decisions given the information, resources and conditions you have at a time. And at that time, I think I made a decent decision by joining the school and seeing it to the end.
 
 Besides, is there really anything we could do other than learn and move on?
-
----
-
-Thumbnail picture by [Tim Trad](https://unsplash.com/@timtrad?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/shallow-focus-photo-of-car-side-mirror--TcTakRTNfM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)

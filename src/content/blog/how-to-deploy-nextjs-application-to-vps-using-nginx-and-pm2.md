@@ -6,6 +6,8 @@ pubDate: 2024-02-26
 thumbnail:
   url: "/images/thumbnails/how-to-deploy-nextjs-application-to-vps-using-nginx-and-pm2.jpg"
   alt: "light decorations in dark area"
+  creditText: "Picture by Aron Visuals on Unsplash"
+  creditLink: "https://unsplash.com/photos/light-decorations-in-dark-area-bZZp1PmHI0E?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
 ---
 
 In this guide I explain how to deploy your Next.js application to a VPS as well as the different parts of the process. If you're only looking for the NGINX configuration files, you can find them in this [gist](https://gist.github.com/yamanidev/839d2ef90c2da03df892fdff50c4fb34).
@@ -334,7 +336,3 @@ I hope you benefited from it.
 ## Stay in touch
 
 If you'd like to stay updated with my blog, reach out, or see what I am up to, you can find me on [Twitter](https://twitter.com/yamanidev).
-
----
-
-Thumbnail picture by [Aron Visuals](https://unsplash.com/@aronvisuals?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/light-decorations-in-dark-area-bZZp1PmHI0E?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)

@@ -6,6 +6,8 @@ pubDate: 2023-09-03
 thumbnail:
   url: "/images/thumbnails/how-chatgpt-can-hurt-your-problem-solving-skills-anecdote.jpg"
   alt: "a person's shadow with a yellow string in the air"
+  creditText: "Picture by Jr Korpa on Unsplash"
+  creditLink: "https://unsplash.com/photos/a-persons-shadow-with-a-yellow-string-in-the-air-u3yyYID6eP4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
 ---
 
 ## Introduction
@@ -48,7 +50,3 @@ I personally found the middle ground is to limit my prompts to a set of question
 The key takeaway I would say from this anecdote is, to pay attention to how we're using our everyday tools, how much we're relying on them, whether that's a good or a bad thing. Because tools affect us, and as ironic as it sounds, we could very well end up being enslaved by our creation.
 
 _Note: Funnily enough, I prompted for a title and a description for this post (they suck, I am going with my own). Guess I have some more work to do..._
-
----
-
-Thumbnail picture by [Jr Korpa](https://unsplash.com/@jrkorpa?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/a-persons-shadow-with-a-yellow-string-in-the-air-u3yyYID6eP4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)

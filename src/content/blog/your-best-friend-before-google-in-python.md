@@ -6,6 +6,8 @@ pubDate: 2021-01-29
 thumbnail:
   url: "/images/thumbnails/your-best-friend-before-google-in-python.jpg"
   alt: "women sitting on rock near body of water"
+  creditText: "Picture by Roberto Nickson on Unsplash"
+  creditLink: "https://unsplash.com/photos/women-sitting-on-rock-near-body-of-water-vRAYwESFc-U?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
 ---
 
 It is no secret (or so I hope) that when programming in any given language, consulting the official documentation (as most of them are up-to-date, extensively detailed and thorough) is crucial to understanding the intricacies and details of the technology we're fiddling with.
@@ -58,5 +60,3 @@ If you want a brief, concise and official description or documentation about a c
 I hope you enjoyed reading this! Let me know how you find this type of short articles!
 
 Follow me on [Twitter](https://twitter.com/yamanidev) for more!
-
-Thumbnail picture by [Roberto Nickson](https://unsplash.com/@rpnickson?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/women-sitting-on-rock-near-body-of-water-vRAYwESFc-U?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)

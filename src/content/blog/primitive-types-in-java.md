@@ -6,6 +6,8 @@ pubDate: 2021-05-05
 thumbnail:
   url: "/images/thumbnails/primitive-types-in-java.jpg"
   alt: "laptop monitor showing java class file on IDE"
+  creditText: "Picture by orbtal media on Unsplash"
+  creditLink: "https://unsplash.com/photos/monitor-showing-computer-application-1td5Iq5IvNc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
 ---
 
 ## Introduction
@@ -109,7 +111,3 @@ That was it! I hope you learned something new and enjoyed reading!
 Follow me on [Twitter](https://twitter.com/yamanidev) for more!
 
 Have a nice one!
-
----
-
-Thumbnail picture by [orbtal media](https://unsplash.com/@orbtalmedia?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/monitor-showing-computer-application-1td5Iq5IvNc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)

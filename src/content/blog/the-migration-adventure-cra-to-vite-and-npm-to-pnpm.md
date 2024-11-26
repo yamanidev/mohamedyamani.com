@@ -6,6 +6,8 @@ pubDate: 2023-07-05
 thumbnail:
   url: "/images/thumbnails/the-migration-adventure-cra-to-vite-and-npm-to-pnpm.jpg"
   alt: "purple and white abstract painting"
+  creditText: "Picture by FlyD on Unsplash"
+  creditLink: "https://unsplash.com/photos/purple-and-white-abstract-painting-3TtVnxJHfhw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
 ---
 
 As I was migrating a client's project from CRA to Vite I encountered plenty of issues. Some of which were due to certain imports that are specific to Webpack, the other ones were due to me using `pnpm` as opposed to `npm`.
@@ -27,7 +29,3 @@ I downloaded the missing packages like a good boy and life moved on 🙂.
 ## References
 
 I followed [this article](https://www.robinwieruch.de/vite-create-react-app/) to switch from CRA to Vite, it was very helpful.
-
----
-
-Thumbnail picture by [FlyD](https://unsplash.com/@flyd2069?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/purple-and-white-abstract-painting-3TtVnxJHfhw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)

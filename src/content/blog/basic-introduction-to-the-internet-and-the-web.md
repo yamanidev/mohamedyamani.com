@@ -6,6 +6,8 @@ pubDate: 2021-07-24
 thumbnail:
   url: "/images/thumbnails/basic-introduction-to-the-internet-and-the-web.jpg"
   alt: "earth from outer space"
+  creditText: Picture by NASA on Unsplash
+  creditLink: "https://unsplash.com/photos/photo-of-outer-space-Q1p7bh3SHj8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
 ---
 
 ## Table of content
@@ -129,7 +131,3 @@ That was it. I hope you learned something new and enjoyed reading!
 Follow my blog and my [Twitter](https://twitter.com/yamanidev) for more!
 
 Have a nice one.
-
----
-
-Thumbnail picture by [NASA](https://unsplash.com/@nasa?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/photo-of-outer-space-Q1p7bh3SHj8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)

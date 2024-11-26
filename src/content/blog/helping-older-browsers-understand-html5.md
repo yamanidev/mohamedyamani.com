@@ -6,6 +6,8 @@ pubDate: 2021-08-06
 thumbnail:
   url: "/images/thumbnails/helping-older-browsers-understand-html5.jpg"
   alt: "abandoned old black sedan with broken windows"
+  creditText: "Picture by Hans Eiskonen on Unsplash"
+  creditLink: "https://unsplash.com/photos/black-sedan-D9TK2X0Nj-U?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
 ---
 
 ## Table of content
@@ -116,7 +118,3 @@ I hope you learned something new and enjoyed reading!
 Follow my blog and my [Twitter](https://twitter.com/yamanidev) for more!
 
 Have a nice one.
-
----
-
-Thumbnail picture by [Hans Eiskonen](https://unsplash.com/@eiskonen?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/black-sedan-D9TK2X0Nj-U?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)

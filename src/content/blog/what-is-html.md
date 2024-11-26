@@ -6,6 +6,8 @@ pubDate: 2021-03-14
 thumbnail:
   url: "/images/thumbnails/what-is-html.jpg"
   alt: "skeleton wearing sunglasses sitting on gray rocky shore during daytime"
+  creditText: "Picture by Ana GG on Unsplash"
+  creditLink: "https://unsplash.com/photos/person-in-white-and-black-stripe-hoodie-standing-on-gray-rocky-shore-during-daytime-qUvfEBl5baI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
 ---
 
 If you're interested in becoming a web developer -and did some research- you must have encountered the term HTML on many occasions, in the context of the front-end part of web development along with CSS and Javascript. We'll be covering today what HTML is as well as some foundational concepts about it.
@@ -95,7 +97,3 @@ That was a brief introduction to what HTML is, I hope you enjoyed the article!
 Follow my blog and my [Twitter](https://twitter.com/yamanidev) for more!
 
 Have a nice one!
-
----
-
-Thumbnail picture by [Ana GG](https://unsplash.com/@garnicanetworks?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/person-in-white-and-black-stripe-hoodie-standing-on-gray-rocky-shore-during-daytime-qUvfEBl5baI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)

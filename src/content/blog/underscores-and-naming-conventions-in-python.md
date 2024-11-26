@@ -6,6 +6,8 @@ pubDate: 2021-03-21
 thumbnail:
   url: "/images/thumbnails/underscores-and-naming-conventions-in-python.jpg"
   alt: "two men using computer and laptop"
+  creditText: "Picture by Alvaro Reyes on Unsplash"
+  creditLink: "https://unsplash.com/photos/two-men-using-computer-and-laptop-fSWOVc3e06w?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
 ---
 
 ## Introduction
@@ -164,7 +166,3 @@ That was it! I hope you learned something new and enjoyed reading!
 Follow me on [Twitter](https://twitter.com/yamanidev) for more!
 
 Have a nice one!
-
----
-
-Thumbnail picture by [Alvaro Reyes](https://unsplash.com/@alvarordesign?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/two-men-using-computer-and-laptop-fSWOVc3e06w?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)

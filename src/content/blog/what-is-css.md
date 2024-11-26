@@ -6,6 +6,8 @@ pubDate: 2021-03-17
 thumbnail:
   url: "/images/thumbnails/what-is-css.jpg"
   alt: "brown blue and yellow abstract painting showing a skeleton with a mustache playing the guitar and singing"
+  creditText: "Picture by ActionVance on Unsplash"
+  creditLink: "https://unsplash.com/photos/brown-blue-and-yellow-abstract-painting-vjUokUWbFOs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
 ---
 
 It can easily be daunting for newcomers to web development when first starting out. We often get overwhelmed with all the different technologies and terminologies used in the web, trying to make sense of it all can be frustrating. In my **What Is** series, I try to explain concepts to beginners in the simplest way I can in a form of brief and digestable articles, today we will talk about CSS and its place in the large scheme of web design!
@@ -139,7 +141,3 @@ That was a brief introduction to CSS, I hope you enjoyed the article!
 Follow my blog and my [Twitter](https://twitter.com/yamanidev) for more!
 
 Have a nice one!
-
----
-
-Thumbnail picture by [ActionVance](https://unsplash.com/@actionvance?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/brown-blue-and-yellow-abstract-painting-vjUokUWbFOs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)

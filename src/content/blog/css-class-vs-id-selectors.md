@@ -6,6 +6,8 @@ pubDate: 2021-03-21
 thumbnail:
   url: "/images/thumbnails/css-class-vs-id-selectors.jpg"
   alt: "two monitor desk setup with red backlights showing code on one screen and spotify on the other with a phone between them"
+  creditText: "Picture by Fotis Fotopoulos on Unsplash"
+  creditLink: "https://unsplash.com/photos/black-remote-control-on-red-table-6sAl6aQ4OWI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
 ---
 
 When I first started learning about CSS (and I still am) I felt fabulous applying styles to elements and making the web page look decent (Although still not making the 21st century in style). Till I met one day the ID and class selectors where were my first obstacle in my learning journey. I just couldn’t understand what was the difference between the two, if both of them allows me to select HTML elements so I could apply style rules to them, why do we need two!
@@ -138,7 +140,3 @@ These were the differences between Classes and IDs, I hope you enjoyed reading t
 Follow my blog and my [Twitter](https://twitter.com/yamanidev) for more.
 
 Have a nice one!
-
----
-
-Thumbnail picture by [Fotis Fotopoulos](https://unsplash.com/@ffstop?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/black-remote-control-on-red-table-6sAl6aQ4OWI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)

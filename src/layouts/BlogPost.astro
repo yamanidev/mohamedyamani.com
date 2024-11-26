@@ -26,13 +26,32 @@ const { title, description, pubDate, thumbnail } = Astro.props;
         <article class="blog-post prose prose-sleek max-w-none">
           <h1 class="m-0 mb-[0.25em]">{title}</h1>
           <FormattedDate date={pubDate} className="mb-4 block text-text-muted" />
-          <img
-            src={thumbnail.url}
-            width="748"
-            height="392"
-            alt={thumbnail.alt}
-            class="m-0 mb-8 w-full rounded-md object-cover"
-          />
+          <figure class="mb-8">
+            <img
+              src={thumbnail.url}
+              width="748"
+              height="392"
+              alt={thumbnail.alt}
+              class="m-0 rounded-md object-cover"
+            />
+            {
+              thumbnail.creditText && (
+                <figcaption class="text-center text-xs">
+                  {thumbnail.creditLink ? (
+                    <a
+                      href={thumbnail.creditLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      class="unset not-prose">
+                      {thumbnail.creditText}
+                    </a>
+                  ) : (
+                    thumbnail.creditText
+                  )}
+                </figcaption>
+              )
+            }
+          </figure>
           <slot name="content" />
         </article>
       </div>

@@ -6,6 +6,8 @@ pubDate: 2021-02-15
 thumbnail:
   url: "/images/thumbnails/what-are-algorithms-and-data-structures.jpg"
   alt: "toddler's standing in front of beige concrete stair"
+  creditText: "Picture by Jukan Tateisi on Unsplash"
+  creditLink: "https://unsplash.com/photos/toddlers-standing-in-front-of-beige-concrete-stair-bJhT_8nbUA0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
 ---
 
 Hello there and welcome!!
@@ -113,7 +115,3 @@ That was it ladies and gentlemen, I hope you enjoyed the article!
 Follow me on [Twitter](https://twitter.com/yamanidev) for more!
 
 Have a nice one!
-
----
-
-Thumbnail picture by [Jukan Tateisi](https://unsplash.com/@tateisimikito?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/toddlers-standing-in-front-of-beige-concrete-stair-bJhT_8nbUA0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)

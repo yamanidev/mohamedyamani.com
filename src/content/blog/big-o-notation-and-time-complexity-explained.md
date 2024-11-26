@@ -6,6 +6,8 @@ pubDate: 2021-02-22
 thumbnail:
   url: "/images/thumbnails/big-o-notation-and-time-complexity-explained.jpg"
   alt: "white and gray optical illusion"
+  creditText: "Picture by JJ Ying on Unsplash"
+  creditLink: "https://unsplash.com/photos/white-and-gray-optical-illusion-7JX0-bfiuxQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
 ---
 
 If you've been procrastinating learning Big-O Notation and Time Complexity for an eternity -like myself-, this post is for you.
@@ -149,7 +151,3 @@ That was it ladies and gentlemen, I hope you enjoyed the article!
 Follow my blog and my [Twitter](https://twitter.com/yamanidev) for more!
 
 Have a nice one!
-
----
-
-Thumbnail picture by [JJ Ying](https://unsplash.com/@jjying?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/white-and-gray-optical-illusion-7JX0-bfiuxQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)

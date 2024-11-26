@@ -6,6 +6,8 @@ pubDate: 2021-01-29
 thumbnail:
   url: "/images/thumbnails/what-is-programming.jpg"
   alt: "laptop next to monitor with code on both screens"
+  creditText: "Picture by Pakata Goh on Unsplash"
+  creditLink: "https://unsplash.com/photos/laptop-computer-beside-monitor-with-keyboard-and-mouse-EJMTKCZ00I0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
 ---
 
 Hello there everyone and welcome to my very first blog post 😃!
@@ -48,7 +50,3 @@ I will share with you in the upcoming days my journey with programming and how I
 I hope you liked my introductory post. More articles coming up next so make sure you follow the blog!
 
 Follow me on [Twitter](https://twitter.com/yamanidev) for more!
-
----
-
-Thumbnail picture by [Pakata Goh](https://unsplash.com/@pakata?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/laptop-computer-beside-monitor-with-keyboard-and-mouse-EJMTKCZ00I0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)

@@ -11,7 +11,9 @@ const blog = defineCollection({
     updatedDate: z.coerce.date().optional(),
     thumbnail: z.object({
       url: z.string(),
-      alt: z.string()
+      alt: z.string(),
+      creditText: z.string().optional(),
+      creditLink: z.string().url().optional()
     })
   })
 });
