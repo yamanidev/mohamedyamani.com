@@ -19,8 +19,3 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
-
-# Website content
-# Found in https://github.com/yamanidev/blog-articles
-src/content/blog/*.md
-public/images/*
