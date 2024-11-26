@@ -20,10 +20,10 @@ const latestPosts = (await getCollection("blog"))
             }`}>
             <a href={`/blog/${post.slug}/`}>
               <img
-                src={post.data.image}
+                src={post.data.thumbnail.url}
                 width="748"
                 height="392"
-                alt={post.data.imageAlt}
+                alt={post.data.thumbnail.alt}
                 loading="lazy"
                 class="w-full"
               />

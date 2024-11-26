@@ -9,14 +9,14 @@ import ThemeScript from "./ThemeScript.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
-const { title, description, pubDate, updatedDate, image, imageAlt } = Astro.props;
+const { title, description, pubDate, thumbnail } = Astro.props;
 ---
 
 <html class="theme-sleek" lang="en">
   <head>
     <Favicon />
     <ThemeScript />
-    <BaseHead title={title} description={description} image={image} slot="meta" />
+    <BaseHead title={title} description={description} thumbnailUrl={thumbnail.url} slot="meta" />
   </head>
 
   <body>
@@ -25,21 +25,14 @@ const { title, description, pubDate, updatedDate, image, imageAlt } = Astro.prop
       <div class="mx-auto min-h-screen max-w-3xl px-6 sm:px-8">
         <article class="blog-post prose prose-sleek max-w-none">
           <h1 class="m-0 mb-[0.25em]">{title}</h1>
-          <FormattedDate
-            date={pubDate}
-            className={`block text-text-muted ${image ? "mb-4" : "mb-8"}`}
+          <FormattedDate date={pubDate} className="mb-4 block text-text-muted" />
+          <img
+            src={thumbnail.url}
+            width="748"
+            height="392"
+            alt={thumbnail.alt}
+            class="m-0 mb-8 w-full rounded-md object-cover"
           />
-          {
-            image && (
-              <img
-                src={image}
-                width="748"
-                height="392"
-                alt={imageAlt}
-                class="m-0 mb-8 w-full rounded-md object-cover"
-              />
-            )
-          }
           <slot name="content" />
         </article>
       </div>

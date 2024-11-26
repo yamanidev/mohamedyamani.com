@@ -3,8 +3,9 @@ title: "Your Best Friend Before Google in Python! 👩‍💻"
 description: "I share in this article the first source you should refer to before Google when it comes to Python, it is the built in manual."
 canonicalUrl: "https://mohamedyamani.com/blog/your-best-friend-before-google-in-python/"
 pubDate: 2021-01-29
-image: "/images/thumbnails/your-best-friend-before-google-in-python.jpg"
-imageAlt: "women sitting on rock near body of water"
+thumbnail:
+  url: "/images/thumbnails/your-best-friend-before-google-in-python.jpg"
+  alt: "women sitting on rock near body of water"
 ---
 
 It is no secret (or so I hope) that when programming in any given language, consulting the official documentation (as most of them are up-to-date, extensively detailed and thorough) is crucial to understanding the intricacies and details of the technology we're fiddling with.

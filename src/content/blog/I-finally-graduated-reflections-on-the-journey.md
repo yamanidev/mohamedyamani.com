@@ -3,8 +3,9 @@ title: "I Finally Graduated: Reflections on the Journey"
 description: "In this reflective piece, I share my 5-year long journey of going through a computer science school and the lessons I learned along the way."
 canonicalUrl: "https://mohamedyamani.com/blog/i-finally-graduated-reflections-on-the-journey/"
 pubDate: 2024-11-12
-image: "/images/thumbnails/i-finally-graduated-reflections-on-the-journey.jpg"
-imageAlt: "shallow focus photo of car side mirror"
+thumbnail:
+  url: "/images/thumbnails/i-finally-graduated-reflections-on-the-journey.jpg"
+  alt: "shallow focus photo of car side mirror"
 ---
 
 Last month, I finally got my Master's, after a long 5 years of school.
