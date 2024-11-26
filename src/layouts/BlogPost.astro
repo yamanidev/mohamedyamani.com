@@ -4,6 +4,7 @@ import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
 import FormattedDate from "../components/FormattedDate.astro";
 import Navbar from "../components/Navbar.astro";
+import StayConnected from "../components/StayConnected.astro";
 import Favicon from "./Favicon.astro";
 import ThemeScript from "./ThemeScript.astro";
 
@@ -54,6 +55,7 @@ const { title, description, pubDate, thumbnail } = Astro.props;
           </figure>
           <slot name="content" />
         </article>
+        <StayConnected className="mt-16 px-6 sm:px-8" />
       </div>
     </main>
     <Footer />
