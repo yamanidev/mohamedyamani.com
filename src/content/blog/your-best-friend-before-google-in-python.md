@@ -58,5 +58,3 @@ If you want a brief, concise and official description or documentation about a c
 ### The End!
 
 I hope you enjoyed reading this! Let me know how you find this type of short articles!
-
-Follow me on [Twitter](https://twitter.com/yamanidev) for more!

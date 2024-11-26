@@ -163,6 +163,4 @@ To state other magic methods, we have: `__add__` , `__str__` , `__and__`...
 
 That was it! I hope you learned something new and enjoyed reading!
 
-Follow me on [Twitter](https://twitter.com/yamanidev) for more!
-
 Have a nice one!

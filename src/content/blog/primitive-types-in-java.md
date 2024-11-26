@@ -108,6 +108,4 @@ As we said, we’ll get into all of this in the next article. I pointed this out
 
 That was it! I hope you learned something new and enjoyed reading!
 
-Follow me on [Twitter](https://twitter.com/yamanidev) for more!
-
 Have a nice one!

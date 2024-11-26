@@ -84,10 +84,6 @@ You also get some free photoshoots, and if you don't usually make weird faces, y
 
 ![picture of myself making a weird face giving the talk with a slide titled "who dis" behind me](/images/me-giving-a-talk-devfest-2023.jpg)
 
-## Follow my journey on Twitter
-
-You can find me on Twitter [@yamanidev](https://twitter.com/yamanidev) where I am most active, documenting my journey and sharing what I learn about software engineering and tech in general.
-
 And lastly,
 
 **don't forget to touch some grass.**

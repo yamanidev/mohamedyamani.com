@@ -94,6 +94,4 @@ In order to get our page's style out of the 90's (aka more appealing and modern)
 
 That was a brief introduction to what HTML is, I hope you enjoyed the article!
 
-Follow my blog and my [Twitter](https://twitter.com/yamanidev) for more!
-
 Have a nice one!

@@ -81,6 +81,4 @@ You most probably will meet new people, get exposed to different technologies, l
 
 That was it ladies and gentlemen, I hope you enjoyed the article!
 
-Follow my blog and my [Twitter](https://twitter.com/yamanidev) for more!
-
 Have a nice one!

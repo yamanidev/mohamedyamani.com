@@ -128,6 +128,4 @@ The infrastructure underneath the internet is much more complex than that and is
 
 That was it. I hope you learned something new and enjoyed reading!
 
-Follow my blog and my [Twitter](https://twitter.com/yamanidev) for more!
-
 Have a nice one.

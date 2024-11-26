@@ -112,6 +112,4 @@ With experience, you will get familiarized with that process and like anything e
 
 That was it ladies and gentlemen, I hope you enjoyed the article!
 
-Follow me on [Twitter](https://twitter.com/yamanidev) for more!
-
 Have a nice one!

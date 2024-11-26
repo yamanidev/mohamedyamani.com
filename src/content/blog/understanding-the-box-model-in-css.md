@@ -209,6 +209,4 @@ So that was the box model for you. One of the key concepts of CSS. One topic dow
 
 That was it. I hope you learned something new and enjoyed reading!
 
-Follow my blog and my [Twitter](https://twitter.com/yamanidev) for more!
-
 Have a nice one.

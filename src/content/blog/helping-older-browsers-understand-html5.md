@@ -115,6 +115,4 @@ Problem solved. You can now safely forget about the older browsers!
 
 I hope you learned something new and enjoyed reading!
 
-Follow my blog and my [Twitter](https://twitter.com/yamanidev) for more!
-
 Have a nice one.

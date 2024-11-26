@@ -332,7 +332,3 @@ A couple of weeks ago, I was struggling with this deployment for a client. I nev
 It took me an entire day to debug its configuration and understand what the directives are doing to get the reverse proxy working. What can I say, I am a masochist, so I enjoy this.
 
 I hope you benefited from it.
-
-## Stay in touch
-
-If you'd like to stay updated with my blog, reach out, or see what I am up to, you can find me on [Twitter](https://twitter.com/yamanidev).

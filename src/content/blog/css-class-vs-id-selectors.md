@@ -41,10 +41,10 @@ And the way we can reference them in CSS is by prefixing:
 
 ```css
 #cool-heading {
-    // CSS styles
+  /* CSS styles */
 }
 .cool-text {
-   // CSS styles
+  /* CSS styles */
 }
 ```
 
@@ -136,7 +136,5 @@ console.log(document.getElementById("some-id"));
 ## Thank you for reading!
 
 These were the differences between Classes and IDs, I hope you enjoyed reading the article!
-
-Follow my blog and my [Twitter](https://twitter.com/yamanidev) for more.
 
 Have a nice one!

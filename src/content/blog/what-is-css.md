@@ -138,6 +138,4 @@ And we get the text "Banana man" in blue.
 
 That was a brief introduction to CSS, I hope you enjoyed the article!
 
-Follow my blog and my [Twitter](https://twitter.com/yamanidev) for more!
-
 Have a nice one!
