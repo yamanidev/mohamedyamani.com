@@ -38,7 +38,7 @@ So what's Next.js? Well, it depends how you're using it.
 
 If you're using the framework to **build an SPA** (not SSG), your application is essentially a bunch of **static files** (HTML, CSS and JavaScript).
 
-However, if need SSR/SSG/ISR or any of these [features](https://nextjs.org/docs/pages/building-your-application/deploying/static-exports#unsupported-features), your Next.js application needs to run as a **Node server**.
+However, if you need SSR/SSG/ISR or any of these [features](https://nextjs.org/docs/pages/building-your-application/deploying/static-exports#unsupported-features), your Next.js application needs to run as a **Node server**.
 
 ## Deployment
 
