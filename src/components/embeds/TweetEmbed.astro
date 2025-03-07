@@ -1,0 +1,15 @@
+---
+type Props = {
+  tweetId: string;
+};
+
+const { tweetId } = Astro.props;
+---
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<div class="my-6 flex justify-center">
+  <blockquote class="twitter-tweet">
+    <a href={`https://twitter.com/adambinksmith/status/${tweetId}`}></a>
+  </blockquote>
+</div>
