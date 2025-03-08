@@ -81,60 +81,39 @@
 @layer base {
   /* light theme */
   .theme-sleek {
-    /* Tailwind orange-500 #f97316 */
-    --color-primary-main: 249 115 22;
+    --color-primary-main: theme("colors.orange.500");
+    --color-text-body: theme("colors.gray.700");
+    --color-text-heading: theme("colors.gray.700");
+    --color-text-bold: theme("colors.gray.700");
+    --color-text-muted: theme("colors.gray.500");
+    --color-text-code: theme("colors.black");
+    --color-text-selection: theme("colors.black");
 
-    /* Tailwind gray-700 #374151 */
-    --color-text-body: 55 65 81;
-    /* Tailwind gray-700 #374151 */
-    --color-text-heading: 55 65 81;
-    /* Tailwind gray-700 #374151 */
-    --color-text-bold: 55 65 81;
-    /* Tailwind gray-500 #6b7280 */
-    --color-text-muted: 107 114 128;
-    /* black */
-    --color-text-code: 0 0 0;
-    /* black */
-    --color-text-selection: 0 0 0;
+    --color-bg-body: theme("colors.white");
+    --color-bg-code: theme("colors.orange.50");
+    --color-bg-selection: theme("colors.amber.200");
 
-    /* white */
-    --color-bg-body: 255 255 255;
-    /* Tailwind orange-50 #fff7ed */
-    --color-bg-code: 255 247 237;
-    /* Tailwind amber-200 #fde68a */
-    --color-bg-selection: 253 230 138;
-
-    /* Tailwind orange-100 #ffedd5 */
-    --color-border-code: 255 237 213;
+    --color-border-code: theme("colors.orange.100");
   }
 
   /* dark theme */
   .theme-sleek.dark {
-    /* Tailwind yellow-400 #facc15 */
-    --color-primary-main: 250 204 21;
+    --color-primary-main: theme("colors.yellow.400");
 
-    /* Tailwind stone-300 #d6d3d1 */
-    --color-text-body: 214 211 209;
-    /* white */
-    --color-text-heading: 255 255 255;
-    /* white */
-    --color-text-bold: 255 255 255;
-    /* Tailwind stone-400 #a8a29e */
-    --color-text-muted: 168 162 158;
-    /* black */
-    --color-text-code: 255 255 255;
-    /* black */
-    --color-text-selection: 0 0 0;
+    --color-text-body: theme("colors.stone.300");
+    --color-text-heading: theme("colors.white");
+    --color-text-bold: theme("colors.white");
+    --color-text-muted: theme("colors.stone.400");
+    --color-text-code: theme("colors.white");
+    --color-text-selection: theme("colors.black");
 
-    /* #0e141b */
-    --color-bg-body: 14 20 27;
-    /* Tailwind yellow-500 #eab308 */
-    --color-bg-code: 234 179 8;
-    /* Tailwind yellow-300 #fde047 */
-    --color-bg-selection: 253 224 71;
+    --color-bg-body: #0e141b;
+    --color-bg-code: theme("colors.yellow.500");
+    --color-bg-code-rgb: 234 179 8; /* To use in an rgba() function */
+    --color-bg-selection: theme("colors.yellow.300");
 
-    /* Tailwind yellow-100 #fef9c3 */
-    --color-border-code: 254 243 199;
+    --color-border-code: theme("colors.yellow.100");
+    --color-border-code-rgb: 254 249 195; /* To use in an rgba() function */
   }
 
   :root {
@@ -201,8 +180,8 @@
   }
 
   html.dark code:not(pre code) {
-    background-color: rgb(var(--color-bg-code) / 0.15);
-    border-color: rgb(var(--color-border-code) / 0.15);
+    background-color: rgb(var(--color-bg-code-rgb) / 0.15);
+    border-color: rgb(var(--color-border-code-rgb) / 0.15);
   }
 
   ul:not(.unset):not(:where([class~="prose"] *)) {
@@ -219,7 +198,7 @@
     position: absolute;
     left: 0;
     content: "»";
-    color: rgb(var(--color-text-muted));
+    color: var(--color-text-muted);
   }
 
   ol:not(.unset):not(:where([class~="prose"] *)) {
@@ -227,7 +206,7 @@
   }
 
   ol:not(.unset):not(:where([class~="prose"] *)) > li::marker {
-    color: rgb(var(--color-text-muted));
+    color: var(--color-text-muted);
   }
 
   ul:not(.unset):not(:where([class~="prose"] *)) > li,
