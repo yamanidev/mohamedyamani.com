@@ -26,9 +26,9 @@ You are given a problem to solve in 5 hours "modeled off a real Google engineeri
 
 ### Prizes
 
-- 1st place: 4000$ USD
-- 2nd place: 2000$ USD
-- 3rd place: 1000$ USD
+- 1st place: 4,000$ USD
+- 2nd place: 2,000$ USD
+- 3rd place: 1,000$ USD
 
 Along with some Google products to the top rankings.
 
@@ -48,7 +48,7 @@ Fast forward to the competition day (a week later), it started on 6:30 PM (if I 
 
 We downloaded the PDF and started reading through the 10 pages (it was even longer than last year's which were 5) and it took as around 35 minutes to "absorb" it. Each one of us started thinking through some possible solutions and how to implement them for an hour-ish long. What was weird and funny though is that we all found ourselves forgetting the problem statement mid-way and that costed us a lot of time perhaps due to the many variables, circumstances and conditions to take into account but surely for our lack of practice.
 
-We discovered that one of the test cases given through an example is one of the problems' inputs, so we copied the results of the example's output and submitted it, 1002 points received for that. But guess what, time was already up haha, the scoreboard was frozen, so our score was 0.
+We discovered that one of the test cases given through an example is one of the problems' inputs, so we copied the results of the example's output and submitted it, 1,002 points received for that. But guess what, time was already up haha, the scoreboard was frozen, so our score was 0.
 
 So basically, we yet again did nothing, not even a single implementation of the ideas we had.
 
