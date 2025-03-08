@@ -6,8 +6,6 @@ let attributes: { target?: string; rel?: string } = {};
 
 const domain = import.meta.env.SITE;
 
-console.log(domain);
-
 // Open external links in new tabs
 if (!href.includes(domain) && !href.startsWith("/") && !href.startsWith("#")) {
   attributes["target"] = "_blank";
