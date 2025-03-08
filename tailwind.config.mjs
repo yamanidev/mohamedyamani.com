@@ -19,7 +19,6 @@ export default {
           heading: "rgb(var(--color-text-heading) / <alpha-value>)",
           muted: "rgb(var(--color-text-muted) / <alpha-value>)",
           code: "rgb(var(--color-text-code) / <alpha-value>)",
-          link: "rgb(var(--color-text-link) / <alpha-value>)",
           selection: "rgb(var(--color-text-selection) / <alpha-value>)"
         },
         bg: {
@@ -40,9 +39,9 @@ export default {
               "background-size": "100% 1.5px",
               "background-position": "0 100%",
               "background-image":
-                "linear-gradient(to right, rgb(var(--color-text-link)/1), rgb(var(--color-text-link)/1))",
+                "linear-gradient(to right, rgb(var(--color-primary-main)/1), rgb(var(--color-primary-main)/1))",
               "&:hover": {
-                color: "rgb(var(--color-text-link))"
+                color: "rgb(var(--color-primary-main))"
               }
             },
             "h1, h2, h3, h4, h5": {
@@ -69,7 +68,7 @@ export default {
               "font-family": "Arial",
               content: "'“'",
               "font-size": "4em",
-              color: "rgb(var(--color-text-link))",
+              color: "rgb(var(--color-primary-main))",
               position: "absolute",
               left: "-10px",
               top: "-10px"

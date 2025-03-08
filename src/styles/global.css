@@ -92,8 +92,6 @@
     --color-text-bold: 55 65 81;
     /* Tailwind gray-500 #6b7280 */
     --color-text-muted: 107 114 128;
-    /* Tailwind orange-500 #f97316 */
-    --color-text-link: 249 115 22;
     /* black */
     --color-text-code: 0 0 0;
     /* black */
@@ -123,8 +121,6 @@
     --color-text-bold: 255 255 255;
     /* Tailwind stone-400 #a8a29e */
     --color-text-muted: 168 162 158;
-    /* Tailwind yellow-400 #facc15 */
-    --color-text-link: 250 204 21;
     /* black */
     --color-text-code: 255 255 255;
     /* black */
@@ -184,13 +180,13 @@
     background-position: 0 100%;
     background-image: linear-gradient(
       to right,
-      theme("colors.text.link"),
-      theme("colors.text.link")
+      theme("colors.primary.main"),
+      theme("colors.primary.main")
     );
   }
 
   a:not(.unset):hover {
-    color: theme("colors.text.link");
+    color: theme("colors.primary.main");
   }
 
   code:not(pre code):not(.unset) {
@@ -270,8 +266,8 @@
     transition: all 0.15s ease-in-out;
     background-image: linear-gradient(
       to right,
-      theme("colors.text.link"),
-      theme("colors.text.link")
+      theme("colors.primary.main"),
+      theme("colors.primary.main")
     );
   }
 
