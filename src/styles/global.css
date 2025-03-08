@@ -14,7 +14,7 @@
 
 @font-face {
   font-family: "Lora";
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
   src:
@@ -24,7 +24,7 @@
 
 @font-face {
   font-family: "Lora";
-  font-weight: bold;
+  font-weight: 700;
   font-style: italic;
   font-display: swap;
   src:
@@ -44,7 +44,7 @@
 
 @font-face {
   font-family: "Inter";
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
   src:
@@ -64,7 +64,7 @@
 
 @font-face {
   font-family: "Inter";
-  font-weight: bold;
+  font-weight: 700;
   font-style: italic;
   font-display: swap;
   src:
