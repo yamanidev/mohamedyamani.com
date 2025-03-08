@@ -14,7 +14,7 @@
 
 @font-face {
   font-family: "Lora";
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
   src:
@@ -24,12 +24,52 @@
 
 @font-face {
   font-family: "Lora";
-  font-weight: bold;
+  font-weight: 700;
   font-style: italic;
   font-display: swap;
   src:
     url("/fonts/lora-bold-italic.woff2") format("woff2"),
     url("/fonts/lora-bold-italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("/fonts/inter-regular.woff2") format("woff2"),
+    url("/fonts/inter-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("/fonts/inter-bold.woff2") format("woff2"),
+    url("/fonts/inter-bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src:
+    url("/fonts/inter-italic.woff2") format("woff2"),
+    url("/fonts/inter-italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+  src:
+    url("/fonts/inter-bold-italic.woff2") format("woff2"),
+    url("/fonts/inter-bold-italic.woff") format("woff");
 }
 
 /* 
@@ -102,7 +142,7 @@
   }
 
   :root {
-    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
     background-color: theme("colors.bg.body");
     color: theme("colors.text.body");
     /* base font-size 1px larger for better visibility */
