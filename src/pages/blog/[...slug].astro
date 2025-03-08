@@ -1,5 +1,6 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
+import CustomLink from "../../components/CustomLink.astro";
 import BlogPost from "../../layouts/BlogPost.astro";
 
 export async function getStaticPaths() {
@@ -16,5 +17,5 @@ const { Content } = await post.render();
 ---
 
 <BlogPost {...post.data}>
-  <Content slot="content" />
+  <Content slot="content" components={{ a: CustomLink }} />
 </BlogPost>

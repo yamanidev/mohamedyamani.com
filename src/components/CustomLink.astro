@@ -1,0 +1,20 @@
+---
+// `href` prop from the MDX file
+const { href }: Record<string, any> = Astro.props;
+
+let attributes: { target?: string; rel?: string } = {};
+
+const domain = import.meta.env.SITE;
+
+console.log(domain);
+
+// Open external links in new tabs
+if (!href.includes(domain) && !href.startsWith("/") && !href.startsWith("#")) {
+  attributes["target"] = "_blank";
+  attributes["rel"] = "noopener noreferrer";
+}
+---
+
+<a href={href} {...attributes}>
+  <slot />
+</a>
