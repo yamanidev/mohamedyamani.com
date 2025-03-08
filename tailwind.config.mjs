@@ -11,24 +11,23 @@ export default {
         transparent: "transparent",
         current: "currentColor",
         primary: {
-          main: "rgb(var(--color-primary-main) / <alpha-value>)"
+          main: "var(--color-primary-main)"
         },
         text: {
-          body: "rgb(var(--color-text-body) / <alpha-value>)",
-          bold: "rgb(var(--color-text-bold) / <alpha-value>)",
-          heading: "rgb(var(--color-text-heading) / <alpha-value>)",
-          muted: "rgb(var(--color-text-muted) / <alpha-value>)",
-          code: "rgb(var(--color-text-code) / <alpha-value>)",
-          link: "rgb(var(--color-text-link) / <alpha-value>)",
-          selection: "rgb(var(--color-text-selection) / <alpha-value>)"
+          body: "var(--color-text-body)",
+          bold: "var(--color-text-bold)",
+          heading: "var(--color-text-heading)",
+          muted: "var(--color-text-muted)",
+          code: "var(--color-text-code)",
+          selection: "var(--color-text-selection)"
         },
         bg: {
-          body: "rgb(var(--color-bg-body) / <alpha-value>)",
-          code: "rgb(var(--color-bg-code) / <alpha-value>)",
-          selection: "rgb(var(--color-bg-selection) / <alpha-value>)"
+          body: "var(--color-bg-body)",
+          code: "var(--color-bg-code)",
+          selection: "var(--color-bg-selection)"
         },
         border: {
-          code: "rgb(var(--color-border-code) / <alpha-value>)"
+          code: "var(--color-border-code)"
         }
       },
       typography: (theme) => ({
@@ -40,13 +39,13 @@ export default {
               "background-size": "100% 1.5px",
               "background-position": "0 100%",
               "background-image":
-                "linear-gradient(to right, rgb(var(--color-text-link)/1), rgb(var(--color-text-link)/1))",
+                "linear-gradient(to right, var(--color-primary-main), var(--color-primary-main))",
               "&:hover": {
-                color: "rgb(var(--color-text-link))"
+                color: "var(--color-primary-main)"
               }
             },
             "h1, h2, h3, h4, h5": {
-              color: "rgb(var(--color-text-heading))"
+              color: "var(--color-text-heading)"
             },
             "code::before": {
               content: "none"
@@ -69,7 +68,7 @@ export default {
               "font-family": "Arial",
               content: "'“'",
               "font-size": "4em",
-              color: "rgb(var(--color-text-link))",
+              color: "var(--color-primary-main)",
               position: "absolute",
               left: "-10px",
               top: "-10px"
@@ -87,23 +86,23 @@ export default {
         },
         sleek: {
           css: {
-            "--tw-prose-body": "rgb(var(--color-text-body))",
-            "--tw-prose-headings": "rgb(var(--color-text-heading))",
-            "--tw-prose-lead": "rgb(var(--color-text-body))",
-            "--tw-prose-links": "rgb(var(--color-text-body))",
-            "--tw-prose-bold": "rgb(var(--color-text-bold))",
-            "--tw-prose-counters": "rgb(var(--color-text-body))",
-            "--tw-prose-bullets": "rgb(var(--color-text-body))",
-            "--tw-prose-hr": "rgb(var(--color-text-muted))",
-            "--tw-prose-quotes": "rgb(var(--color-text-body))",
-            "--tw-prose-quote-borders": "rgb(var(--color-primary-main))",
-            "--tw-prose-captions": "rgb(var(--color-primary-heading))",
-            "--tw-prose-quote-captions": "rgb(var(--color-primary-heading))",
-            "--tw-prose-code": "rgb(var(--color-text-code))",
-            "--tw-prose-pre-code": "rgb(var(--color-text-code))",
-            "--tw-prose-pre-bg": "rgb(var(--color-bg-code))",
-            "--tw-prose-th-borders": "rgb(var(--color-text-muted))",
-            "--tw-prose-td-borders": "rgb(var(--color-text-muted))"
+            "--tw-prose-body": "var(--color-text-body)",
+            "--tw-prose-headings": "var(--color-text-heading)",
+            "--tw-prose-lead": "var(--color-text-body)",
+            "--tw-prose-links": "var(--color-text-body)",
+            "--tw-prose-bold": "var(--color-text-bold)",
+            "--tw-prose-counters": "var(--color-text-body)",
+            "--tw-prose-bullets": "var(--color-text-body)",
+            "--tw-prose-hr": "var(--color-text-muted)",
+            "--tw-prose-quotes": "var(--color-text-body)",
+            "--tw-prose-quote-borders": "var(--color-primary-main)",
+            "--tw-prose-captions": "var(--color-primary-heading)",
+            "--tw-prose-quote-captions": "var(--color-primary-heading)",
+            "--tw-prose-code": "var(--color-text-code)",
+            "--tw-prose-pre-code": "var(--color-text-code)",
+            "--tw-prose-pre-bg": "var(--color-bg-code)",
+            "--tw-prose-th-borders": "var(--color-text-muted)",
+            "--tw-prose-td-borders": "var(--color-text-muted)"
           }
         }
       })

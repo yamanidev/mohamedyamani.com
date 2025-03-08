@@ -15,7 +15,7 @@ const latestPosts = (await getCollection("blog"))
       {
         latestPosts.map((post, index) => (
           <article
-            class={`group overflow-hidden rounded-md bg-slate-100 dark:bg-slate-900 ${
+            class={`group overflow-hidden rounded-md bg-neutral-100 dark:bg-slate-900 ${
               index === 0 ? "sm:col-span-2" : "col-span-1"
             }`}>
             <a href={`/blog/${post.slug}/`}>

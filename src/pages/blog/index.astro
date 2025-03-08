@@ -20,7 +20,7 @@ const posts = (await getCollection("blog")).sort(
             return (
               <li class="mb-3 grid grid-cols-[1fr] items-start md:grid-cols-[1fr_auto] md:gap-2">
                 <div class="title">
-                  <a href={`/blog/${post.slug}/`} class="unset hover:text-text-link">
+                  <a href={`/blog/${post.slug}/`} class="unset hover:text-primary-main">
                     {post.data.title}
                   </a>
                 </div>
