@@ -7,7 +7,7 @@ thumbnail:
   url: "/images/thumbnails/linux-fundamentals-file-permissions-and-ownership.jpg"
   alt: "a window with rain drops on the glass"
   creditText: "Picture by Jr Korpa on Unsplash"
-  creditLink: "https://unsplash.com/photos/a-window-with-rain-drops-on-the-glass-E2i7Hftb_rI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+  creditLink: "https://unsplash.com/photos/a-window-with-rain-drops-on-the-glass-E2i7Hftb_rI?utm_medium=referral&utm_source=mohamedyamani.com"
 ---
 
 In my last article [Explaining the ls command and beyond](https://mohamedyamani.com/blog/linux-fundamentals-explaining-the-ls-command-and-beyond/), I broke down the `ls` command, how to interpret the output, and introduced some command line concepts. It was quite the jargon, and to some of you, it was unfamiliar.

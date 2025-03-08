@@ -7,7 +7,7 @@ thumbnail:
   url: "/images/thumbnails/my-first-experience-in-google-hashcode.jpg"
   alt: "Google logo neon light signage"
   creditText: "Picture by Mitchell Luo on Unsplash"
-  creditLink: "https://unsplash.com/photos/google-logo-neon-light-signage-jz4ca36oJ_M?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+  creditLink: "https://unsplash.com/photos/google-logo-neon-light-signage-jz4ca36oJ_M?utm_medium=referral&utm_source=mohamedyamani.com"
 ---
 
 We all know how important practicing is for learning crafts and honing skills. You become a better chef by cooking more often, a great painter by drawing and a skilled programmer by writing more code.

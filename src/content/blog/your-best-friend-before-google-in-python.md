@@ -7,7 +7,7 @@ thumbnail:
   url: "/images/thumbnails/your-best-friend-before-google-in-python.jpg"
   alt: "women sitting on rock near body of water"
   creditText: "Picture by Roberto Nickson on Unsplash"
-  creditLink: "https://unsplash.com/photos/women-sitting-on-rock-near-body-of-water-vRAYwESFc-U?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+  creditLink: "https://unsplash.com/photos/women-sitting-on-rock-near-body-of-water-vRAYwESFc-U?utm_medium=referral&utm_source=mohamedyamani.com"
 ---
 
 It is no secret (or so I hope) that when programming in any given language, consulting the official documentation (as most of them are up-to-date, extensively detailed and thorough) is crucial to understanding the intricacies and details of the technology we're fiddling with.

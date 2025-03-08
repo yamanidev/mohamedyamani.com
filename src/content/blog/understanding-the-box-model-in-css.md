@@ -7,7 +7,7 @@ thumbnail:
   url: "/images/thumbnails/understanding-the-box-model-in-css.jpg"
   alt: "white box on white table"
   creditText: "Picture by Kelli McClintock on Unsplash"
-  creditLink: "https://unsplash.com/photos/white-box-on-white-table-GopRYASfsOc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+  creditLink: "https://unsplash.com/photos/white-box-on-white-table-GopRYASfsOc?utm_medium=referral&utm_source=mohamedyamani.com"
 ---
 
 ## Table of content

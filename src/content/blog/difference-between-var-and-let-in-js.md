@@ -7,7 +7,7 @@ thumbnail:
   url: "/images/thumbnails/difference-between-var-and-let-in-js.jpg"
   alt: "javascript code on laptop screen"
   creditText: "Picture by Pankaj Patel on Unsplash"
-  creditLink: "https://unsplash.com/photos/person-sitting-in-front-of-computer-1IW4HQuauSU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+  creditLink: "https://unsplash.com/photos/person-sitting-in-front-of-computer-1IW4HQuauSU?utm_medium=referral&utm_source=mohamedyamani.com"
 ---
 
 One of the features that ES6 (ECMAScript 2015) introduced was **let** and **const** which raised some confusion between **var** and **let**. If we could already declare variables with **var** why do we need **let**? What's the difference between them? Today we will discover that!

@@ -7,7 +7,7 @@ thumbnail:
   url: "/images/thumbnails/what-are-algorithms-and-data-structures.jpg"
   alt: "toddler's standing in front of beige concrete stair"
   creditText: "Picture by Jukan Tateisi on Unsplash"
-  creditLink: "https://unsplash.com/photos/toddlers-standing-in-front-of-beige-concrete-stair-bJhT_8nbUA0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+  creditLink: "https://unsplash.com/photos/toddlers-standing-in-front-of-beige-concrete-stair-bJhT_8nbUA0?utm_medium=referral&utm_source=mohamedyamani.com"
 ---
 
 Hello there and welcome!!

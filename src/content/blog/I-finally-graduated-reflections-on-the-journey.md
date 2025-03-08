@@ -7,7 +7,7 @@ thumbnail:
   url: "/images/thumbnails/i-finally-graduated-reflections-on-the-journey.jpg"
   alt: "shallow focus photo of car side mirror"
   creditText: "Picture by Tim Trad on Unsplash"
-  creditLink: "https://unsplash.com/photos/shallow-focus-photo-of-car-side-mirror--TcTakRTNfM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+  creditLink: "https://unsplash.com/photos/shallow-focus-photo-of-car-side-mirror--TcTakRTNfM?utm_medium=referral&utm_source=mohamedyamani.com"
 ---
 
 Last month, I finally got my Master's, after a long 5 years of school.

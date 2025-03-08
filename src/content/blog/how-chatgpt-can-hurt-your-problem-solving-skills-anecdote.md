@@ -7,7 +7,7 @@ thumbnail:
   url: "/images/thumbnails/how-chatgpt-can-hurt-your-problem-solving-skills-anecdote.jpg"
   alt: "a person's shadow with a yellow string in the air"
   creditText: "Picture by Jr Korpa on Unsplash"
-  creditLink: "https://unsplash.com/photos/a-persons-shadow-with-a-yellow-string-in-the-air-u3yyYID6eP4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+  creditLink: "https://unsplash.com/photos/a-persons-shadow-with-a-yellow-string-in-the-air-u3yyYID6eP4?utm_medium=referral&utm_source=mohamedyamani.com"
 ---
 
 ## Introduction

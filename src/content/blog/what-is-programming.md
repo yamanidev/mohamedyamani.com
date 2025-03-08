@@ -7,7 +7,7 @@ thumbnail:
   url: "/images/thumbnails/what-is-programming.jpg"
   alt: "laptop next to monitor with code on both screens"
   creditText: "Picture by Pakata Goh on Unsplash"
-  creditLink: "https://unsplash.com/photos/laptop-computer-beside-monitor-with-keyboard-and-mouse-EJMTKCZ00I0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+  creditLink: "https://unsplash.com/photos/laptop-computer-beside-monitor-with-keyboard-and-mouse-EJMTKCZ00I0?utm_medium=referral&utm_source=mohamedyamani.com"
 ---
 
 Hello there everyone and welcome to my very first blog post 😃!

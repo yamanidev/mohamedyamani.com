@@ -7,7 +7,7 @@ thumbnail:
   url: "/images/thumbnails/linux-fundamentals-explaining-the-ls-command-and-beyond.jpg"
   alt: "blue and white abstract painting"
   creditText: "Picture by Diane Picchiottino on Unsplash"
-  creditLink: "https://unsplash.com/photos/blue-and-white-abstract-painting-Avy65GwRDUU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+  creditLink: "https://unsplash.com/photos/blue-and-white-abstract-painting-Avy65GwRDUU?utm_medium=referral&utm_source=mohamedyamani.com"
 ---
 
 If you ever used a Linux system before, chances are you're familiar with the `ls` command, or at least you know of it. Through understanding the output of this command, you can learn some fundamental concepts in Linux (or operating systems in general) like user management and file permissions. It's kinda fun, I promise.

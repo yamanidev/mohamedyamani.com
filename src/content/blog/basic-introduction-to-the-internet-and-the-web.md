@@ -7,7 +7,7 @@ thumbnail:
   url: "/images/thumbnails/basic-introduction-to-the-internet-and-the-web.jpg"
   alt: "earth from outer space"
   creditText: Picture by NASA on Unsplash
-  creditLink: "https://unsplash.com/photos/photo-of-outer-space-Q1p7bh3SHj8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+  creditLink: "https://unsplash.com/photos/photo-of-outer-space-Q1p7bh3SHj8?&utm_medium=referral&utm_source=mohamedyamani.com"
 ---
 
 ## Table of content

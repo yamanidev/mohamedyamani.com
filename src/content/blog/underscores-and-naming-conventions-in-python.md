@@ -7,7 +7,7 @@ thumbnail:
   url: "/images/thumbnails/underscores-and-naming-conventions-in-python.jpg"
   alt: "two men using computer and laptop"
   creditText: "Picture by Alvaro Reyes on Unsplash"
-  creditLink: "https://unsplash.com/photos/two-men-using-computer-and-laptop-fSWOVc3e06w?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+  creditLink: "https://unsplash.com/photos/two-men-using-computer-and-laptop-fSWOVc3e06w?utm_medium=referral&utm_source=mohamedyamani.com"
 ---
 
 ## Introduction

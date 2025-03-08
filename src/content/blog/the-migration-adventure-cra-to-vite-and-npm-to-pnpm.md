@@ -7,7 +7,7 @@ thumbnail:
   url: "/images/thumbnails/the-migration-adventure-cra-to-vite-and-npm-to-pnpm.jpg"
   alt: "purple and white abstract painting"
   creditText: "Picture by FlyD on Unsplash"
-  creditLink: "https://unsplash.com/photos/purple-and-white-abstract-painting-3TtVnxJHfhw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+  creditLink: "https://unsplash.com/photos/purple-and-white-abstract-painting-3TtVnxJHfhw?utm_medium=referral&utm_source=mohamedyamani.com"
 ---
 
 As I was migrating a client's project from CRA to Vite I encountered plenty of issues. Some of which were due to certain imports that are specific to Webpack, the other ones were due to me using `pnpm` as opposed to `npm`.

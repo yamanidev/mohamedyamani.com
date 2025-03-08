@@ -7,7 +7,7 @@ thumbnail:
   url: "/images/thumbnails/primitive-types-in-java.jpg"
   alt: "laptop monitor showing java class file on IDE"
   creditText: "Picture by orbtal media on Unsplash"
-  creditLink: "https://unsplash.com/photos/monitor-showing-computer-application-1td5Iq5IvNc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+  creditLink: "https://unsplash.com/photos/monitor-showing-computer-application-1td5Iq5IvNc?utm_medium=referral&utm_source=mohamedyamani.com"
 ---
 
 ## Introduction

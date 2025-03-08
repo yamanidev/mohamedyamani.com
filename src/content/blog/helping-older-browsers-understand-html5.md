@@ -7,7 +7,7 @@ thumbnail:
   url: "/images/thumbnails/helping-older-browsers-understand-html5.jpg"
   alt: "abandoned old black sedan with broken windows"
   creditText: "Picture by Hans Eiskonen on Unsplash"
-  creditLink: "https://unsplash.com/photos/black-sedan-D9TK2X0Nj-U?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+  creditLink: "https://unsplash.com/photos/black-sedan-D9TK2X0Nj-U?utm_medium=referral&utm_source=mohamedyamani.com"
 ---
 
 ## Table of content

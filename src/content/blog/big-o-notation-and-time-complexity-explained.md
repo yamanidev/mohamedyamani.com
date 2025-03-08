@@ -7,7 +7,7 @@ thumbnail:
   url: "/images/thumbnails/big-o-notation-and-time-complexity-explained.jpg"
   alt: "white and gray optical illusion"
   creditText: "Picture by JJ Ying on Unsplash"
-  creditLink: "https://unsplash.com/photos/white-and-gray-optical-illusion-7JX0-bfiuxQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+  creditLink: "https://unsplash.com/photos/white-and-gray-optical-illusion-7JX0-bfiuxQ?utm_medium=referral&utm_source=mohamedyamani.com"
 ---
 
 If you've been procrastinating learning Big-O Notation and Time Complexity for an eternity -like myself-, this post is for you.
