@@ -9,7 +9,7 @@ export default defineConfig({
   site: "https://mohamedyamani.com/",
   markdown: {
     shikiConfig: {
-      theme: "dark-plus"
+      theme: "github-dark-dimmed"
     }
   },
   integrations: [mdx(), sitemap(), tailwind()]
