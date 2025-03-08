@@ -107,7 +107,7 @@
     --color-text-code: theme("colors.white");
     --color-text-selection: theme("colors.black");
 
-    --color-bg-body: #0e141b;
+    --color-bg-body: #030712;
     --color-bg-code: theme("colors.yellow.500");
     --color-bg-code-rgb: 234 179 8; /* To use in an rgba() function */
     --color-bg-selection: theme("colors.yellow.300");
