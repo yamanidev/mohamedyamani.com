@@ -81,7 +81,7 @@
 @layer base {
   /* light theme */
   .theme-sleek {
-    --color-primary-main: theme("colors.orange.500");
+    --color-primary-main: theme("colors.blue.500");
     --color-text-body: theme("colors.gray.700");
     --color-text-heading: theme("colors.gray.700");
     --color-text-bold: theme("colors.gray.700");
@@ -90,15 +90,15 @@
     --color-text-selection: theme("colors.black");
 
     --color-bg-body: theme("colors.white");
-    --color-bg-code: theme("colors.orange.50");
+    --color-bg-code: theme("colors.blue.50");
     --color-bg-selection: theme("colors.amber.200");
 
-    --color-border-code: theme("colors.orange.100");
+    --color-border-code: theme("colors.blue.100");
   }
 
   /* dark theme */
   .theme-sleek.dark {
-    --color-primary-main: theme("colors.yellow.400");
+    --color-primary-main: theme("colors.sky.400");
 
     --color-text-body: theme("colors.stone.300");
     --color-text-heading: theme("colors.white");
@@ -108,12 +108,12 @@
     --color-text-selection: theme("colors.black");
 
     --color-bg-body: #030712;
-    --color-bg-code: theme("colors.yellow.500");
-    --color-bg-code-rgb: 234 179 8; /* To use in an rgba() function */
-    --color-bg-selection: theme("colors.yellow.300");
+    --color-bg-code: theme("colors.sky.500");
+    --color-bg-code-rgb: 14 165 233; /* To use in an rgba() function */
+    --color-bg-selection: theme("colors.sky.300");
 
-    --color-border-code: theme("colors.yellow.100");
-    --color-border-code-rgb: 254 249 195; /* To use in an rgba() function */
+    --color-border-code: theme("colors.sky.100");
+    --color-border-code-rgb: 224 242 254; /* To use in an rgba() function */
   }
 
   :root {
