@@ -83,7 +83,7 @@ export default {
             }
           }
         },
-        sleek: {
+        theme: {
           css: {
             "--tw-prose-body": "var(--color-text-body)",
             "--tw-prose-headings": "var(--color-text-bold)",
