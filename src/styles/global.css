@@ -88,7 +88,7 @@
   }
 
   /* dark theme */
-  .theme {
+  .theme.dark {
     --color-text-body: theme("colors.stone.300");
     --color-text-bold: theme("colors.white");
     --color-text-muted: theme("colors.stone.400");
