@@ -101,6 +101,7 @@
     --color-text-code: theme("colors.black");
 
     --color-bg-body: theme("colors.white");
+    --color-bg-body-rgb: 255 255 255; /* To use in an rgba() function */
     --color-bg-code: theme("colors.blue.50");
     --color-bg-selection: theme("colors.amber.200");
 
@@ -115,6 +116,7 @@
     --color-text-code: theme("colors.white");
 
     --color-bg-body: #030712;
+    --color-bg-body-rgb: 3 7 18; /* To use in an rgba() function */
     --color-bg-code: theme("colors.sky.500");
     --color-bg-code-rgb: 14 165 233; /* To use in an rgba() function */
     --color-bg-selection: theme("colors.sky.300");
