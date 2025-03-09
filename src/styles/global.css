@@ -103,9 +103,7 @@
     --color-bg-body: theme("colors.white");
     --color-bg-body-rgb: 255 255 255; /* To use in an rgba() function */
     --color-bg-code: theme("colors.blue.50");
-    --color-bg-selection: theme("colors.amber.200");
-
-    --color-border-code: theme("colors.blue.100");
+    --color-bg-selection: theme("colors.blue.200");
   }
 
   /* dark theme */
@@ -117,17 +115,17 @@
 
     --color-bg-body: #030712;
     --color-bg-body-rgb: 3 7 18; /* To use in an rgba() function */
-    --color-bg-code: theme("colors.sky.500");
-    --color-bg-code-rgb: 14 165 233; /* To use in an rgba() function */
-    --color-bg-selection: theme("colors.sky.300");
-
-    --color-border-code: theme("colors.sky.100");
-    --color-border-code-rgb: 224 242 254; /* To use in an rgba() function */
+    --color-bg-code: theme("colors.blue.500");
+    --color-bg-code-rgb: 59 130 246; /* To use in an rgba() function */
+    --color-bg-selection: theme("colors.blue.300");
   }
 
   :root {
     --color-primary-main: theme("colors.blue.500");
     --color-text-selection: theme("colors.black");
+
+    --color-border-code: theme("colors.blue.100");
+    --color-border-code-rgb: 219 234 254; /* To use in an rgba() function */
 
     font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
     background-color: theme("colors.bg.body");
