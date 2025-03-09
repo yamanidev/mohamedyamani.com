@@ -72,22 +72,13 @@
     url("/fonts/inter-bold-italic.woff") format("woff");
 }
 
-/* 
-    Tailwind colors listed here: https://tailwindcss.com/docs/customizing-colors
-    
-    Why colors are written in rgb format (255 255 255) instead of hex (#ffffff)
-    https://tailwindcss.com/docs/customizing-colors#using-css-variables 
-*/
 @layer base {
   /* light theme */
-  .theme-sleek {
-    --color-primary-main: theme("colors.blue.500");
+  .theme {
     --color-text-body: theme("colors.gray.700");
-    --color-text-heading: theme("colors.gray.700");
     --color-text-bold: theme("colors.gray.700");
     --color-text-muted: theme("colors.gray.500");
     --color-text-code: theme("colors.black");
-    --color-text-selection: theme("colors.black");
 
     --color-bg-body: theme("colors.white");
     --color-bg-code: theme("colors.blue.50");
@@ -97,15 +88,11 @@
   }
 
   /* dark theme */
-  .theme-sleek.dark {
-    --color-primary-main: theme("colors.sky.400");
-
+  .theme {
     --color-text-body: theme("colors.stone.300");
-    --color-text-heading: theme("colors.white");
     --color-text-bold: theme("colors.white");
     --color-text-muted: theme("colors.stone.400");
     --color-text-code: theme("colors.white");
-    --color-text-selection: theme("colors.black");
 
     --color-bg-body: #030712;
     --color-bg-code: theme("colors.sky.500");
@@ -117,6 +104,9 @@
   }
 
   :root {
+    --color-primary-main: theme("colors.blue.500");
+    --color-text-selection: theme("colors.black");
+
     font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
     background-color: theme("colors.bg.body");
     color: theme("colors.text.body");
