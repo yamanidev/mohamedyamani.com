@@ -4,7 +4,7 @@ import NavbarLink from "./NavbarLink.astro";
 import Logo from "./svg/Logo.astro";
 ---
 
-<header class="sticky inset-x-0 top-0 z-10 py-6 backdrop-blur-xl">
+<header class="sticky inset-x-0 top-0 z-10 py-4 backdrop-blur-xl sm:py-6">
   <div class="mx-auto flex max-w-6xl justify-between px-6 sm:px-8">
     <a
       class="unset absolute -top-[100rem] left-[50%] z-10 translate-x-[-50%] bg-white px-8 py-2 text-black focus:top-[initial]"
@@ -15,8 +15,20 @@ import Logo from "./svg/Logo.astro";
       <Logo width="27" height="50" />
       <span>Mohamed Yamani</span>
     </a>
-    <div class="flex items-center gap-8">
-      <div class="flex items-center gap-4 text-text-bold max-[375px]:hidden">
+
+    <div class="flex items-center gap-2 sm:gap-4">
+      <button id="menuToggleButton" class="text-text-bold focus:outline-none md:hidden">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7">
+          </path>
+        </svg>
+      </button>
+
+      <div class="hidden items-center gap-8 md:flex">
         <nav class="text-text-bold">
           <ul class="unset flex gap-4 [&>li]:p-0">
             <li>
@@ -34,4 +46,29 @@ import Logo from "./svg/Logo.astro";
       <DarkModeToggle />
     </div>
   </div>
+
+  <div id="mobileMenu" class="hidden px-6 pt-4 sm:px-8 md:hidden">
+    <nav class="text-text-bold">
+      <ul class="unset [&>li]:px-0">
+        <li class="py-4">
+          <NavbarLink href="/">Home</NavbarLink>
+        </li>
+        <li class="py-4">
+          <NavbarLink href="/blog/">Blog</NavbarLink>
+        </li>
+        <li class="py-4">
+          <NavbarLink href="/contact/">Contact</NavbarLink>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </header>
+
+<script>
+  const menuToggleButton = document.getElementById("menuToggleButton") as HTMLButtonElement;
+  const mobileMenu = document.getElementById("mobileMenu") as HTMLDivElement;
+
+  menuToggleButton.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
