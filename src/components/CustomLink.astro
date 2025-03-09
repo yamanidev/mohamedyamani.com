@@ -13,6 +13,6 @@ if (!href.includes(domain) && !href.startsWith("/") && !href.startsWith("#")) {
 }
 ---
 
-<a href={href} {...attributes}>
-  <slot />
-</a>
+<!-- prettier-ignore-start -->
+<a href={href} {...attributes}><slot /></a>
+<!-- prettier-ignore-end -->
