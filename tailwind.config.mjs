@@ -16,7 +16,6 @@ export default {
         text: {
           body: "var(--color-text-body)",
           bold: "var(--color-text-bold)",
-          heading: "var(--color-text-heading)",
           muted: "var(--color-text-muted)",
           code: "var(--color-text-code)",
           selection: "var(--color-text-selection)"
@@ -45,7 +44,7 @@ export default {
               }
             },
             "h1, h2, h3, h4, h5": {
-              color: "var(--color-text-heading)"
+              color: "var(--color-text-bold)"
             },
             "code::before": {
               content: "none"
@@ -87,7 +86,7 @@ export default {
         sleek: {
           css: {
             "--tw-prose-body": "var(--color-text-body)",
-            "--tw-prose-headings": "var(--color-text-heading)",
+            "--tw-prose-headings": "var(--color-text-bold)",
             "--tw-prose-lead": "var(--color-text-body)",
             "--tw-prose-links": "var(--color-text-body)",
             "--tw-prose-bold": "var(--color-text-bold)",
@@ -96,8 +95,8 @@ export default {
             "--tw-prose-hr": "var(--color-text-muted)",
             "--tw-prose-quotes": "var(--color-text-body)",
             "--tw-prose-quote-borders": "var(--color-primary-main)",
-            "--tw-prose-captions": "var(--color-primary-heading)",
-            "--tw-prose-quote-captions": "var(--color-primary-heading)",
+            "--tw-prose-captions": "var(--color-primary-bold)",
+            "--tw-prose-quote-captions": "var(--color-primary-bold)",
             "--tw-prose-code": "var(--color-text-code)",
             "--tw-prose-pre-code": "var(--color-text-code)",
             "--tw-prose-pre-bg": "var(--color-bg-code)",
