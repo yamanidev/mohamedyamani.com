@@ -72,12 +72,6 @@
     url("/fonts/inter-bold-italic.woff") format("woff");
 }
 
-/* 
-    Tailwind colors listed here: https://tailwindcss.com/docs/customizing-colors
-    
-    Why colors are written in rgb format (255 255 255) instead of hex (#ffffff)
-    https://tailwindcss.com/docs/customizing-colors#using-css-variables 
-*/
 @layer base {
   /* light theme */
   .theme-sleek {
