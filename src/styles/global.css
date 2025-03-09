@@ -81,7 +81,6 @@
 @layer base {
   /* light theme */
   .theme-sleek {
-    --color-primary-main: theme("colors.blue.500");
     --color-text-body: theme("colors.gray.700");
     --color-text-heading: theme("colors.gray.700");
     --color-text-bold: theme("colors.gray.700");
@@ -98,8 +97,6 @@
 
   /* dark theme */
   .theme-sleek.dark {
-    --color-primary-main: theme("colors.sky.400");
-
     --color-text-body: theme("colors.stone.300");
     --color-text-heading: theme("colors.white");
     --color-text-bold: theme("colors.white");
@@ -117,6 +114,8 @@
   }
 
   :root {
+    --color-primary-main: theme("colors.blue.500");
+
     font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
     background-color: theme("colors.bg.body");
     color: theme("colors.text.body");
