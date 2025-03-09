@@ -1,17 +1,21 @@
 ---
 import DarkModeToggle from "./DarkModeToggle.astro";
 import NavbarLink from "./NavbarLink.astro";
+import Logo from "./svg/Logo.astro";
 ---
 
-<header class="sticky inset-x-0 top-0 z-10 py-8 backdrop-blur-xl">
+<header class="sticky inset-x-0 top-0 z-10 py-6 backdrop-blur-xl">
   <div class="mx-auto flex max-w-6xl justify-between px-6 sm:px-8">
     <a
       class="unset absolute -top-[100rem] left-[50%] z-10 translate-x-[-50%] bg-white px-8 py-2 text-black focus:top-[initial]"
       href="#main">
       Skip to content
     </a>
-    <a href="/" class="unset font-lora font-bold">MY</a>
-    <div class="flex gap-8">
+    <a href="/" class="unset flex items-center gap-2 font-lora font-bold italic text-text-bold">
+      <Logo width="27" height="50" />
+      <span>Mohamed Yamani</span>
+    </a>
+    <div class="flex items-center gap-8">
       <div class="flex items-center gap-4 text-text-bold max-[375px]:hidden">
         <nav class="text-text-bold">
           <ul class="unset flex gap-4 [&>li]:p-0">
