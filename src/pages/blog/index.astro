@@ -35,7 +35,10 @@ const posts = (await getCollection("blog")).sort(
                   class="unset mt-2.5 inline-block font-semibold leading-snug underline hover:text-primary-main lg:text-xl lg:leading-snug">
                   {post.data.title}
                 </a>
-                <FormattedDate date={post.data.pubDate} className="text-sm text-text-muted" />
+                <FormattedDate
+                  date={post.data.pubDate}
+                  className="text-sm text-text-muted mt-1 block"
+                />
                 <ul class="unset mt-2 flex gap-2">
                   {post.data.tags.map((tag) => (
                     <li class="pl-0">
