@@ -57,7 +57,7 @@ const posts = (await getCollection("blog")).filter((post) => post.data.tags.incl
                 <a
                   href={`/blog/${post.slug}/`}
                   aria-label={`Read more about ${post.data.title}`}
-                  class="unset mt-2.5 inline-block font-semibold leading-snug underline transition hover:text-primary-main lg:text-xl lg:leading-snug">
+                  class="unset mt-2.5 inline-block font-semibold leading-snug transition hover:text-primary-main hover:underline lg:text-xl lg:leading-snug">
                   {post.data.title}
                 </a>
                 <FormattedDate
