@@ -10,3 +10,25 @@ export const MY_NAME = "Mohamed Yamani";
 // setup in astro.config.mjs
 const BASE_URL = new URL(import.meta.env.SITE);
 export const SITE_URL = BASE_URL.origin;
+
+export const TAGS_MAPPING: Record<string, string> = {
+  networking: "Networking",
+  basics: "Basics",
+  css: "CSS",
+  javascript: "JavaScript",
+  personal: "Personal",
+  learning: "Learning",
+  html: "HTML",
+  "browser-compatibility": "Browser Compatibility",
+  llms: "LLMs",
+  ai: "AI",
+  nextjs: "Next.js",
+  devops: "DevOps",
+  linux: "Linux",
+  java: "Java",
+  miscellaneous: "Miscellaneous",
+  python: "Python",
+  algorithms: "Algorithms",
+  "data-structures": "Data Structures",
+  "tips-and-tricks": "Tips & Tricks"
+};
