@@ -30,5 +30,6 @@ export const TAGS_MAPPING: Record<string, string> = {
   python: "Python",
   algorithms: "Algorithms",
   "data-structures": "Data Structures",
-  "tips-and-tricks": "Tips & Tricks"
+  "tips-and-tricks": "Tips & Tricks",
+  "web-development": "Web Development"
 };
