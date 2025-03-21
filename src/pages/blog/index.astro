@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 import BaseHead from "../../components/BaseHead.astro";
 import FormattedDate from "../../components/FormattedDate.astro";
-import { SITE_DESCRIPTION, SITE_TITLE } from "../../consts";
+import { SITE_DESCRIPTION, SITE_TITLE, TAGS_MAPPING } from "../../consts";
 import PageLayout from "../../layouts/PageLayout.astro";
 
 const posts = (await getCollection("blog")).sort(
@@ -14,24 +14,45 @@ const posts = (await getCollection("blog")).sort(
   <BaseHead title={`Blog | ${SITE_TITLE}`} description={SITE_DESCRIPTION} slot="meta" />
   <section slot="main" class="py-10">
     <div class="mx-auto max-w-6xl px-6 sm:px-8">
-      <ul>
+      <div class="grid justify-center gap-10 md:grid-cols-2 md:gap-x-4 md:gap-y-20">
         {
           posts.map((post) => {
             return (
-              <li class="mb-3 grid grid-cols-[1fr] items-start md:grid-cols-[1fr_auto] md:gap-2">
-                <div>
-                  <a href={`/blog/${post.slug}/`} class="unset hover:text-primary-main">
-                    {post.data.title}
-                  </a>
-                </div>
-                <div class="text-sm italic text-text-muted">
-                  <FormattedDate date={post.data.pubDate} />
-                </div>
-              </li>
+              <article class="mb-3 rounded-md p-2">
+                <a href={`/blog/${post.slug}`} aria-label={`Read more about ${post.data.title}`}>
+                  <img
+                    width="552"
+                    height="289"
+                    src={post.data.thumbnail.url}
+                    alt={post.data.thumbnail.alt}
+                    loading="lazy"
+                    class="max-w-full rounded-md"
+                  />
+                </a>
+                <a
+                  href={`/blog/${post.slug}/`}
+                  aria-label={`Read more about ${post.data.title}`}
+                  class="unset mt-2.5 inline-block font-semibold leading-snug underline hover:text-primary-main lg:text-xl lg:leading-snug">
+                  {post.data.title}
+                </a>
+                <FormattedDate date={post.data.pubDate} className="text-sm text-text-muted" />
+                <ul class="unset mt-2 flex gap-2">
+                  {post.data.tags.map((tag) => (
+                    <li class="pl-0">
+                      <a
+                        href={`/blog/${tag}`}
+                        aria-label={`See all posts tagged with ${TAGS_MAPPING[tag] ?? tag}`}
+                        class="unset rounded-full border border-primary-main px-4 py-1 text-xs font-bold hover:bg-primary-main hover:text-white">
+                        {TAGS_MAPPING[tag] ?? tag}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </article>
             );
           })
         }
-      </ul>
+      </div>
     </div>
   </section>
 </PageLayout>
