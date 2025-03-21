@@ -39,7 +39,7 @@ const posts = (await getCollection("blog")).sort(
                   date={post.data.pubDate}
                   className="text-sm text-text-muted mt-1 block"
                 />
-                <ul class="unset mt-2 flex gap-2">
+                <ul class="unset mt-2 flex flex-wrap gap-x-2 gap-y-1">
                   {post.data.tags.map((tag) => (
                     <li class="pl-0">
                       <a
