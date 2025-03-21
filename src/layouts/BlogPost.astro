@@ -24,7 +24,7 @@ const { title, description, pubDate, thumbnail } = Astro.props;
     <Navbar />
     <main id="main" class="py-20">
       <div class="mx-auto min-h-screen max-w-3xl px-6 sm:px-8">
-        <article class="blog-post prose-theme prose max-w-none prose-img:mx-auto">
+        <article class="blog-post prose prose-theme max-w-none prose-img:mx-auto">
           <h1 class="m-0 mb-[0.25em]">{title}</h1>
           <FormattedDate date={pubDate} className="mb-4 block text-text-muted" />
           <figure class="mb-16">
@@ -43,7 +43,7 @@ const { title, description, pubDate, thumbnail } = Astro.props;
                       href={thumbnail.creditLink}
                       target="_blank"
                       rel="noreferrer"
-                      class="unset not-prose">
+                      class="unset not-prose underline">
                       {thumbnail.creditText}
                     </a>
                   ) : (
