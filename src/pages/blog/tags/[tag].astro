@@ -33,7 +33,9 @@ const posts = (await getCollection("blog")).filter((post) => post.data.tags.incl
       <div class="unset mb-10 flex items-center gap-4 font-lora text-xl sm:text-3xl">
         <a href="/blog/tags/" class="unset hover:underline">All Tags</a>
         <ChevronRightIcon width="20" height="20" />
-        <a href={`/blog/tags/${tagData.slug}/`} class="unset text-white hover:underline">
+        <a
+          href={`/blog/tags/${tagData.slug}/`}
+          class="unset text-black hover:underline dark:text-white">
           {tagData.label}
         </a>
       </div>
