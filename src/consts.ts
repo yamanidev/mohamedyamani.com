@@ -11,25 +11,85 @@ export const MY_NAME = "Mohamed Yamani";
 const BASE_URL = new URL(import.meta.env.SITE);
 export const SITE_URL = BASE_URL.origin;
 
-export const TAGS_MAPPING: Record<string, string> = {
-  networking: "Networking",
-  basics: "Basics",
-  css: "CSS",
-  javascript: "JavaScript",
-  personal: "Personal",
-  learning: "Learning",
-  html: "HTML",
-  "browser-compatibility": "Browser Compatibility",
-  llms: "LLMs",
-  ai: "AI",
-  nextjs: "Next.js",
-  devops: "DevOps",
-  linux: "Linux",
-  java: "Java",
-  miscellaneous: "Miscellaneous",
-  python: "Python",
-  algorithms: "Algorithms",
-  "data-structures": "Data Structures",
-  "tips-and-tricks": "Tips & Tricks",
-  "web-development": "Web Development"
+export const TAGS: Record<string, { label: string; slug: string }> = {
+  networking: {
+    slug: "networking",
+    label: "Networking"
+  },
+  basics: {
+    slug: "basics",
+    label: "Basics"
+  },
+  css: {
+    slug: "css",
+    label: "CSS"
+  },
+  javascript: {
+    slug: "javascript",
+    label: "JavaScript"
+  },
+  personal: {
+    slug: "personal",
+    label: "Personal"
+  },
+  learning: {
+    slug: "learning",
+    label: "Learning"
+  },
+  html: {
+    slug: "html",
+    label: "HTML"
+  },
+  "browser-compatibility": {
+    slug: "browser-compatibility",
+    label: "Browser Compatibility"
+  },
+  llms: {
+    slug: "llms",
+    label: "LLMs"
+  },
+  ai: {
+    slug: "ai",
+    label: "AI"
+  },
+  nextjs: {
+    slug: "nextjs",
+    label: "Next.js"
+  },
+  devops: {
+    slug: "devops",
+    label: "DevOps"
+  },
+  linux: {
+    slug: "linux",
+    label: "Linux"
+  },
+  java: {
+    slug: "java",
+    label: "Java"
+  },
+  miscellaneous: {
+    slug: "miscellaneous",
+    label: "Miscellaneous"
+  },
+  python: {
+    slug: "python",
+    label: "Python"
+  },
+  algorithms: {
+    slug: "algorithms",
+    label: "Algorithms"
+  },
+  "data-structures": {
+    slug: "data-structures",
+    label: "Data Structures"
+  },
+  "tips-and-tricks": {
+    slug: "tips-and-tricks",
+    label: "Tips & Tricks"
+  },
+  "web-development": {
+    slug: "web-development",
+    label: "Web Development"
+  }
 };

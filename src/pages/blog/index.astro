@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 import BaseHead from "../../components/BaseHead.astro";
 import FormattedDate from "../../components/FormattedDate.astro";
-import { SITE_DESCRIPTION, SITE_TITLE, TAGS_MAPPING } from "../../consts";
+import { SITE_DESCRIPTION, SITE_TITLE, TAGS } from "../../consts";
 import PageLayout from "../../layouts/PageLayout.astro";
 
 const posts = (await getCollection("blog")).sort(
@@ -32,7 +32,7 @@ const posts = (await getCollection("blog")).sort(
                 <a
                   href={`/blog/${post.slug}/`}
                   aria-label={`Read more about ${post.data.title}`}
-                  class="unset mt-2.5 inline-block font-semibold leading-snug underline hover:text-primary-main lg:text-xl lg:leading-snug">
+                  class="unset mt-2.5 inline-block font-semibold leading-snug underline transition hover:text-primary-main lg:text-xl lg:leading-snug">
                   {post.data.title}
                 </a>
                 <FormattedDate
@@ -44,9 +44,9 @@ const posts = (await getCollection("blog")).sort(
                     <li class="pl-0">
                       <a
                         href={`/blog/${tag}`}
-                        aria-label={`See all posts tagged with ${TAGS_MAPPING[tag] ?? tag}`}
-                        class="unset rounded-full border border-primary-main px-4 py-1 text-xs font-bold hover:bg-primary-main hover:text-white">
-                        {TAGS_MAPPING[tag] ?? tag}
+                        aria-label={`See all posts tagged with ${TAGS[tag].label ?? tag}`}
+                        class="unset rounded-full border border-primary-main px-4 py-1 text-xs font-bold transition hover:bg-primary-main hover:text-white">
+                        {TAGS[tag].label ?? tag}
                       </a>
                     </li>
                   ))}
