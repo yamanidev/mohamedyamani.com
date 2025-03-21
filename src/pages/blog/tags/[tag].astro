@@ -31,16 +31,16 @@ const posts = (await getCollection("blog")).filter((post) => post.data.tags.incl
   <section slot="main" class="py-10">
     <div class="mx-auto max-w-6xl px-6 sm:px-8">
       <div class="unset mb-10 flex items-center gap-4 font-lora text-3xl font-bold">
-        <a href="/blog/tags">All Tags</a>
+        <a href="/blog/tags/">All Tags</a>
         <ChevronRightIcon />
-        <a href={`/blog/tags/${tagData.slug}`}>{tagData.label}</a>
+        <a href={`/blog/tags/${tagData.slug}/`}>{tagData.label}</a>
       </div>
       <div class="grid justify-center gap-10 md:grid-cols-2 md:gap-x-4 md:gap-y-20">
         {
           posts.map((post) => {
             return (
               <article class="mb-3 rounded-md p-2">
-                <a href={`/blog/${post.slug}`} aria-label={`Read more about ${post.data.title}`}>
+                <a href={`/blog/${post.slug}/`} aria-label={`Read more about ${post.data.title}`}>
                   <img
                     width="552"
                     height="289"
@@ -64,7 +64,7 @@ const posts = (await getCollection("blog")).filter((post) => post.data.tags.incl
                   {post.data.tags.map((tag) => (
                     <li class="pl-0">
                       <a
-                        href={`/blog/tags/${tag}`}
+                        href={`/blog/tags/${tag}/`}
                         aria-label={`See all posts tagged with ${TAGS[tag].label ?? tag}`}
                         class="unset rounded-full border border-primary-main px-4 py-1 text-xs font-bold transition hover:bg-primary-main hover:text-white">
                         {TAGS[tag].label ?? tag}

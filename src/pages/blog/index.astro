@@ -19,7 +19,7 @@ const posts = (await getCollection("blog")).sort(
           posts.map((post) => {
             return (
               <article class="mb-3 rounded-md p-2">
-                <a href={`/blog/${post.slug}`} aria-label={`Read more about ${post.data.title}`}>
+                <a href={`/blog/${post.slug}/`} aria-label={`Read more about ${post.data.title}`}>
                   <img
                     width="552"
                     height="289"
@@ -43,7 +43,7 @@ const posts = (await getCollection("blog")).sort(
                   {post.data.tags.map((tag) => (
                     <li class="pl-0">
                       <a
-                        href={`/blog/tags/${tag}`}
+                        href={`/blog/tags/${tag}/`}
                         aria-label={`See all posts tagged with ${TAGS[tag].label ?? tag}`}
                         class="unset rounded-full border border-primary-main px-4 py-1 text-xs font-bold transition hover:bg-primary-main hover:text-white">
                         {TAGS[tag].label ?? tag}
