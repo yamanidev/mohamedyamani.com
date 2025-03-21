@@ -6,8 +6,7 @@ const { href, class: className, ...props } = Astro.props;
 const pathname = Astro.url.pathname;
 
 const isHome = href === "/" && pathname === "/";
-const isOtherPages =
-  typeof href === "string" && href.length > 1 ? pathname.startsWith(href) : false;
+const isOtherPages = typeof href === "string" && href === pathname;
 const isActive = isHome || isOtherPages;
 ---
 
