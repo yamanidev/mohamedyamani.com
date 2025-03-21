@@ -14,7 +14,7 @@ import { TAGS } from "../../../consts";
           Object.entries(TAGS).map(([_, tag]) => (
             <a
               href={`/blog/tags/${tag.slug}/`}
-              class="unset block rounded-lg border p-4 font-semibold transition hover:bg-primary-main hover:text-white">
+              class="unset block rounded-lg border border-primary-main p-4 font-semibold transition hover:bg-primary-main hover:text-white">
               {tag.label}
             </a>
           ))
