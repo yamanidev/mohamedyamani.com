@@ -30,10 +30,12 @@ const posts = (await getCollection("blog")).filter((post) => post.data.tags.incl
   />
   <section slot="main" class="py-10">
     <div class="mx-auto max-w-6xl px-6 sm:px-8">
-      <div class="unset mb-10 flex items-center gap-4 font-lora text-3xl font-bold">
-        <a href="/blog/tags/">All Tags</a>
-        <ChevronRightIcon />
-        <a href={`/blog/tags/${tagData.slug}/`}>{tagData.label}</a>
+      <div class="unset mb-10 flex items-center gap-4 font-lora text-xl sm:text-3xl">
+        <a href="/blog/tags/" class="unset hover:underline">All Tags</a>
+        <ChevronRightIcon width="20" height="20" />
+        <a href={`/blog/tags/${tagData.slug}/`} class="unset text-white hover:underline">
+          {tagData.label}
+        </a>
       </div>
       <div class="grid justify-center gap-10 md:grid-cols-2 md:gap-x-4 md:gap-y-20">
         {
