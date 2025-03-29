@@ -9,12 +9,13 @@ import Favicon from "./Favicon.astro";
 import ThemeScript from "./ThemeScript.astro";
 import CalendarDaysIcon from "../components/svg/CalendarDaysIcon.astro";
 import ArrowPath from "../components/svg/ArrowPath.astro";
+import { TAGS } from "../consts";
 
 type Props = CollectionEntry<"blog">["data"] & {
   lastModified: string;
 };
 
-const { title, description, pubDate, lastModified, thumbnail } = Astro.props;
+const { title, description, pubDate, lastModified, thumbnail, tags } = Astro.props;
 ---
 
 <html class="theme" lang="en">
@@ -42,6 +43,20 @@ const { title, description, pubDate, lastModified, thumbnail } = Astro.props;
               <FormattedDate date={new Date(lastModified)} />
             </div>
           </div>
+          <ul class="unset not-prose mt-4 flex list-none flex-wrap gap-x-2 gap-y-1">
+            {
+              tags.map((tag) => (
+                <li>
+                  <a
+                    href={`/blog/tags/${tag}/`}
+                    aria-label={`See all posts tagged with ${TAGS[tag].label ?? tag}`}
+                    class="unset rounded-full border border-primary-main px-4 py-1 text-xs font-bold transition hover:bg-primary-main hover:text-white">
+                    {TAGS[tag].label ?? tag}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
           <figure class="mb-16">
             <img
               src={thumbnail.url}
