@@ -9,13 +9,13 @@ import Favicon from "./Favicon.astro";
 import ThemeScript from "./ThemeScript.astro";
 import CalendarDaysIcon from "../components/svg/CalendarDaysIcon.astro";
 import ArrowPath from "../components/svg/ArrowPath.astro";
-import { TAGS } from "../consts";
+import { BLOG_CATEGORIES } from "../consts";
 
 type Props = CollectionEntry<"blog">["data"] & {
   lastModified: string;
 };
 
-const { title, description, pubDate, lastModified, thumbnail, tags } = Astro.props;
+const { title, description, pubDate, lastModified, thumbnail, categories } = Astro.props;
 ---
 
 <html class="theme" lang="en">
@@ -45,13 +45,15 @@ const { title, description, pubDate, lastModified, thumbnail, tags } = Astro.pro
           </div>
           <ul class="unset not-prose mt-4 flex list-none flex-wrap gap-x-2 gap-y-1">
             {
-              tags.map((tag) => (
+              categories.map((category) => (
                 <li>
                   <a
-                    href={`/blog/tags/${tag}/`}
-                    aria-label={`See all posts tagged with ${TAGS[tag].label ?? tag}`}
+                    href={`/blog/categories/${category}/`}
+                    aria-label={`See all posts in the ${
+                      BLOG_CATEGORIES[category].label ?? category
+                    } category`}
                     class="unset rounded-full border border-primary-main px-4 py-1 text-xs font-bold transition hover:bg-primary-main hover:text-white">
-                    {TAGS[tag].label ?? tag}
+                    {BLOG_CATEGORIES[category].label ?? category}
                   </a>
                 </li>
               ))

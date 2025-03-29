@@ -15,7 +15,7 @@ const blog = defineCollection({
       creditText: z.string().optional(),
       creditLink: z.string().url().optional()
     }),
-    tags: z.array(z.string())
+    categories: z.array(z.string())
   })
 });
 
