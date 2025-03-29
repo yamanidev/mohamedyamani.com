@@ -7,10 +7,14 @@ import Navbar from "../components/Navbar.astro";
 import StayConnected from "../components/StayConnected.astro";
 import Favicon from "./Favicon.astro";
 import ThemeScript from "./ThemeScript.astro";
+import CalendarDaysIcon from "../components/svg/CalendarDaysIcon.astro";
+import ArrowPath from "../components/svg/ArrowPath.astro";
 
-type Props = CollectionEntry<"blog">["data"];
+type Props = CollectionEntry<"blog">["data"] & {
+  lastModified: string;
+};
 
-const { title, description, pubDate, thumbnail } = Astro.props;
+const { title, description, pubDate, lastModified, thumbnail } = Astro.props;
 ---
 
 <html class="theme" lang="en">
@@ -25,8 +29,19 @@ const { title, description, pubDate, thumbnail } = Astro.props;
     <main id="main" class="py-20">
       <div class="mx-auto min-h-screen max-w-3xl px-6 sm:px-8">
         <article class="blog-post prose prose-theme max-w-none prose-img:mx-auto">
-          <h1 class="m-0 mb-[0.25em]">{title}</h1>
-          <FormattedDate date={pubDate} className="mb-4 block text-text-muted" />
+          <h1 class="m-0 mb-4">{title}</h1>
+          <div class="space-y-1 text-sm">
+            <div class="flex items-center gap-1">
+              <CalendarDaysIcon width="20" height="20" />
+              <span>Published:</span>
+              <FormattedDate date={pubDate} />
+            </div>
+            <div class="flex items-center gap-1">
+              <ArrowPath width="20" height="20" />
+              <span>Last updated:</span>
+              <FormattedDate date={new Date(lastModified)} />
+            </div>
+          </div>
           <figure class="mb-16">
             <img
               src={thumbnail.url}
