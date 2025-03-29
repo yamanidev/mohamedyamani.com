@@ -35,7 +35,7 @@ It's a CSS standard that represents the elements of a document as boxes with cer
 
 Put simply, every HTML element is a box of this sort:
 
-![a box model diagram](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6ehqv1npf33xkw8iukih.png)
+![Box model diagram](/images/css-box-model-diagram.png)
 
 Every box has a **content area**. An element's content could be text, an image, nested elements etc.
 
@@ -165,7 +165,7 @@ But rather (for the width) `width` + `padding-left` + `padding-right` + `border-
 
 Visual representation from my developer tools (I use Firefox, this is from Firefox. Use Firefox):
 
-![box model in developer tools of previous example](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/cfnaul99lq4phfd929ot.png)
+![box model in developer tools of previous example](/images/box-sizing-content-box-representation.png)
 
 You can see that what `height` and `width` did is specify the content area dimensions, but not the overall element size.
 
@@ -175,7 +175,7 @@ The rendered dimensions are exactly the values of `height` and `width` specified
 
 To enable this mode, we'll add `box-sizing: border-box` to our `div`. We get this:
 
-![box model in developer tools for border-box](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/3p7pnf0ezcydz0s0a7gv.png)
+![box model in developer tools for border-box](/images/box-sizing-border-box-representation.png)
 
 As you can see, the dimensions of the content area would be computed so that the overall size of our element matches 200px width and 300px height.
 
