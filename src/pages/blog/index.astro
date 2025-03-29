@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import BaseHead from "../../components/BaseHead.astro";
 import FormattedDate from "../../components/FormattedDate.astro";
+import CalendarDaysIcon from "../../components/svg/CalendarDaysIcon.astro";
 import { SITE_DESCRIPTION, SITE_TITLE, TAGS } from "../../consts";
 import PageLayout from "../../layouts/PageLayout.astro";
 
@@ -35,10 +36,10 @@ const posts = (await getCollection("blog")).sort(
                   class="unset mt-2.5 inline-block font-semibold leading-snug transition hover:text-primary-main hover:underline lg:text-xl lg:leading-snug">
                   {post.data.title}
                 </a>
-                <FormattedDate
-                  date={post.data.pubDate}
-                  className="text-sm text-text-muted mt-1 block"
-                />
+                <div class="mt-1 flex items-center gap-1 text-sm text-text-muted">
+                  <CalendarDaysIcon width="20" height="20" />
+                  <FormattedDate date={post.data.pubDate} />
+                </div>
                 <ul class="unset mt-2 flex flex-wrap gap-x-2 gap-y-1">
                   {post.data.tags.map((tag) => (
                     <li class="pl-0">
