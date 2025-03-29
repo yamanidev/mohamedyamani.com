@@ -13,9 +13,11 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<"blog">;
 
 const post = Astro.props;
-const { Content } = await post.render();
+const { Content, remarkPluginFrontmatter } = await post.render();
+
+const lastModified = remarkPluginFrontmatter.lastModified;
 ---
 
-<BlogPost {...post.data}>
+<BlogPost {...post.data} lastModified={lastModified}>
   <Content slot="content" components={{ a: CustomLink }} />
 </BlogPost>
