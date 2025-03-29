@@ -1,0 +1,87 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import BuildingOfficeIcon from "../components/svg/BuildingOfficeIcon.astro";
+import CalendarDaysIcon from "../components/svg/CalendarDaysIcon.astro";
+import MapPinIcon from "../components/svg/MapPinIcon.astro";
+import PageLayout from "../layouts/PageLayout.astro";
+---
+
+<PageLayout>
+  <BaseHead title="Talks" description="Browse all categories for our blog" slot="meta" />
+  <section slot="main" class="py-10">
+    <div class="mx-auto max-w-6xl px-6 sm:px-8">
+      <h1 class="text-2xl font-bold sm:text-4xl md:text-5xl">Talks</h1>
+      <div class="mt-10 max-w-lg space-y-8">
+        <article class="rounded-md border-2 border-primary-main p-4">
+          <h2 class="text-xl sm:text-2xl">Inside the Browser: How the Front end Works</h2>
+          <div class="mt-4 grid gap-2 text-sm sm:grid-cols-2 sm:gap-y-4">
+            <div class="flex items-center gap-1.5">
+              <span>
+                <BuildingOfficeIcon width="20" height="20" />
+              </span>
+              <span>GDSC USTO-MB</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span>
+                <CalendarDaysIcon width="20" height="20" />
+              </span>
+              <span>14th February, 2025</span>
+            </div>
+            <div class="flex items-center gap-1.5 sm:col-span-2">
+              <span>
+                <MapPinIcon width="20" height="20" />
+              </span>
+              <span>Online (Google Meet)</span>
+            </div>
+          </div>
+        </article>
+        <article class="rounded-md border-2 border-primary-main p-4">
+          <h2 class="text-xl sm:text-2xl">Working as a Student</h2>
+          <div class="mt-4 grid gap-2 text-sm sm:grid-cols-2 sm:gap-y-4">
+            <div class="flex items-center gap-1.5">
+              <span>
+                <BuildingOfficeIcon width="20" height="20" />
+              </span>
+              <span>GDSC ESI SBA</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span>
+                <CalendarDaysIcon width="20" height="20" />
+              </span>
+              <span>2nd January, 2024</span>
+            </div>
+            <div class="flex items-center gap-1.5 sm:col-span-2">
+              <span>
+                <MapPinIcon width="20" height="20" />
+              </span>
+              <span>Online (Discord Server)</span>
+            </div>
+          </div>
+        </article>
+        <article class="rounded-md border-2 border-primary-main p-4">
+          <h2 class="text-xl sm:text-2xl">Why You Should Write Technical Articles</h2>
+          <div class="mt-4 grid gap-2 text-sm sm:grid-cols-2 sm:gap-y-4">
+            <div class="flex items-center gap-1.5">
+              <span>
+                <BuildingOfficeIcon width="20" height="20" />
+              </span>
+              <span>GDG El Bayadh</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span>
+                <CalendarDaysIcon width="20" height="20" />
+              </span>
+              <span>23rd December, 2023</span>
+            </div>
+            <div class="flex items-center gap-1.5 sm:col-span-2">
+              <span>
+                <MapPinIcon width="20" height="20" />
+              </span>
+              <span>The Central Library of El Bayadh</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</PageLayout>
