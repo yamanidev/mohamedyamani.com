@@ -8,18 +8,10 @@ thumbnail:
   alt: "white and gray optical illusion"
   creditText: "Picture by JJ Ying on Unsplash"
   creditLink: "https://unsplash.com/photos/white-and-gray-optical-illusion-7JX0-bfiuxQ?utm_medium=referral&utm_source=mohamedyamani.com"
-tags: ["algorithms", "basics"]
+categories: ["algorithms", "basics"]
 ---
 
 If you've been procrastinating learning Big-O Notation and Time Complexity for an eternity -like myself-, this post is for you.
-
-**Table of content:**
-
-- Introduction
-- What is Big-O Notation and Time Complexity?
-- Why should I care?
-- How to calculate it?
-- Common complexity classes
 
 ## Introduction
 
@@ -75,7 +67,7 @@ If there are k nested loops, the Time Complexity is **O(n^k)**
 
 The following code has **O(n)** complexity:
 
-```
+```c
 for (int i = 0; i <= n;  ++i){
      //code
 }
@@ -103,7 +95,7 @@ A phase is a single loop in a code.
 
 **For example:**
 
-```
+```c
 for (int i = 1; i <= n*2; i++) {
      // code (phase 1)
 }

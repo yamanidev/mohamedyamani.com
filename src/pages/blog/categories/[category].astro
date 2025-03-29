@@ -2,41 +2,43 @@
 import { getCollection } from "astro:content";
 import BaseHead from "../../../components/BaseHead.astro";
 import PageLayout from "../../../layouts/PageLayout.astro";
-import { TAGS } from "../../../consts";
+import { BLOG_CATEGORIES } from "../../../consts";
 import FormattedDate from "../../../components/FormattedDate.astro";
 import ChevronRightIcon from "../../../components/svg/ChevronRightIcon.astro";
 
 export async function getStaticPaths() {
-  const tags = Object.keys(TAGS);
+  const categories = Object.keys(BLOG_CATEGORIES);
 
-  // Generate a static path for each tag
-  return tags.map((tag) => ({
-    params: { tag }
+  // Generate a static path for each category
+  return categories.map((category) => ({
+    params: { category }
   }));
 }
 
-const { tag } = Astro.params;
+const { category } = Astro.params;
 
-const tagData = TAGS[tag];
+const categoryData = BLOG_CATEGORIES[category];
 
-const posts = (await getCollection("blog")).filter((post) => post.data.tags.includes(tag));
+const posts = (await getCollection("blog")).filter((post) =>
+  post.data.categories.includes(category)
+);
 ---
 
 <PageLayout>
   <BaseHead
-    title={`${tagData.label} Articles`}
-    description={`Posts related to ${tagData.label}`}
+    title={`${categoryData.label} Articles`}
+    description={`Posts related to ${categoryData.label}`}
     slot="meta"
   />
   <section slot="main" class="py-10">
     <div class="mx-auto max-w-6xl px-6 sm:px-8">
       <div class="unset mb-10 flex items-center gap-4 font-lora text-xl sm:text-3xl">
-        <a href="/blog/tags/" class="unset hover:underline">All Tags</a>
+        <a href="/blog/categories/" class="unset hover:underline">All Categories</a>
         <ChevronRightIcon width="20" height="20" />
         <a
-          href={`/blog/tags/${tagData.slug}/`}
+          href={`/blog/categories/${categoryData.slug}/`}
           class="unset text-black hover:underline dark:text-white">
-          {tagData.label}
+          {categoryData.label}
         </a>
       </div>
       <div class="grid justify-center gap-10 md:grid-cols-2 md:gap-x-4 md:gap-y-20">
@@ -65,13 +67,15 @@ const posts = (await getCollection("blog")).filter((post) => post.data.tags.incl
                   className="text-sm text-text-muted mt-1 block"
                 />
                 <ul class="unset mt-2 flex flex-wrap gap-x-2 gap-y-1">
-                  {post.data.tags.map((tag) => (
+                  {post.data.categories.map((category) => (
                     <li class="pl-0">
                       <a
-                        href={`/blog/tags/${tag}/`}
-                        aria-label={`See all posts tagged with ${TAGS[tag].label ?? tag}`}
+                        href={`/blog/categories/${category}/`}
+                        aria-label={`See all posts in the ${
+                          BLOG_CATEGORIES[category].label ?? category
+                        } category`}
                         class="unset rounded-full border border-primary-main px-4 py-1 text-xs font-bold transition hover:bg-primary-main hover:text-white">
-                        {TAGS[tag].label ?? tag}
+                        {BLOG_CATEGORIES[category].label ?? category}
                       </a>
                     </li>
                   ))}

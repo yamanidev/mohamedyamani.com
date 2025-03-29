@@ -1,21 +1,21 @@
 ---
 import BaseHead from "../../../components/BaseHead.astro";
 import PageLayout from "../../../layouts/PageLayout.astro";
-import { TAGS } from "../../../consts";
+import { BLOG_CATEGORIES } from "../../../consts";
 ---
 
 <PageLayout>
-  <BaseHead title="All Tags" description="Browse all tags for our blog" slot="meta" />
+  <BaseHead title="All Categories" description="Browse all categories for our blog" slot="meta" />
   <section slot="main" class="py-10">
     <div class="mx-auto max-w-6xl px-6 sm:px-8">
-      <h1 class="mb-10 font-lora text-3xl font-bold">All Tags</h1>
+      <h1 class="mb-10 font-lora text-3xl font-bold">All Categories</h1>
       <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {
-          Object.entries(TAGS).map(([_, tag]) => (
+          Object.entries(BLOG_CATEGORIES).map(([_, category]) => (
             <a
-              href={`/blog/tags/${tag.slug}/`}
+              href={`/blog/categories/${category.slug}/`}
               class="unset block rounded-lg border border-primary-main p-4 font-semibold transition hover:bg-primary-main hover:text-white">
-              {tag.label}
+              {category.label}
             </a>
           ))
         }

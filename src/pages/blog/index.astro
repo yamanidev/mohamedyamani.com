@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 import BaseHead from "../../components/BaseHead.astro";
 import FormattedDate from "../../components/FormattedDate.astro";
 import CalendarDaysIcon from "../../components/svg/CalendarDaysIcon.astro";
-import { SITE_DESCRIPTION, SITE_TITLE, TAGS } from "../../consts";
+import { SITE_DESCRIPTION, SITE_TITLE, BLOG_CATEGORIES } from "../../consts";
 import PageLayout from "../../layouts/PageLayout.astro";
 
 const posts = (await getCollection("blog")).sort(
@@ -41,13 +41,15 @@ const posts = (await getCollection("blog")).sort(
                   <FormattedDate date={post.data.pubDate} />
                 </div>
                 <ul class="unset mt-2 flex flex-wrap gap-x-2 gap-y-1">
-                  {post.data.tags.map((tag) => (
+                  {post.data.categories.map((category) => (
                     <li class="pl-0">
                       <a
-                        href={`/blog/tags/${tag}/`}
-                        aria-label={`See all posts tagged with ${TAGS[tag].label ?? tag}`}
+                        href={`/blog/categories/${category}/`}
+                        aria-label={`See all posts in the ${
+                          BLOG_CATEGORIES[category].label ?? category
+                        } category`}
                         class="unset rounded-full border border-primary-main px-4 py-1 text-xs font-bold transition hover:bg-primary-main hover:text-white">
-                        {TAGS[tag].label ?? tag}
+                        {BLOG_CATEGORIES[category].label ?? category}
                       </a>
                     </li>
                   ))}

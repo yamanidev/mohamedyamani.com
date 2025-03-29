@@ -11,7 +11,7 @@ export const MY_NAME = "Mohamed Yamani";
 const BASE_URL = new URL(import.meta.env.SITE);
 export const SITE_URL = BASE_URL.origin;
 
-export const TAGS: Record<string, { label: string; slug: string }> = {
+export const BLOG_CATEGORIES: Record<string, { label: string; slug: string }> = {
   networking: {
     slug: "networking",
     label: "Networking"
