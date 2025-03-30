@@ -6,11 +6,7 @@ import PageLayout from "../layouts/PageLayout.astro";
 ---
 
 <PageLayout>
-  <BaseHead
-    title={`${SITE_TITLE} | Front end Software Engineer`}
-    description={SITE_DESCRIPTION}
-    slot="meta"
-  />
+  <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} slot="meta" />
   <div slot="main">
     <Intro slot="main" />
   </div>
