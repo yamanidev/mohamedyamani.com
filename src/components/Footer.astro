@@ -24,6 +24,14 @@ const WEBSITE_LINKS = [
     link: "/blog/"
   },
   {
+    text: "Talks",
+    link: "/talks/"
+  },
+  {
+    text: "Categories",
+    link: "/blog/categories/"
+  },
+  {
     text: "Contact",
     link: "/contact/"
   },
@@ -38,43 +46,60 @@ const WEBSITE_LINKS = [
   <div
     class="mx-auto flex max-w-6xl flex-col-reverse justify-between gap-10 px-6 sm:flex-row sm:px-8">
     <div class="text-center sm:text-left">
-      <p class="leading-5">
-        Copyright &copy; 2023 - {new Date().getFullYear()} Mohamed Yamani. All rights reserved.
-      </p>
-      <p class="mt-4 text-xs">
-        All content of this website is distributed under the license
-        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">
-          CC BY-NC-SA
-        </a>
-      </p>
+      <section class="text-sm">
+        <h6 class="mb-4 text-xs text-text-muted">About</h6>
+        <p>I am a software engineer with a focus on the front end.</p>
+        <p>I work remotely from Algeria.</p>
+        <p>My services are available worldwide.</p>
+      </section>
+      <div class="mt-10 text-xs">
+        <p class="leading-5">
+          &copy; 2023 — {new Date().getFullYear()} Mohamed Yamani. All rights reserved.
+        </p>
+        <p class="text-xs">
+          All content of this website is distributed under the license
+          <a
+            href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+            target="_blank"
+            rel="noopener">
+            CC BY-NC-SA
+          </a>.
+        </p>
+      </div>
     </div>
     <div class="flex justify-center gap-10">
-      <ul class="unset">
-        {
-          WEBSITE_LINKS.map((websiteLink) => (
-            <li class="p-0">
-              <a href={websiteLink.link} class="unset hover:underline">
-                {websiteLink.text}
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-      <ul class="unset">
-        {
-          SOCIAL_LINKS.map((socialLink) => (
-            <li class="p-0">
-              <a
-                href={socialLink.link}
-                class="unset hover:underline"
-                target="_blank"
-                rel="noopener">
-                {socialLink.text}
-              </a>
-            </li>
-          ))
-        }
-      </ul>
+      <div>
+        <h6 class="mb-4 text-xs text-text-muted">Navigation</h6>
+        <ul class="unset space-y-2.5">
+          {
+            WEBSITE_LINKS.map((websiteLink) => (
+              <li class="p-0 leading-none">
+                <a href={websiteLink.link} class="unset leading-none hover:underline">
+                  {websiteLink.text}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div>
+        <h6 class="mb-4 text-xs text-text-muted">Socials</h6>
+        <ul class="unset space-y-2.5">
+          {
+            SOCIAL_LINKS.map((socialLink) => (
+              <li class="p-0 leading-none">
+                <a
+                  href={socialLink.link}
+                  class="unset leading-none hover:underline"
+                  target="_blank"
+                  rel="noopener">
+                  {socialLink.text}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
     </div>
   </div>
 </footer>
