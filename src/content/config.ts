@@ -13,10 +13,10 @@ const blog = defineCollection({
       url: z.string(),
       alt: z.string(),
       creditText: z.string().optional(),
-      creditLink: z.string().url().optional()
+      creditLink: z.string().url().optional(),
     }),
-    categories: z.array(z.string())
-  })
+    categories: z.array(z.string()),
+  }),
 });
 
 export const collections = { blog };

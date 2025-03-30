@@ -5,29 +5,29 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        lora: ["Lora", "serif"]
+        lora: ["Lora", "serif"],
       },
       colors: {
         transparent: "transparent",
         current: "currentColor",
         primary: {
-          main: "var(--color-primary-main)"
+          main: "var(--color-primary-main)",
         },
         text: {
           body: "var(--color-text-body)",
           bold: "var(--color-text-bold)",
           muted: "var(--color-text-muted)",
           code: "var(--color-text-code)",
-          selection: "var(--color-text-selection)"
+          selection: "var(--color-text-selection)",
         },
         bg: {
           body: "var(--color-bg-body)",
           code: "var(--color-bg-code)",
-          selection: "var(--color-bg-selection)"
+          selection: "var(--color-bg-selection)",
         },
         border: {
-          code: "var(--color-border-code)"
-        }
+          code: "var(--color-border-code)",
+        },
       },
       typography: (theme) => ({
         DEFAULT: {
@@ -40,17 +40,17 @@ export default {
               "background-image":
                 "linear-gradient(to right, var(--color-primary-main), var(--color-primary-main))",
               "&:hover": {
-                color: "var(--color-primary-main)"
-              }
+                color: "var(--color-primary-main)",
+              },
             },
             "h1, h2, h3, h4, h5": {
-              color: "var(--color-text-bold)"
+              color: "var(--color-text-bold)",
             },
             "code::before": {
-              content: "none"
+              content: "none",
             },
             "code::after": {
-              content: "none"
+              content: "none",
             },
             blockquote: {
               border: "none",
@@ -61,7 +61,7 @@ export default {
               "padding-top": "1.5rem",
               "padding-bottom": "0.5rem",
               "padding-left": "1.5rem",
-              "padding-right": "1.5rem"
+              "padding-right": "1.5rem",
             },
             "blockquote::before": {
               "font-family": "Arial",
@@ -70,18 +70,18 @@ export default {
               color: "var(--color-primary-main)",
               position: "absolute",
               left: "-10px",
-              top: "-10px"
+              top: "-10px",
             },
             "blockquote::after": {
-              content: ""
+              content: "",
             },
             "blockquote p:first-of-type::before": {
-              content: ""
+              content: "",
             },
             "blockquote p:last-of-type::after": {
-              content: ""
-            }
-          }
+              content: "",
+            },
+          },
         },
         theme: {
           css: {
@@ -101,14 +101,14 @@ export default {
             "--tw-prose-pre-code": "var(--color-text-code)",
             "--tw-prose-pre-bg": "var(--color-bg-code)",
             "--tw-prose-th-borders": "var(--color-text-muted)",
-            "--tw-prose-td-borders": "var(--color-text-muted)"
-          }
-        }
-      })
-    }
+            "--tw-prose-td-borders": "var(--color-text-muted)",
+          },
+        },
+      }),
+    },
   },
   future: {
-    hoverOnlyWhenSupported: true
+    hoverOnlyWhenSupported: true,
   },
-  plugins: [require("@tailwindcss/typography")]
+  plugins: [require("@tailwindcss/typography")],
 };

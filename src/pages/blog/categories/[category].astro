@@ -11,7 +11,7 @@ export async function getStaticPaths() {
 
   // Generate a static path for each category
   return categories.map((category) => ({
-    params: { category }
+    params: { category },
   }));
 }
 
@@ -20,7 +20,7 @@ const { category } = Astro.params;
 const categoryData = BLOG_CATEGORIES[category];
 
 const posts = (await getCollection("blog")).filter((post) =>
-  post.data.categories.includes(category)
+  post.data.categories.includes(category),
 );
 ---
 
