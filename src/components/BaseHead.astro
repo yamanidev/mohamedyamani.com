@@ -1,6 +1,4 @@
 ---
-import { SITE_TITLE } from "../consts";
-
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
 import "../styles/global.css";
@@ -28,7 +26,7 @@ const { title, description, thumbnailUrl } = Astro.props;
 <link
   rel="alternate"
   type="application/rss+xml"
-  title={`Blog | ${SITE_TITLE}`}
+  title="Mohamed Yamani's Blog"
   href={`${Astro.site}rss.xml`}
 />
 

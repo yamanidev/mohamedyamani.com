@@ -1,11 +1,11 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import { SITE_DESCRIPTION } from "../consts";
 import PageLayout from "../layouts/PageLayout.astro";
 ---
 
 <PageLayout>
-  <BaseHead title={`${SITE_TITLE} | Page not found`} description={SITE_DESCRIPTION} slot="meta" />
+  <BaseHead title="Page Not Found | Mohamed Yamani" description={SITE_DESCRIPTION} slot="meta" />
   <div slot="main" class="mx-auto max-w-6xl px-6 sm:px-8">
     <h1 class="overflow-hidden pb-2 pt-4 text-5xl font-extrabold tracking-tight md:text-6xl">
       <span
