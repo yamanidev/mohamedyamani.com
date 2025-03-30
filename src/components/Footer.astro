@@ -1,16 +1,23 @@
 ---
+import GitHubLogo from "./svg/GitHubLogo.astro";
+import LinkedInLogo from "./svg/LinkedInLogo.astro";
+import XLogo from "./svg/XLogo.astro";
+
 const SOCIAL_LINKS = [
   {
     text: "Twitter",
-    link: "https://twitter.com/yamanidev"
+    link: "https://twitter.com/yamanidev",
+    logoComponent: XLogo
   },
   {
     text: "LinkedIn",
-    link: "https://www.linkedin.com/in/yamanidev/"
+    link: "https://www.linkedin.com/in/yamanidev/",
+    logoComponent: LinkedInLogo
   },
   {
     text: "GitHub",
-    link: "https://github.com/yamanidev"
+    link: "https://github.com/yamanidev",
+    logoComponent: GitHubLogo
   }
 ];
 
@@ -90,10 +97,13 @@ const WEBSITE_LINKS = [
               <li class="p-0 leading-none">
                 <a
                   href={socialLink.link}
-                  class="unset leading-none hover:underline"
+                  class="unset flex items-center gap-2 leading-none hover:underline"
                   target="_blank"
                   rel="noopener">
-                  {socialLink.text}
+                  <span>
+                    <socialLink.logoComponent width="16" height="16" />
+                  </span>
+                  <span>{socialLink.text}</span>
                 </a>
               </li>
             ))
