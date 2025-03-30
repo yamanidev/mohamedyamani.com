@@ -6,6 +6,7 @@ import FormattedDate from "../components/FormattedDate.astro";
 import Navbar from "../components/Navbar.astro";
 import StayConnected from "../components/StayConnected.astro";
 import ArrowLongLeft from "../components/svg/ArrowLongLeft.astro";
+import ArrowLongRight from "../components/svg/ArrowLongRight.astro";
 import ArrowPath from "../components/svg/ArrowPath.astro";
 import CalendarDaysIcon from "../components/svg/CalendarDaysIcon.astro";
 import { BLOG_CATEGORIES } from "../consts";
@@ -14,9 +15,12 @@ import ThemeScript from "./ThemeScript.astro";
 
 type Props = CollectionEntry<"blog">["data"] & {
   lastModified: string;
+  nextPost?: CollectionEntry<"blog">;
+  previousPost?: CollectionEntry<"blog">;
 };
 
-const { title, description, pubDate, lastModified, thumbnail, categories } = Astro.props;
+const { title, description, pubDate, lastModified, thumbnail, categories, previousPost, nextPost } =
+  Astro.props;
 ---
 
 <html class="theme" lang="en">
@@ -101,6 +105,37 @@ const { title, description, pubDate, lastModified, thumbnail, categories } = Ast
           <slot name="content" />
         </article>
         <StayConnected className="mt-16 px-6 sm:px-8" />
+      </div>
+      <div
+        class="mx-auto mt-10 flex max-w-5xl flex-col justify-between gap-x-4 gap-y-6 px-6 text-xs md:flex-row">
+        {
+          previousPost && (
+            <a
+              href={`/blog/${previousPost.slug}/`}
+              class="unset group flex max-w-sm items-center gap-4 hover:underline">
+              <span>
+                <ArrowLongLeft class="transform transition-transform duration-300 group-hover:-translate-x-1" />
+              </span>
+              <span>
+                <strong>Previous:</strong> {previousPost.data.title}
+              </span>
+            </a>
+          )
+        }
+        {
+          nextPost && (
+            <a
+              href={`/blog/${nextPost.slug}/`}
+              class="unset group ml-auto flex max-w-sm items-center gap-4 text-right hover:underline">
+              <span>
+                <strong>Next:</strong> {nextPost.data.title}
+              </span>
+              <span>
+                <ArrowLongRight class="transform transition-transform duration-300 group-hover:translate-x-1" />
+              </span>
+            </a>
+          )
+        }
       </div>
     </main>
     <Footer />
