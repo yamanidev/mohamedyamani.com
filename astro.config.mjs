@@ -9,9 +9,9 @@ export default defineConfig({
   site: "https://mohamedyamani.com/",
   markdown: {
     shikiConfig: {
-      theme: "github-dark-dimmed"
+      theme: "github-dark-dimmed",
     },
-    remarkPlugins: [remarkModifiedTime]
+    remarkPlugins: [remarkModifiedTime],
   },
-  integrations: [mdx(), sitemap(), tailwind()]
+  integrations: [mdx(), sitemap(), tailwind()],
 });

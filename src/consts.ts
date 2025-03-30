@@ -14,82 +14,82 @@ export const SITE_URL = BASE_URL.origin;
 export const BLOG_CATEGORIES: Record<string, { label: string; slug: string }> = {
   networking: {
     slug: "networking",
-    label: "Networking"
+    label: "Networking",
   },
   basics: {
     slug: "basics",
-    label: "Basics"
+    label: "Basics",
   },
   css: {
     slug: "css",
-    label: "CSS"
+    label: "CSS",
   },
   javascript: {
     slug: "javascript",
-    label: "JavaScript"
+    label: "JavaScript",
   },
   personal: {
     slug: "personal",
-    label: "Personal"
+    label: "Personal",
   },
   learning: {
     slug: "learning",
-    label: "Learning"
+    label: "Learning",
   },
   html: {
     slug: "html",
-    label: "HTML"
+    label: "HTML",
   },
   "browser-compatibility": {
     slug: "browser-compatibility",
-    label: "Browser Compatibility"
+    label: "Browser Compatibility",
   },
   llms: {
     slug: "llms",
-    label: "LLMs"
+    label: "LLMs",
   },
   ai: {
     slug: "ai",
-    label: "AI"
+    label: "AI",
   },
   nextjs: {
     slug: "nextjs",
-    label: "Next.js"
+    label: "Next.js",
   },
   devops: {
     slug: "devops",
-    label: "DevOps"
+    label: "DevOps",
   },
   linux: {
     slug: "linux",
-    label: "Linux"
+    label: "Linux",
   },
   java: {
     slug: "java",
-    label: "Java"
+    label: "Java",
   },
   miscellaneous: {
     slug: "miscellaneous",
-    label: "Miscellaneous"
+    label: "Miscellaneous",
   },
   python: {
     slug: "python",
-    label: "Python"
+    label: "Python",
   },
   algorithms: {
     slug: "algorithms",
-    label: "Algorithms"
+    label: "Algorithms",
   },
   "data-structures": {
     slug: "data-structures",
-    label: "Data Structures"
+    label: "Data Structures",
   },
   "tips-and-tricks": {
     slug: "tips-and-tricks",
-    label: "Tips & Tricks"
+    label: "Tips & Tricks",
   },
   "web-development": {
     slug: "web-development",
-    label: "Web Development"
-  }
+    label: "Web Development",
+  },
 };
