@@ -3,11 +3,11 @@
 // all pages through the use of the <BaseHead /> component.
 import "../styles/global.css";
 
-interface Props {
+type Props = {
   title: string;
   description: string;
   thumbnailUrl?: string;
-}
+};
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
