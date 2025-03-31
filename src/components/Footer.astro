@@ -1,4 +1,8 @@
 ---
+import GitHubLogo from "./svg/GitHubLogo.astro";
+import LinkedInLogo from "./svg/LinkedInLogo.astro";
+import XLogo from "./svg/XLogo.astro";
+
 const WEBSITE_LINKS = [
   {
     text: "Home",
@@ -23,6 +27,24 @@ const WEBSITE_LINKS = [
   {
     text: "RSS",
     link: `${Astro.site}rss.xml`,
+  },
+];
+
+const SOCIAL_LINKS = [
+  {
+    text: "Twitter",
+    link: "https://twitter.com/yamanidev",
+    logoComponent: XLogo,
+  },
+  {
+    text: "LinkedIn",
+    link: "https://www.linkedin.com/in/yamanidev/",
+    logoComponent: LinkedInLogo,
+  },
+  {
+    text: "GitHub",
+    link: "https://github.com/yamanidev",
+    logoComponent: GitHubLogo,
   },
 ];
 ---
@@ -72,9 +94,21 @@ const WEBSITE_LINKS = [
         <a href="mailto:mohamed@yamani.dev?subject=mohamedyamani.com" class="unset underline">
           mohamed@yamani.dev
         </a>
-        <p class="mt-2.5 max-w-44 text-xs">
+        <p class="my-2.5 max-w-44 text-xs">
           You can also find me online under the handle <strong class="italic">yamanidev</strong>.
         </p>
+        <ul class="unset flex gap-2">
+          {
+            SOCIAL_LINKS.map((socialLink) => (
+              <li class="p-0 leading-none">
+                <a href={socialLink.link} class="unset" target="_blank" rel="noopener">
+                  <span class="sr-only">{socialLink.text}</span>
+                  <socialLink.logoComponent width="20" height="20" />
+                </a>
+              </li>
+            ))
+          }
+        </ul>
       </div>
     </div>
   </div>
