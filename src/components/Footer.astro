@@ -1,26 +1,4 @@
 ---
-import GitHubLogo from "./svg/GitHubLogo.astro";
-import LinkedInLogo from "./svg/LinkedInLogo.astro";
-import XLogo from "./svg/XLogo.astro";
-
-const SOCIAL_LINKS = [
-  {
-    text: "Twitter",
-    link: "https://twitter.com/yamanidev",
-    logoComponent: XLogo,
-  },
-  {
-    text: "LinkedIn",
-    link: "https://www.linkedin.com/in/yamanidev/",
-    logoComponent: LinkedInLogo,
-  },
-  {
-    text: "GitHub",
-    link: "https://github.com/yamanidev",
-    logoComponent: GitHubLogo,
-  },
-];
-
 const WEBSITE_LINKS = [
   {
     text: "Home",
@@ -51,8 +29,8 @@ const WEBSITE_LINKS = [
 
 <footer class="mt-auto border-t bg-neutral-50 py-20 dark:border-t-0 dark:bg-[#040C1A]">
   <div
-    class="mx-auto flex max-w-6xl flex-col-reverse justify-between gap-10 px-6 sm:flex-row sm:px-8">
-    <div class="text-center sm:text-left">
+    class="mx-auto flex max-w-6xl flex-col-reverse justify-between gap-10 px-6 md:flex-row md:px-8">
+    <div class="text-center md:text-left">
       <section class="text-sm">
         <h6 class="mb-4 text-xs text-text-muted">About</h6>
         <p>I am a software engineer with a focus on the front end.</p>
@@ -74,7 +52,7 @@ const WEBSITE_LINKS = [
         </p>
       </div>
     </div>
-    <div class="flex justify-center gap-10">
+    <div class="flex justify-center gap-10 text-sm">
       <div>
         <h6 class="mb-4 text-xs text-text-muted">Navigation</h6>
         <ul class="unset space-y-2.5">
@@ -90,25 +68,13 @@ const WEBSITE_LINKS = [
         </ul>
       </div>
       <div>
-        <h6 class="mb-4 text-xs text-text-muted">Socials</h6>
-        <ul class="unset space-y-2.5">
-          {
-            SOCIAL_LINKS.map((socialLink) => (
-              <li class="p-0 leading-none">
-                <a
-                  href={socialLink.link}
-                  class="unset flex items-center gap-2 leading-none hover:underline"
-                  target="_blank"
-                  rel="noopener">
-                  <span>
-                    <socialLink.logoComponent width="14" height="14" />
-                  </span>
-                  <span>{socialLink.text}</span>
-                </a>
-              </li>
-            ))
-          }
-        </ul>
+        <h6 class="mb-4 text-xs text-text-muted">Contact</h6>
+        <a href="mailto:mohamed@yamani.dev?subject=mohamedyamani.com" class="unset underline">
+          mohamed@yamani.dev
+        </a>
+        <p class="mt-2.5 max-w-44 text-xs">
+          You can also find me online under the handle <strong class="italic">yamanidev</strong>.
+        </p>
       </div>
     </div>
   </div>
