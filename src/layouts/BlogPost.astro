@@ -104,6 +104,21 @@ const { title, description, pubDate, lastModified, thumbnail, categories, previo
           </figure>
           <slot name="content" />
         </article>
+        <hr class="my-10" />
+        <div
+          class="mx-auto flex max-w-sm flex-col items-center gap-4 text-center sm:flex-row sm:text-left">
+          <img
+            src="/images/mohamed-yamani.jpg"
+            alt="Mohamed Yamani (yamanidev) smiling"
+            class="h-20 w-20 flex-shrink-0 rounded-full object-cover"
+          />
+          <div>
+            <h6 class="leading-tight text-white">Written by Mohamed Yamani</h6>
+            <p class="mt-2 text-xs">
+              Software engineer sharing the craft, personal insights, and my journey.
+            </p>
+          </div>
+        </div>
         <StayConnected className="mt-16 px-6 sm:px-8" />
       </div>
       <div
