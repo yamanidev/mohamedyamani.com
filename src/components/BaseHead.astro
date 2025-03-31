@@ -18,6 +18,7 @@ const { title, description, thumbnailUrl } = Astro.props;
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <meta name="generator" content={Astro.generator} />
+<meta name="author" content="Mohamed Yamani" />
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
@@ -36,6 +37,9 @@ const { title, description, thumbnailUrl } = Astro.props;
 <meta name="description" content={description} />
 
 <!-- Open Graph / Facebook -->
+<meta name="twitter:creator" content="@yamanidev" />
+<meta property="og:site_name" content="Mohamed Yamani" />
+
 {
   thumbnailUrl && (
     <>
