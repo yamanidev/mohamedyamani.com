@@ -29,7 +29,7 @@ export default {
           code: "var(--color-border-code)",
         },
       },
-      typography: (theme) => ({
+      typography: () => ({
         DEFAULT: {
           css: {
             a: {
