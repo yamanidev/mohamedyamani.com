@@ -42,7 +42,7 @@ const posts = (await getCollection("blog")).sort(
                 </div>
                 <ul class="unset mt-2 flex flex-wrap gap-x-2 gap-y-1">
                   {post.data.categories.map((category) => (
-                    <li class="pl-0">
+                    <li class="ps-0">
                       <a
                         href={`/blog/categories/${category}/`}
                         aria-label={`See all posts in the ${
