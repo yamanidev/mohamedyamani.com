@@ -2,6 +2,29 @@
 import DarkModeToggle from "./DarkModeToggle.astro";
 import NavbarLink from "./NavbarLink.astro";
 import Logo from "./svg/Logo.astro";
+import type { Language } from "../types";
+import { getRelativeLocaleUrl } from "astro:i18n";
+
+const currentLocale = (Astro.currentLocale as Language) || "en";
+
+const translationContent = {
+  en: {
+    skip: "Skip to content",
+    name: "Mohamed Yamani",
+    blog: "Blog",
+    talks: "Talks",
+    contact: "Contact",
+  },
+  "ar-DZ": {
+    skip: "تخط إلى المحتوى",
+    name: "محمد يماني",
+    blog: "مدونة",
+    talks: "مداخلات",
+    contact: "اتصال",
+  },
+} as const;
+
+const t = translationContent[currentLocale];
 ---
 
 <header
@@ -10,11 +33,13 @@ import Logo from "./svg/Logo.astro";
     <a
       class="unset absolute -top-[100rem] left-[50%] z-10 translate-x-[-50%] bg-white px-8 py-2 text-black focus:top-[initial]"
       href="#main">
-      Skip to content
+      {t.skip}
     </a>
-    <a href="/" class="unset flex items-center gap-2 font-lora font-bold italic text-text-bold">
+    <a
+      href={getRelativeLocaleUrl(currentLocale, "/")}
+      class="unset flex items-center gap-2 font-lora font-bold italic text-text-bold rtl:not-italic">
       <Logo width="27" height="50" />
-      <span>Mohamed Yamani</span>
+      <span>{t.name}</span>
     </a>
 
     <div class="flex items-center gap-2 sm:gap-4">
@@ -33,13 +58,17 @@ import Logo from "./svg/Logo.astro";
         <nav class="text-sm font-semibold text-text-bold">
           <ul class="unset flex gap-4 [&>li]:p-0">
             <li>
-              <NavbarLink href="/blog/">Blog</NavbarLink>
+              <NavbarLink href={getRelativeLocaleUrl(currentLocale, "/blog/")}>{t.blog}</NavbarLink>
             </li>
             <li>
-              <NavbarLink href="/talks/">Talks</NavbarLink>
+              <NavbarLink href={getRelativeLocaleUrl(currentLocale, "/talks/")}
+                >{t.talks}</NavbarLink
+              >
             </li>
             <li>
-              <NavbarLink href="/contact/">Contact</NavbarLink>
+              <NavbarLink href={getRelativeLocaleUrl(currentLocale, "/contact/")}
+                >{t.contact}</NavbarLink
+              >
             </li>
           </ul>
         </nav>
@@ -54,13 +83,15 @@ import Logo from "./svg/Logo.astro";
     <nav>
       <ul class="unset [&>li]:px-0">
         <li class="py-4">
-          <NavbarLink href="/blog/">Blog</NavbarLink>
+          <NavbarLink href={getRelativeLocaleUrl(currentLocale, "/blog/")}>{t.blog}</NavbarLink>
         </li>
         <li class="py-4">
-          <NavbarLink href="/talks/">Talks</NavbarLink>
+          <NavbarLink href={getRelativeLocaleUrl(currentLocale, "/talks/")}>{t.talks}</NavbarLink>
         </li>
         <li class="py-4">
-          <NavbarLink href="/contact/">Contact</NavbarLink>
+          <NavbarLink href={getRelativeLocaleUrl(currentLocale, "/contact/")}
+            >{t.contact}</NavbarLink
+          >
         </li>
       </ul>
     </nav>
