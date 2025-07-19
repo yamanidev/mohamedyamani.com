@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
 import FormattedDate from "../components/FormattedDate.astro";
@@ -10,6 +11,7 @@ import ArrowLongRight from "../components/svg/ArrowLongRight.astro";
 import ArrowPath from "../components/svg/ArrowPath.astro";
 import CalendarDaysIcon from "../components/svg/CalendarDaysIcon.astro";
 import { BLOG_CATEGORIES } from "../consts";
+import type { Language } from "../types";
 import Favicon from "./Favicon.astro";
 import ThemeScript from "./ThemeScript.astro";
 
@@ -21,9 +23,34 @@ type Props = CollectionEntry<"blog">["data"] & {
 
 const { title, description, pubDate, lastModified, thumbnail, categories, previousPost, nextPost } =
   Astro.props;
+
+const translationContent = {
+  en: {
+    back: "All blog articles",
+    published: "Published:",
+    updated: "Last updated:",
+    writtenBy: "Written by Mohamed Yamani",
+    bio: "Software engineer sharing the craft, personal insights, and my journey.",
+    previous: "Previous:",
+    next: "Next:",
+  },
+  "ar-DZ": {
+    back: "جميع مقالات المدونة",
+    published: "نُشرت في:",
+    updated: "آخر تحديث:",
+    writtenBy: "بقلم محمد يماني",
+    bio: "مهندس برمجيات يشارك الحرفة والتجربة ورحلته الشخصية.",
+    previous: "السابق:",
+    next: "التالي:",
+  },
+} as const;
+
+const currentLocale = Astro.currentLocale as Language;
+const t = translationContent[currentLocale];
+const isRTL = currentLocale === "ar-DZ";
 ---
 
-<html class="theme" lang="en">
+<html class="theme" lang={currentLocale} dir={isRTL ? "rtl" : "ltr"}>
   <head>
     <Favicon />
     <ThemeScript />
@@ -35,14 +62,14 @@ const { title, description, pubDate, lastModified, thumbnail, categories, previo
     <main id="main" class="py-20">
       <div class="mx-auto max-w-5xl px-6">
         <a
-          href="/blog/"
+          href={getRelativeLocaleUrl(currentLocale, "/blog/")}
           class="unset group flex items-center gap-4 text-sm text-white hover:underline">
           <span>
             <ArrowLongLeft
-              class="transform transition-transform duration-300 group-hover:-translate-x-1"
+              class="transform transition-transform duration-300 group-hover:-translate-x-1 rtl:-scale-100 rtl:group-hover:translate-x-1"
             />
           </span>
-          <span>All blog articles</span>
+          <span>{t["back"]}</span>
         </a>
       </div>
       <div class="mx-auto mt-10 min-h-screen max-w-3xl px-6 sm:px-8">
@@ -51,12 +78,12 @@ const { title, description, pubDate, lastModified, thumbnail, categories, previo
           <div class="space-y-1 text-sm">
             <div class="flex items-center gap-1">
               <CalendarDaysIcon width="20" height="20" />
-              <span>Published:</span>
+              <span>{t["published"]}</span>
               <FormattedDate date={pubDate} />
             </div>
             <div class="flex items-center gap-1">
               <ArrowPath width="20" height="20" />
-              <span>Last updated:</span>
+              <span>{t["updated"]}</span>
               <FormattedDate date={new Date(lastModified)} />
             </div>
           </div>
@@ -106,20 +133,18 @@ const { title, description, pubDate, lastModified, thumbnail, categories, previo
         </article>
         <hr class="my-10" />
         <div
-          class="mx-auto flex max-w-sm flex-col items-center gap-4 text-center sm:flex-row sm:text-left">
+          class="mx-auto flex max-w-sm flex-col items-center gap-4 text-center sm:flex-row sm:text-left rtl:sm:text-right">
           <img
             src="/images/mohamed-yamani.jpg"
             alt="Mohamed Yamani (yamanidev) smiling"
             class="h-20 w-20 flex-shrink-0 rounded-full object-cover"
           />
           <div>
-            <h6 class="leading-tight text-white">Written by Mohamed Yamani</h6>
-            <p class="mt-2 text-xs">
-              Software engineer sharing the craft, personal insights, and my journey.
-            </p>
+            <h6 class="leading-tight text-white">{t["writtenBy"]}</h6>
+            <p class="mt-2 text-xs">{t["bio"]}</p>
           </div>
         </div>
-        <StayConnected className="mt-16 px-6 sm:px-8" />
+        {currentLocale === "en" && <StayConnected className="mt-16 px-6 sm:px-8" />}
       </div>
       <div
         class="mx-auto mt-10 flex max-w-5xl flex-col justify-between gap-x-4 gap-y-6 px-6 text-xs md:flex-row">
@@ -132,7 +157,7 @@ const { title, description, pubDate, lastModified, thumbnail, categories, previo
                 <ArrowLongLeft class="transform transition-transform duration-300 group-hover:-translate-x-1" />
               </span>
               <span>
-                <strong>Previous:</strong> {previousPost.data.title}
+                <strong>{t["previous"]}</strong> {previousPost.data.title}
               </span>
             </a>
           )
@@ -143,7 +168,7 @@ const { title, description, pubDate, lastModified, thumbnail, categories, previo
               href={`/blog/${nextPost.slug}/`}
               class="unset group ml-auto flex max-w-sm items-center gap-4 text-right hover:underline">
               <span>
-                <strong>Next:</strong> {nextPost.data.title}
+                <strong>{t["next"]}</strong> {nextPost.data.title}
               </span>
               <span>
                 <ArrowLongRight class="transform transition-transform duration-300 group-hover:translate-x-1" />
