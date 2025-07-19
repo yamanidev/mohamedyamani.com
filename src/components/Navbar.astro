@@ -5,7 +5,7 @@ import Logo from "./svg/Logo.astro";
 import type { Language } from "../types";
 import { getRelativeLocaleUrl } from "astro:i18n";
 
-const currentLocale = (Astro.currentLocale as Language) || "en";
+const currentLocale = Astro.currentLocale as Language;
 
 const translationContent = {
   en: {

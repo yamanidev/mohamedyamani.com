@@ -4,7 +4,7 @@ import GitHubLogo from "./svg/GitHubLogo.astro";
 import LinkedInLogo from "./svg/LinkedInLogo.astro";
 import XLogo from "./svg/XLogo.astro";
 
-const currentLocale = (Astro.currentLocale as Language) || "en";
+const currentLocale = Astro.currentLocale as Language;
 
 const translationContent = {
   en: {
