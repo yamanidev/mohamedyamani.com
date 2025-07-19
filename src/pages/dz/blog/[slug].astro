@@ -1,0 +1,46 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import CustomLink from "../../../components/CustomLink.astro";
+import BlogPost from "../../../layouts/BlogPost.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => {
+    return data.language === "ar-DZ";
+  });
+
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }));
+}
+
+type Props = CollectionEntry<"blog">;
+
+const post = Astro.props;
+const { Content, remarkPluginFrontmatter } = await post.render();
+
+const allDarjaPosts = await getCollection("blog", ({ data }) => {
+  return data.language === "ar-DZ";
+});
+
+const sortedPosts = allDarjaPosts.sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+
+const currentIndex = allDarjaPosts
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .findIndex((p) => p.slug === post.slug);
+
+const previousPost = sortedPosts[currentIndex + 1] || null;
+const nextPost = sortedPosts[currentIndex - 1] || null;
+
+const lastModified = remarkPluginFrontmatter.lastModified;
+---
+
+<BlogPost
+  {...post.data}
+  lastModified={lastModified}
+  nextPost={nextPost}
+  previousPost={previousPost}>
+  <Content slot="content" components={{ a: CustomLink }} />
+</BlogPost>

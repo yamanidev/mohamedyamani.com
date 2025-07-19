@@ -1,0 +1,70 @@
+---
+import { getCollection } from "astro:content";
+import BaseHead from "../../../components/BaseHead.astro";
+import FormattedDate from "../../../components/FormattedDate.astro";
+import CalendarDaysIcon from "../../../components/svg/CalendarDaysIcon.astro";
+import { BLOG_CATEGORIES, SITE_DESCRIPTION } from "../../../consts";
+import PageLayout from "../../../layouts/PageLayout.astro";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import type { Language } from "../../../types";
+
+const posts = (await getCollection("blog"))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .filter((post) => post.data.language === "ar-DZ");
+
+const currentLocale = Astro.currentLocale as Language;
+---
+
+<PageLayout language="ar-DZ">
+  <BaseHead title="Mohamed Yamani's Blog" description={SITE_DESCRIPTION} slot="meta" />
+  <section slot="main" class="py-10">
+    <div class="mx-auto max-w-6xl px-6 sm:px-8">
+      <div class="grid justify-center gap-10 md:grid-cols-2 md:gap-x-4 md:gap-y-20">
+        {
+          posts.map((post) => {
+            return (
+              <article class="mb-3 rounded-md p-2">
+                <a
+                  href={getRelativeLocaleUrl(currentLocale, `/blog/${post.slug}/`)}
+                  aria-label={`Read more about ${post.data.title}`}>
+                  <img
+                    width="552"
+                    height="289"
+                    src={post.data.thumbnail.url}
+                    alt={post.data.thumbnail.alt}
+                    loading="lazy"
+                    class="max-w-full rounded-md"
+                  />
+                </a>
+                <a
+                  href={getRelativeLocaleUrl(currentLocale, `/blog/${post.slug}/`)}
+                  aria-label={`Read more about ${post.data.title}`}
+                  class="unset mt-2.5 inline-block font-semibold leading-snug transition hover:text-primary-main hover:underline lg:text-xl lg:leading-snug">
+                  {post.data.title}
+                </a>
+                <div class="mt-1 flex items-center gap-1 text-sm text-text-muted">
+                  <CalendarDaysIcon width="20" height="20" />
+                  <FormattedDate date={post.data.pubDate} />
+                </div>
+                <ul class="unset mt-2 flex flex-wrap gap-x-2 gap-y-1">
+                  {post.data.categories.map((category) => (
+                    <li class="ps-0">
+                      <a
+                        href={`/blog/categories/${category}/`}
+                        aria-label={`See all posts in the ${
+                          BLOG_CATEGORIES[category].label ?? category
+                        } category`}
+                        class="unset rounded-full border border-primary-main px-4 py-1 text-xs font-bold transition hover:bg-primary-main hover:text-white">
+                        {BLOG_CATEGORIES[category].label ?? category}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            );
+          })
+        }
+      </div>
+    </div>
+  </section>
+</PageLayout>
