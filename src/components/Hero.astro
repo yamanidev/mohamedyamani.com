@@ -1,28 +1,51 @@
 ---
+import type { Language } from "../types";
+import { getRelativeLocaleUrl } from "astro:i18n";
 
+const currentLocale = Astro.currentLocale as Language;
+const isRTL = currentLocale === "ar-DZ";
+
+const translationContent = {
+  en: {
+    name: "Mohamed Yamani,",
+    role: "Software Engineer",
+    tagline: "—I build web experiences and write about it online.",
+    blog: "Blog",
+    contact: "Get in touch",
+  },
+  "ar-DZ": {
+    name: "محمد يماني،",
+    role: "مهندس برمجيات",
+    tagline: "—أبني تجارب ويب وأكتب عنها على الإنترنت.",
+    blog: "المدونة",
+    contact: "تواصل معي",
+  },
+} as const;
+
+const t = translationContent[currentLocale];
 ---
 
-<section class="py-20 sm:py-40">
+<section class="py-20 sm:py-40" dir={isRTL ? "rtl" : "ltr"}>
   <div class="mx-auto max-w-6xl px-6 sm:px-8">
     <h1 class="text-2xl font-bold sm:text-4xl md:text-5xl">
-      <span>Mohamed Yamani,</span>
+      <span>{t.name}</span>
       <br />
-      <span>Software Engineer</span>
+      <span>{t.role}</span>
       <br />
-      <span class="text-xl font-normal italic sm:text-2xl md:text-3xl">
-        —I build web experiences and write about it online.
+      <span class="text-xl font-normal italic sm:text-2xl md:text-3xl rtl:not-italic">
+        {t.tagline}
       </span>
     </h1>
     <div class="mt-10 flex flex-wrap gap-4 font-lora font-bold italic">
       <a
-        href="/blog/"
+        href={getRelativeLocaleUrl(currentLocale, "/blog/")}
         class="unset rounded-md bg-primary-main px-6 py-2 text-bg-body transition hover:scale-105 sm:px-8">
-        Blog
+        {t.blog}
       </a>
       <a
-        href="/contact/"
+        href={getRelativeLocaleUrl(currentLocale, "/contact/")}
         class="unset rounded-md border-2 border-primary-main px-6 py-2 text-primary-main transition hover:scale-105 hover:bg-primary-main hover:text-bg-body sm:px-8">
-        Get in touch
+        {t.contact}
       </a>
     </div>
   </div>
