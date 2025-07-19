@@ -16,6 +16,7 @@ const blog = defineCollection({
       creditLink: z.string().url().optional(),
     }),
     categories: z.array(z.string()),
+    language: z.enum(["en", "ar-DZ"]).default("en"),
   }),
 });
 
