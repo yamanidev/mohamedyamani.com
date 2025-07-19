@@ -81,6 +81,9 @@ export default {
             "blockquote p:last-of-type::after": {
               content: "",
             },
+            "ul, ol": {
+              "padding-inline-start": "1.5rem",
+            },
           },
         },
         theme: {
