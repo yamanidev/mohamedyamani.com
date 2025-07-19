@@ -9,14 +9,17 @@
 // Import the global.css file here so that it is included on
 import "../styles/global.css";
 
+import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
+import type { Language } from "../types";
 import Favicon from "./Favicon.astro";
 import ThemeScript from "./ThemeScript.astro";
-import Footer from "../components/Footer.astro";
+
+const currentLocale = Astro.currentLocale as Language;
 ---
 
 <!doctype html>
-<html class="theme" lang="en">
+<html class="theme" lang={currentLocale} dir={currentLocale === "ar-DZ" ? "rtl" : "ltr"}>
   <head>
     <Favicon />
     <ThemeScript />
