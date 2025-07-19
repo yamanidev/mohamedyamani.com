@@ -1,85 +1,113 @@
 ---
+import type { Language } from "../types";
 import GitHubLogo from "./svg/GitHubLogo.astro";
 import LinkedInLogo from "./svg/LinkedInLogo.astro";
 import XLogo from "./svg/XLogo.astro";
 
-const WEBSITE_LINKS = [
-  {
-    text: "Home",
-    link: "/",
-  },
-  {
-    text: "Blog",
-    link: "/blog/",
-  },
-  {
-    text: "Talks",
-    link: "/talks/",
-  },
-  {
-    text: "Categories",
-    link: "/blog/categories/",
-  },
-  {
-    text: "Contact",
-    link: "/contact/",
-  },
-  {
-    text: "RSS",
-    link: `${Astro.site}rss.xml`,
-  },
-];
+const currentLocale = (Astro.currentLocale as Language) || "en";
 
-const SOCIAL_LINKS = [
-  {
-    text: "Twitter",
-    link: "https://twitter.com/yamanidev",
-    logoComponent: XLogo,
+const translationContent = {
+  en: {
+    aboutTitle: "About",
+    aboutParagraphs: [
+      "I am a software engineer.",
+      "I work remotely from Algeria.",
+      "My services are available worldwide.",
+    ],
+    navigationTitle: "Navigation",
+    contactTitle: "Contact",
+    email: "mohamed@yamani.dev",
+    emailSubject: "mohamedyamani.com",
+    contactParagraph: "You can also find me online under the handle ",
+    contactHandle: "yamanidev",
+    copyright: (startYear: number, endYear: number) =>
+      `© ${startYear} — ${endYear} Mohamed Yamani. All rights reserved.`,
+    licenseText: "All content of this website is distributed under the license",
+    licenseLink: "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    licenseName: "CC BY-NC-SA",
+    websiteLinks: [
+      { text: "Home", link: "/" },
+      { text: "Blog", link: "/blog/" },
+      { text: "Talks", link: "/talks/" },
+      { text: "Categories", link: "/blog/categories/" },
+      { text: "Contact", link: "/contact/" },
+      { text: "RSS", link: `${Astro.site}rss.xml` },
+    ],
+    socialLinks: [
+      { text: "Twitter", link: "https://twitter.com/yamanidev", logoComponent: XLogo },
+      {
+        text: "LinkedIn",
+        link: "https://www.linkedin.com/in/yamanidev/",
+        logoComponent: LinkedInLogo,
+      },
+      { text: "GitHub", link: "https://github.com/yamanidev", logoComponent: GitHubLogo },
+    ],
   },
-  {
-    text: "LinkedIn",
-    link: "https://www.linkedin.com/in/yamanidev/",
-    logoComponent: LinkedInLogo,
+  "ar-DZ": {
+    aboutTitle: "حول",
+    aboutParagraphs: [
+      "أنا مهندس برمجيات.",
+      "أعمل عن بُعد من الجزائر.",
+      "خدماتي متاحة في جميع أنحاء العالم.",
+    ],
+    navigationTitle: "التنقل",
+    contactTitle: "الاتصال",
+    email: "mohamed@yamani.dev",
+    emailSubject: "mohamedyamani.com",
+    contactParagraph: "يمكنك أيضًا العثور علي عبر الإنترنت تحت المعرف ",
+    contactHandle: "yamanidev",
+    copyright: (startYear: number, endYear: number) =>
+      `© ${startYear} — ${endYear} محمد يماني. جميع الحقوق محفوظة.`,
+    licenseText: "يتم توزيع جميع محتويات هذا الموقع بموجب الترخيص",
+    licenseLink: "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    licenseName: "CC BY-NC-SA",
+    websiteLinks: [
+      { text: "الرئيسية", link: "/" },
+      { text: "مدونة", link: "/blog/" },
+      { text: "مداخلات", link: "/talks/" },
+      { text: "الفئات", link: "/blog/categories/" },
+      { text: "اتصال", link: "/contact/" },
+      { text: "RSS", link: `${Astro.site}rss.xml` },
+    ],
+    socialLinks: [
+      { text: "تويتر", link: "https://twitter.com/yamanidev", logoComponent: XLogo },
+      {
+        text: "لينكدإن",
+        link: "https://www.linkedin.com/in/yamanidev/",
+        logoComponent: LinkedInLogo,
+      },
+      { text: "جيت هاب", link: "https://github.com/yamanidev", logoComponent: GitHubLogo },
+    ],
   },
-  {
-    text: "GitHub",
-    link: "https://github.com/yamanidev",
-    logoComponent: GitHubLogo,
-  },
-];
+} as const;
+
+const t = translationContent[currentLocale];
+const currentYear = new Date().getFullYear();
 ---
 
 <footer class="mt-auto border-t bg-neutral-50 py-20 dark:border-t-0 dark:bg-[#040C1A]">
   <div
     class="mx-auto flex max-w-6xl flex-col-reverse justify-between gap-10 px-6 md:flex-row md:px-8">
-    <div class="text-center md:text-left">
+    <div class="text-center md:text-left rtl:md:text-right">
       <section class="text-sm">
-        <h6 class="mb-4 text-xs text-text-muted">About</h6>
-        <p>I am a software engineer.</p>
-        <p>I work remotely from Algeria.</p>
-        <p>My services are available worldwide.</p>
+        <h6 class="mb-4 text-xs text-text-muted">{t.aboutTitle}</h6>
+        {t.aboutParagraphs.map((para) => <p>{para}</p>)}
       </section>
       <div class="mt-10 text-xs">
-        <p class="leading-5">
-          &copy; 2023 — {new Date().getFullYear()} Mohamed Yamani. All rights reserved.
-        </p>
+        <p class="leading-5">{t.copyright(2023, currentYear)}</p>
         <p class="text-xs">
-          All content of this website is distributed under the license
-          <a
-            href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
-            target="_blank"
-            rel="noopener">
-            CC BY-NC-SA
-          </a>.
+          {t.licenseText}{" "}
+          <a href={t.licenseLink} target="_blank" rel="noopener">{t.licenseName}</a>.
         </p>
       </div>
     </div>
+
     <div class="flex justify-center gap-10 text-sm">
       <div>
-        <h6 class="mb-4 text-xs text-text-muted">Navigation</h6>
+        <h6 class="mb-4 text-xs text-text-muted">{t.navigationTitle}</h6>
         <ul class="unset space-y-2.5">
           {
-            WEBSITE_LINKS.map((websiteLink) => (
+            t.websiteLinks.map((websiteLink) => (
               <li class="p-0 leading-none">
                 <a href={websiteLink.link} class="unset leading-none hover:underline">
                   {websiteLink.text}
@@ -89,17 +117,18 @@ const SOCIAL_LINKS = [
           }
         </ul>
       </div>
+
       <div>
-        <h6 class="mb-4 text-xs text-text-muted">Contact</h6>
-        <a href="mailto:mohamed@yamani.dev?subject=mohamedyamani.com" class="unset underline">
-          mohamed@yamani.dev
+        <h6 class="mb-4 text-xs text-text-muted">{t.contactTitle}</h6>
+        <a href={`mailto:${t.email}?subject=${t.emailSubject}`} class="unset underline">
+          {t.email}
         </a>
         <p class="my-2.5 max-w-44 text-xs">
-          You can also find me online under the handle <strong class="italic">yamanidev</strong>.
+          {t.contactParagraph}<strong class="italic">{t.contactHandle}</strong>.
         </p>
         <ul class="unset flex gap-2">
           {
-            SOCIAL_LINKS.map((socialLink) => (
+            t.socialLinks.map((socialLink) => (
               <li class="p-0 leading-none">
                 <a href={socialLink.link} class="unset" target="_blank" rel="noopener">
                   <span class="sr-only">{socialLink.text}</span>
