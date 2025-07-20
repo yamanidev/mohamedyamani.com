@@ -6,7 +6,7 @@ import CalendarDaysIcon from "../../components/svg/CalendarDaysIcon.astro";
 import { BLOG_CATEGORIES, SITE_DESCRIPTION } from "../../consts";
 import PageLayout from "../../layouts/PageLayout.astro";
 
-const posts = (await getCollection("blog")).sort(
+const posts = (await getCollection("blog", ({ data }) => data.language === "en")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---

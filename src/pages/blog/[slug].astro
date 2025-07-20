@@ -6,7 +6,7 @@ import BlogPost from "../../layouts/BlogPost.astro";
 type Props = CollectionEntry<"blog">;
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blog");
+  const posts = await getCollection("blog", ({ data }) => data.language === "en");
 
   return posts.map((post) => ({
     params: { slug: post.slug },
@@ -14,18 +14,18 @@ export async function getStaticPaths() {
   }));
 }
 
-const posts = (await getCollection("blog")).sort(
+const englishPosts = (await getCollection("blog", ({ data }) => data.language === "en")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 const post = Astro.props;
 const { Content, remarkPluginFrontmatter } = await post.render();
 
-const currentIndex = posts
+const currentIndex = englishPosts
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .findIndex((p) => p.slug === post.slug);
 
-const previousPost = posts[currentIndex + 1] || null;
-const nextPost = posts[currentIndex - 1] || null;
+const previousPost = englishPosts[currentIndex + 1] || null;
+const nextPost = englishPosts[currentIndex - 1] || null;
 
 const lastModified = remarkPluginFrontmatter.lastModified;
 ---
