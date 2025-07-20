@@ -1,0 +1,13 @@
+---
+import BaseHead from "../../components/BaseHead.astro";
+import Hero from "../../components/Hero.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../../consts";
+import PageLayout from "../../layouts/PageLayout.astro";
+---
+
+<PageLayout>
+  <BaseHead title={SITE_TITLE["ar-DZ"]} description={SITE_DESCRIPTION["ar-DZ"]} slot="meta" />
+  <div slot="main">
+    <Hero slot="main" />
+  </div>
+</PageLayout>
