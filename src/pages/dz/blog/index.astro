@@ -8,9 +8,9 @@ import PageLayout from "../../../layouts/PageLayout.astro";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import type { Language } from "../../../types";
 
-const posts = (await getCollection("blog"))
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .filter((post) => post.data.language === "ar-DZ");
+const posts = (await getCollection("blog", ({ data }) => data.language === "ar-DZ")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
 
 const currentLocale = Astro.currentLocale as Language;
 ---
