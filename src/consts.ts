@@ -1,9 +1,17 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
-export const SITE_TITLE = "Mohamed Yamani | Software Engineer";
-export const SITE_DESCRIPTION =
-  "Hello there! I am Mohamed Yamani, I also go by yamanidev online. I am a software engineer documenting my journey by occasionally posting articles of my experiences, tips and thoughts to my blog. This is my personal space online.";
+export const SITE_TITLE = {
+  en: "Mohamed Yamani | Software Engineer",
+  "ar-DZ": "محمد يماني | مهندس برمجيات",
+} as const;
+
+export const SITE_DESCRIPTION = {
+  en: "Hello there! I am Mohamed Yamani, I also go by yamanidev online. I am a software engineer documenting my journey by occasionally posting articles of my experiences, tips and thoughts to my blog. This is my personal space online.",
+  "ar-DZ":
+    "مرحبًا! أنا محمد يماني، أُعرف أيضًا بـ yamanidev على الإنترنت. أنا مهندس برمجيات أوثق رحلتي بمقالات أشارك فيها تجاربي ونصائحي وأفكاري. هذا فضائي الشخصي على الويب.",
+} as const;
+
 export const TWITTER_HANDLE = "@yamanidev";
 export const MY_NAME = "Mohamed Yamani";
 

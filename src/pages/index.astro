@@ -3,10 +3,17 @@ import BaseHead from "../components/BaseHead.astro";
 import Hero from "../components/Hero.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 import PageLayout from "../layouts/PageLayout.astro";
+import type { Language } from "../types";
+
+const currentLocale = Astro.currentLocale as Language;
 ---
 
 <PageLayout>
-  <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} slot="meta" />
+  <BaseHead
+    title={SITE_TITLE[currentLocale]}
+    description={SITE_DESCRIPTION[currentLocale]}
+    slot="meta"
+  />
   <div slot="main">
     <Hero slot="main" />
   </div>
