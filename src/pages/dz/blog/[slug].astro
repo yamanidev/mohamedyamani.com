@@ -19,20 +19,18 @@ type Props = CollectionEntry<"blog">;
 const post = Astro.props;
 const { Content, remarkPluginFrontmatter } = await post.render();
 
-const allDarjaPosts = await getCollection("blog", ({ data }) => {
-  return data.language === "ar-DZ";
-});
+const darjaPosts = (
+  await getCollection("blog", ({ data }) => {
+    return data.language === "ar-DZ";
+  })
+).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const sortedPosts = allDarjaPosts.sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-);
-
-const currentIndex = allDarjaPosts
+const currentIndex = darjaPosts
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .findIndex((p) => p.slug === post.slug);
 
-const previousPost = sortedPosts[currentIndex + 1] || null;
-const nextPost = sortedPosts[currentIndex - 1] || null;
+const previousPost = darjaPosts[currentIndex + 1] || null;
+const nextPost = darjaPosts[currentIndex - 1] || null;
 
 const lastModified = remarkPluginFrontmatter.lastModified;
 ---
