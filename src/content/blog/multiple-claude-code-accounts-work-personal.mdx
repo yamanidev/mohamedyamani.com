@@ -1,0 +1,50 @@
+---
+title: "How to Use Multiple Claude Code Accounts (Work & Personal)"
+description: "How to use multiple Anthropic accounts with Claude Code with separate config directories. Keep work and personal sessions isolated and persistent."
+canonicalUrl: "https://mohamedyamani.com/blog/multiple-claude-code-accounts-work-personal/"
+pubDate: 2026-03-27
+thumbnail:
+  url: "/images/thumbnails/multiple-claude-code-accounts-work-personal.jpg"
+  alt: "blue and orange smoke"
+  creditText: Picture by Lucas K on Unsplash
+  creditLink: "https://unsplash.com/@aznbokchoy?utm_medium=referral&utm_source=mohamedyamani.com"
+categories: ["llms", "ai", "setup"]
+---
+
+At work, we were provided with a generous Anthropic plan to use, it was my first experience with Claude Code, and it was terrific. So I had to get my own account for my projects.
+
+Switching between the accounts was not only tedious, I also lost the entire conversation history between sessions which was frustrating.
+
+Digging online, I found that Claude Code uses the default directory `~/.claude` for configuration, where conversation history is stored, which is naturally cleared on log out.
+
+I also found out the flag `CLAUDE_CONFIG_DIR` that we can use to change the default directory. [Documentation](https://code.claude.com/docs/en/env-vars) explains it as:
+
+> Customize where Claude Code stores its configuration and data files
+
+## The Setup
+
+Create a directory for each account, in my case I needed two:
+
+```bash
+mkdir ~/.claude-work ~/.claude-personal
+```
+
+Add these aliases to your shell configuration (`.bashrc` or `.zshrc`, etc.):
+
+```bash
+# Claude Code
+alias cc-work='CLAUDE_CONFIG_DIR=$HOME/.claude-work claude'
+alias cc-personal='CLAUDE_CONFIG_DIR=$HOME/.claude-personal claude'
+```
+
+Authenticate each account and follow through the steps:
+
+```sh
+cc-work
+```
+
+```sh
+cc-personal
+```
+
+And voilà, the setup is complete.
