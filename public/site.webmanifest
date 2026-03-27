@@ -1,0 +1,21 @@
+{
+  "name": "Mohamed Yamani",
+  "short_name": "yamanidev",
+  "description": "Software engineer sharing the craft, personal insights, and my journey.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#040C1A",
+  "theme_color": "#040C1A",
+  "icons": [
+    {
+      "src": "/favicons/dark/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicons/dark/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
