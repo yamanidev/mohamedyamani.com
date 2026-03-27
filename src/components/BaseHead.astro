@@ -65,17 +65,11 @@ const personSchema = {
 
 <!-- Twitter -->
 <meta name="twitter:creator" content="@yamanidev" />
-{
-  thumbnailUrl && (
-    <>
-      <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content={Astro.url} />
-      <meta property="twitter:title" content={title} />
-      <meta property="twitter:description" content={description} />
-      <meta property="twitter:image" content={new URL(thumbnailUrl, Astro.url)} />
-    </>
-  )
-}
+<meta name="twitter:card" content={thumbnailUrl ? "summary_large_image" : "summary"} />
+<meta name="twitter:url" content={canonicalURL} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+{thumbnailUrl && <meta name="twitter:image" content={new URL(thumbnailUrl, Astro.site)} />}
 
 <!-- Person structured data (JSON-LD) -->
 <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
