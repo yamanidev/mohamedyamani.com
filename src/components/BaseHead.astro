@@ -12,6 +12,18 @@ type Props = {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const { title, description, thumbnailUrl } = Astro.props;
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Mohamed Yamani",
+  url: "https://mohamedyamani.com",
+  sameAs: [
+    "https://twitter.com/yamanidev",
+    "https://www.linkedin.com/in/yamanidev/",
+    "https://github.com/yamanidev",
+  ],
+};
 ---
 
 <!-- Global Metadata -->
@@ -64,3 +76,6 @@ const { title, description, thumbnailUrl } = Astro.props;
     </>
   )
 }
+
+<!-- Person structured data (JSON-LD) -->
+<script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
