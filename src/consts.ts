@@ -92,4 +92,8 @@ export const BLOG_CATEGORIES: Record<string, { label: string; slug: string }> = 
     slug: "web-development",
     label: "Web Development",
   },
+  setup: {
+    slug: "setup",
+    label: "Setup",
+  },
 };
