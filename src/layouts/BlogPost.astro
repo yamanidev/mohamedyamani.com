@@ -7,20 +7,28 @@ import Navbar from "../components/Navbar.astro";
 import StayConnected from "../components/StayConnected.astro";
 import ArrowLongLeft from "../components/svg/ArrowLongLeft.astro";
 import ArrowLongRight from "../components/svg/ArrowLongRight.astro";
-import ArrowPath from "../components/svg/ArrowPath.astro";
-import CalendarDaysIcon from "../components/svg/CalendarDaysIcon.astro";
 import { BLOG_CATEGORIES } from "../consts";
 import Favicon from "./Favicon.astro";
 import ThemeScript from "./ThemeScript.astro";
 
 type Props = CollectionEntry<"blog">["data"] & {
   lastModified: string;
+  readingTime: number;
   nextPost?: CollectionEntry<"blog">;
   previousPost?: CollectionEntry<"blog">;
 };
 
-const { title, description, pubDate, lastModified, thumbnail, categories, previousPost, nextPost } =
-  Astro.props;
+const {
+  title,
+  description,
+  pubDate,
+  lastModified,
+  readingTime,
+  thumbnail,
+  categories,
+  previousPost,
+  nextPost,
+} = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
@@ -84,17 +92,10 @@ const articleSchema = {
       <div class="mx-auto mt-10 min-h-screen max-w-3xl px-6 sm:px-8">
         <article class="blog-post prose prose-theme max-w-none prose-img:mx-auto">
           <h1 class="m-0 mb-4">{title}</h1>
-          <div class="space-y-1 text-sm">
-            <div class="flex items-center gap-1">
-              <CalendarDaysIcon width="20" height="20" />
-              <span>Published:</span>
-              <FormattedDate date={pubDate} />
-            </div>
-            <div class="flex items-center gap-1">
-              <ArrowPath width="20" height="20" />
-              <span>Last updated:</span>
-              <FormattedDate date={new Date(lastModified)} />
-            </div>
+          <div class="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm">
+            <FormattedDate date={pubDate} />
+            <span>·</span>
+            <span>{readingTime} min read</span>
           </div>
           <ul class="unset not-prose mt-4 flex list-none flex-wrap gap-x-2 gap-y-1">
             {
