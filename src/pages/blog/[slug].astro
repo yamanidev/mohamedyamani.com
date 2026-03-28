@@ -28,11 +28,13 @@ const previousPost = posts[currentIndex + 1] || null;
 const nextPost = posts[currentIndex - 1] || null;
 
 const lastModified = remarkPluginFrontmatter.lastModified;
+const readingTime = remarkPluginFrontmatter.readingTime;
 ---
 
 <BlogPost
   {...post.data}
   lastModified={lastModified}
+  readingTime={readingTime}
   nextPost={nextPost}
   previousPost={previousPost}>
   <Content slot="content" components={{ a: CustomLink }} />
