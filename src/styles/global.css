@@ -237,6 +237,51 @@
   }
   /* ------ BLOG POST HEADING ANCHORS - END ------ */
 
+  /* ------ CODE BLOCK COPY BUTTON - START ------ */
+  .blog-post pre {
+    position: relative;
+  }
+
+  .copy-code-button {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+
+  .copy-code-button svg {
+    width: clamp(0.5rem, 1.2vw, 0.7rem);
+    height: clamp(0.5rem, 1.2vw, 0.7rem);
+  }
+
+  .copy-code-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .copy-code-button .icon-check {
+    display: none;
+  }
+
+  .copy-code-button.copied .icon-clipboard {
+    display: none;
+  }
+
+  .copy-code-button.copied .icon-check {
+    display: block;
+    color: theme("colors.primary.main");
+  }
+  /* ------ CODE BLOCK COPY BUTTON - END ------ */
+
   /* ------ REUSABLE UTILS - START ------ */
   .animated-link {
     position: relative;
