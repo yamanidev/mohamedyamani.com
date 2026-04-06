@@ -202,6 +202,41 @@
 
   /* ------ GLOBAL STYLES - END ------ */
 
+  /* ------ BLOG POST HEADING ANCHORS - START ------ */
+  .blog-post :is(h2, h3, h4, h5, h6) {
+    position: relative;
+    scroll-margin-top: 5rem;
+  }
+
+  .blog-post :is(h2, h3, h4, h5, h6) .anchor-link {
+    position: absolute;
+    left: -1.5em;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.35;
+    display: flex;
+    align-items: center;
+    color: theme("colors.text.muted");
+    background-image: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .blog-post :is(h2, h3, h4, h5, h6) .anchor-link:hover {
+    opacity: 1;
+  }
+
+  @media (max-width: 880px) {
+    .blog-post :is(h2, h3, h4, h5, h6) .anchor-link {
+      position: static;
+      display: inline-flex;
+      margin-left: 0.75em;
+      vertical-align: middle;
+      transform: none;
+      opacity: 0.35;
+    }
+  }
+  /* ------ BLOG POST HEADING ANCHORS - END ------ */
+
   /* ------ REUSABLE UTILS - START ------ */
   .animated-link {
     position: relative;

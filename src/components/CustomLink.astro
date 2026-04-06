@@ -1,17 +1,30 @@
 ---
 // `href` prop from the MDX file
-const { href }: Record<string, any> = Astro.props;
+const { href, ...rest }: Record<string, any> = Astro.props;
+
+// Heading anchor links injected by rehype-autolink-headings carry aria-hidden="true".
+// Pass them through as-is — they're not content links.
+const isHeadingAnchor = rest["aria-hidden"] === "true";
 
 let attributes: { target?: string; rel?: string } = {};
 
 const domain = import.meta.env.SITE;
 
 // Open external links in new tabs
-if (!href.includes(domain) && !href.startsWith("/") && !href.startsWith("#")) {
+if (!isHeadingAnchor && !href.includes(domain) && !href.startsWith("/") && !href.startsWith("#")) {
   attributes["target"] = "_blank";
   attributes["rel"] = "noopener noreferrer";
 }
 ---
 
-<!-- prettier-ignore -->
-<a href={href} {...attributes}><slot /></a>
+{
+  isHeadingAnchor ? (
+    <a href={href} {...rest}>
+      <slot />
+    </a>
+  ) : (
+    <a href={href} {...attributes}>
+      <slot />
+    </a>
+  )
+}
