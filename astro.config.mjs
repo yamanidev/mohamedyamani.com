@@ -4,7 +4,7 @@ import tailwind from "@astrojs/tailwind";
 import { defineConfig } from "astro/config";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSlug from "rehype-slug";
-import { remarkModifiedTime, remarkReadingTime } from "./remark-modified-time.mjs";
+import { remarkModifiedTime, remarkReadingTime } from "./remark-plugins.mjs";
 
 // https://astro.build/config
 export default defineConfig({
