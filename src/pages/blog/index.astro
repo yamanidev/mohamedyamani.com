@@ -39,6 +39,20 @@ const posts = (await getCollection("blog")).sort(
                 <div class="mt-1 flex items-center gap-1 text-sm text-text-muted">
                   <CalendarDaysIcon width="20" height="20" />
                   <FormattedDate date={post.data.pubDate} />
+                  <span>·</span>
+                  <span>
+                    {(() => {
+                      const WORDS_PER_MINUTE = 200; // Average reading speed
+                      const content = (post.body ?? "").replace(
+                        /^import\s+.+\s+from\s+['"`].+['"`]\s*;?\s*$/gm,
+                        "",
+                      );
+                      const wordCount = content.trim().split(/\s+/).filter(Boolean).length;
+
+                      return Math.max(1, Math.ceil(wordCount / WORDS_PER_MINUTE));
+                    })()}{" "}
+                    min read
+                  </span>
                 </div>
                 <ul class="unset mt-2 flex flex-wrap gap-x-2 gap-y-1">
                   {post.data.categories.map((category) => (
