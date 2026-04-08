@@ -1,194 +1,104 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import BuildingOfficeIcon from "../components/svg/BuildingOfficeIcon.astro";
-import CalendarDaysIcon from "../components/svg/CalendarDaysIcon.astro";
-import MapPinIcon from "../components/svg/MapPinIcon.astro";
-import PlayCircleIcon from "../components/svg/PlayCircleIcon.astro";
 import PageLayout from "../layouts/PageLayout.astro";
+
+const talks = [
+  {
+    title: "Should You Pursue Freelance?",
+    slides: "https://should-you-pursue-freelancing.yamani.dev/",
+    organizer: {
+      name: "GDGC Batna",
+      url: "https://gdg.community.dev/gdg-on-campus-university-of-batna-2-batna-algeria/",
+    },
+    date: "15th May, 2025",
+    location: "Online (Google Meet)",
+    recording: "https://youtu.be/NZBTbr8LV80",
+  },
+  {
+    title: "Inside the Browser: How the Front end Works",
+    slides:
+      "https://www.figma.com/slides/v2wCgIfzsiv2LxtmSMpujp/Talk%3A-Inside-the-Browser%3A-How-the-Front-end-Works-%E2%80%94GDSC-USTO-MB-2025?node-id=1-87&t=GlROEjthALGjoNvs-1",
+    organizer: {
+      name: "GDSC USTO-MB",
+      url: "https://gdg.community.dev/gdg-on-campus-universite-des-sciences-et-de-la-technologie-doran-mohamed-boudiaf-ustomb-oran-algeria/",
+    },
+    date: "14th February, 2025",
+    location: "Online (Google Meet)",
+    recording: "https://youtu.be/uNn7SyveS9g",
+  },
+  {
+    title: "Working as a Student",
+    slides:
+      "https://www.figma.com/slides/P5AyAuohxZ4iMxkI4tcbFk/Talk%3A-Working-as-a-student-%E2%80%94GDSC-ESI-SBA-2024?node-id=1-88&t=dH3uAzxx7qHRvka2-1",
+    organizer: { name: "GDSC ESI SBA", url: "https://gdg.community.dev/gdg-sba/" },
+    date: "2nd January, 2024",
+    location: "Online (Discord Server)",
+    recording: null,
+  },
+  {
+    title: "Why You Should Write Technical Articles",
+    slides:
+      "https://www.figma.com/slides/9MqqHGduwXiwULhidPw407/Talk%3A-Why-you-should-write-technical-articles-%E2%80%94DevFest-El-Bayadh-2023?node-id=1-90&t=s4JhReioTixezMnt-1",
+    organizer: { name: "GDG El Bayadh", url: "https://gdg.community.dev/gdg-elbayadh/" },
+    date: "23rd December, 2023",
+    location: "The Central Library of El Bayadh",
+    recording: null,
+  },
+];
 ---
 
 <PageLayout>
   <BaseHead
     title="Talks & Presentations | Mohamed Yamani"
-    description="Discover talks and presentations by Mohamed Yamani on topics like front-end development, working as a student, and technical writing. "
+    description="I speak at community events on web development, software careers, and the craft of building things."
     slot="meta"
   />
   <section slot="main" class="py-10">
     <div class="mx-auto max-w-6xl px-6 sm:px-8">
-      <h1 class="text-2xl font-bold sm:text-4xl md:text-5xl">Talks</h1>
-      <div class="mt-10 max-w-xl space-y-8">
-        <article class="rounded-md border border-primary-main p-5">
-          <h2 class="text-xl sm:text-2xl">
-            <a
-              href="https://should-you-pursue-freelancing.yamani.dev/"
-              class="unset underline"
-              target="_blank"
-              rel="noopener noreferrer">
-              Should You Pursue Freelance?
-            </a>
-          </h2>
-          <div class="mt-4 grid gap-2 text-sm sm:grid-cols-2 sm:gap-y-4">
-            <div class="flex items-center gap-1.5">
-              <span>
-                <BuildingOfficeIcon width="20" height="20" />
-              </span>
+      <h1 class="font-lora text-3xl font-bold italic sm:text-4xl">Talks</h1>
+      <p class="mt-3 max-w-xl text-text-muted">
+        I speak at community events on web development, software careers, and the craft of building
+        things.
+      </p>
+      <div class="mt-10 max-w-xl divide-y divide-neutral-200 dark:divide-neutral-800">
+        {
+          talks.map((talk) => (
+            <article class="py-6 first:pt-0 last:pb-0">
+              <div class="flex items-start justify-between gap-4">
+                <h2 class="text-base font-semibold text-text-bold sm:text-lg">{talk.title}</h2>
+                {talk.recording && (
+                  <a
+                    href={talk.recording}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="unset shrink-0 text-xs font-medium text-primary-main hover:underline">
+                    Watch →
+                  </a>
+                )}
+              </div>
+              <div class="mt-1.5 flex flex-wrap gap-x-3 gap-y-1 text-xs text-text-muted">
+                <a
+                  href={talk.organizer.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="unset hover:text-primary-main">
+                  {talk.organizer.name}
+                </a>
+                <span>·</span>
+                <span>{talk.date}</span>
+                <span>·</span>
+                <span>{talk.location}</span>
+              </div>
               <a
-                href="https://gdg.community.dev/gdg-on-campus-university-of-batna-2-batna-algeria/"
-                class="unset underline"
+                href={talk.slides}
                 target="_blank"
-                rel="noopener noreferrer">
-                GDGC Batna
+                rel="noopener noreferrer"
+                class="unset mt-2 inline-block text-xs text-text-muted underline hover:text-primary-main">
+                View slides
               </a>
-            </div>
-            <div class="flex items-center gap-1.5">
-              <span>
-                <CalendarDaysIcon width="20" height="20" />
-              </span>
-              <span>15th May, 2025</span>
-            </div>
-            <div class="flex items-center gap-1.5">
-              <span>
-                <MapPinIcon width="20" height="20" />
-              </span>
-              <span>Online (Google Meet)</span>
-            </div>
-            <div class="flex items-center gap-1.5">
-              <span>
-                <PlayCircleIcon width="20" height="20" />
-              </span>
-              <a
-                href="https://youtu.be/NZBTbr8LV80"
-                class="unset underline"
-                target="_blank"
-                rel="noopener noreferrer">
-                Watch Recording
-              </a>
-            </div>
-          </div>
-        </article>
-        <article class="rounded-md border border-primary-main p-5">
-          <h2 class="text-xl sm:text-2xl">
-            <a
-              href="https://www.figma.com/slides/v2wCgIfzsiv2LxtmSMpujp/Talk%3A-Inside-the-Browser%3A-How-the-Front-end-Works-%E2%80%94GDSC-USTO-MB-2025?node-id=1-87&t=GlROEjthALGjoNvs-1"
-              class="unset underline"
-              target="_blank"
-              rel="noopener noreferrer">
-              Inside the Browser: How the Front end Works
-            </a>
-          </h2>
-          <div class="mt-4 grid gap-2 text-sm sm:grid-cols-2 sm:gap-y-4">
-            <div class="flex items-center gap-1.5">
-              <span>
-                <BuildingOfficeIcon width="20" height="20" />
-              </span>
-              <a
-                href="https://gdg.community.dev/gdg-on-campus-universite-des-sciences-et-de-la-technologie-doran-mohamed-boudiaf-ustomb-oran-algeria/"
-                class="unset underline"
-                target="_blank"
-                rel="noopener noreferrer">
-                GDSC USTO-MB
-              </a>
-            </div>
-            <div class="flex items-center gap-1.5">
-              <span>
-                <CalendarDaysIcon width="20" height="20" />
-              </span>
-              <span>14th February, 2025</span>
-            </div>
-            <div class="flex items-center gap-1.5">
-              <span>
-                <MapPinIcon width="20" height="20" />
-              </span>
-              <span>Online (Google Meet)</span>
-            </div>
-            <div class="flex items-center gap-1.5">
-              <span>
-                <PlayCircleIcon width="20" height="20" />
-              </span>
-              <a
-                href="https://youtu.be/uNn7SyveS9g"
-                class="unset underline"
-                target="_blank"
-                rel="noopener noreferrer">
-                Watch Recording
-              </a>
-            </div>
-          </div>
-        </article>
-        <article class="rounded-md border border-primary-main p-5">
-          <h2 class="text-xl sm:text-2xl">
-            <a
-              href="https://www.figma.com/slides/P5AyAuohxZ4iMxkI4tcbFk/Talk%3A-Working-as-a-student-%E2%80%94GDSC-ESI-SBA-2024?node-id=1-88&t=dH3uAzxx7qHRvka2-1"
-              class="unset underline"
-              target="_blank"
-              rel="noopener noreferrer">
-              Working as a Student
-            </a>
-          </h2>
-          <div class="mt-4 grid gap-2 text-sm sm:grid-cols-2 sm:gap-y-4">
-            <div class="flex items-center gap-1.5">
-              <span>
-                <BuildingOfficeIcon width="20" height="20" />
-              </span>
-              <a
-                href="https://gdg.community.dev/gdg-sba/"
-                class="unset underline"
-                target="_blank"
-                rel="noopener noreferrer">
-                GDSC ESI SBA
-              </a>
-            </div>
-            <div class="flex items-center gap-1.5">
-              <span>
-                <CalendarDaysIcon width="20" height="20" />
-              </span>
-              <span>2nd January, 2024</span>
-            </div>
-            <div class="flex items-center gap-1.5 sm:col-span-2">
-              <span>
-                <MapPinIcon width="20" height="20" />
-              </span>
-              <span>Online (Discord Server)</span>
-            </div>
-          </div>
-        </article>
-        <article class="rounded-md border border-primary-main p-5">
-          <h2 class="text-xl sm:text-2xl">
-            <a
-              href="https://www.figma.com/slides/9MqqHGduwXiwULhidPw407/Talk%3A-Why-you-should-write-technical-articles-%E2%80%94DevFest-El-Bayadh-2023?node-id=1-90&t=s4JhReioTixezMnt-1"
-              class="unset underline"
-              target="_blank"
-              rel="noopener noreferrer">
-              Why You Should Write Technical Articles
-            </a>
-          </h2>
-          <div class="mt-4 grid gap-2 text-sm sm:grid-cols-2 sm:gap-y-4">
-            <div class="flex items-center gap-1.5">
-              <span>
-                <BuildingOfficeIcon width="20" height="20" />
-              </span>
-              <a
-                href="https://gdg.community.dev/gdg-elbayadh/"
-                class="unset underline"
-                target="_blank"
-                rel="noopener noreferrer">
-                GDG El Bayadh
-              </a>
-            </div>
-            <div class="flex items-center gap-1.5">
-              <span>
-                <CalendarDaysIcon width="20" height="20" />
-              </span>
-              <span>23rd December, 2023</span>
-            </div>
-            <div class="flex items-center gap-1.5 sm:col-span-2">
-              <span>
-                <MapPinIcon width="20" height="20" />
-              </span>
-              <span>The Central Library of El Bayadh</span>
-            </div>
-          </div>
-        </article>
+            </article>
+          ))
+        }
       </div>
     </div>
   </section>

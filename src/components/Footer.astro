@@ -1,6 +1,7 @@
 ---
 import GitHubLogo from "./svg/GitHubLogo.astro";
 import LinkedInLogo from "./svg/LinkedInLogo.astro";
+import RssIcon from "./svg/RssIcon.astro";
 import XLogo from "./svg/XLogo.astro";
 
 const WEBSITE_LINKS = [
@@ -28,10 +29,6 @@ const WEBSITE_LINKS = [
     text: "Contact",
     link: "/contact/",
   },
-  {
-    text: "RSS",
-    link: `${Astro.site}rss.xml`,
-  },
 ];
 
 const SOCIAL_LINKS = [
@@ -50,6 +47,11 @@ const SOCIAL_LINKS = [
     link: "https://github.com/yamanidev",
     logoComponent: GitHubLogo,
   },
+  {
+    text: "RSS",
+    link: `${Astro.site}rss.xml`,
+    logoComponent: RssIcon,
+  },
 ];
 ---
 
@@ -59,9 +61,7 @@ const SOCIAL_LINKS = [
     <div class="text-center md:text-left">
       <section class="text-sm">
         <h6 class="mb-4 text-xs text-text-muted">About</h6>
-        <p>I am a software engineer.</p>
-        <p>I work remotely from Algeria.</p>
-        <p>My services are available worldwide.</p>
+        <p>Software engineer based in Algeria — available remotely, worldwide.</p>
       </section>
       <div class="mt-10 text-xs">
         <p class="leading-5">
@@ -95,17 +95,20 @@ const SOCIAL_LINKS = [
       </div>
       <div>
         <h6 class="mb-4 text-xs text-text-muted">Contact</h6>
-        <a href="mailto:mohamed@yamani.dev?subject=mohamedyamani.com" class="unset underline">
+        <a
+          href="mailto:mohamed@yamani.dev?subject=mohamedyamani.com"
+          class="unset underline transition-colors hover:text-primary-main">
           mohamed@yamani.dev
         </a>
-        <p class="my-2.5 max-w-44 text-xs">
-          You can also find me online under the handle <strong class="italic">yamanidev</strong>.
-        </p>
-        <ul class="unset flex gap-2">
+        <ul class="unset mt-2.5 flex gap-2">
           {
             SOCIAL_LINKS.map((socialLink) => (
               <li class="p-0 leading-none">
-                <a href={socialLink.link} class="unset" target="_blank" rel="noopener">
+                <a
+                  href={socialLink.link}
+                  class="unset text-text-muted transition-colors hover:text-primary-main"
+                  target="_blank"
+                  rel="noopener noreferrer">
                   <span class="sr-only">{socialLink.text}</span>
                   <socialLink.logoComponent width="20" height="20" />
                 </a>
