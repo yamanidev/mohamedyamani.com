@@ -1,6 +1,4 @@
 ---
-import XLogo from "./svg/XLogo.astro";
-
 type Props = {
   className?: string;
 };
@@ -8,23 +6,34 @@ type Props = {
 const { className } = Astro.props;
 ---
 
-<div
-  class={`flex flex-col sm:flex-row justify-between sm:items-center gap-10 sm:gap-20 rounded-md border-primary-main border-2 p-10  ${className}`}>
-  <div>
-    <h2 class="text-2xl">Stay connected</h2>
-    <p class="mt-2 text-sm">
-      Stay updated with what I'm tinkering with. Follow me on Twitter to connect, ask a question, or
-      chat!
-    </p>
+<div class={className}>
+  <div class="overflow-hidden rounded-md border border-neutral-200 dark:border-neutral-800">
+    <div class="flex items-start gap-4 p-6">
+      <img
+        src="/images/mohamed-yamani.jpg"
+        alt="Mohamed Yamani"
+        width="56"
+        height="56"
+        class="h-14 w-14 shrink-0 rounded-full object-cover object-[center_30%]"
+      />
+      <div>
+        <p class="text-sm font-semibold text-text-bold">Mohamed Yamani</p>
+        <p class="mt-0.5 text-sm text-text-muted">
+          Software engineer focused on building reliable, well-crafted web products. I write about
+          the things I learn along the way.
+        </p>
+      </div>
+    </div>
+    <div
+      class="flex flex-col gap-2 border-t border-neutral-200 bg-neutral-50 px-6 py-4 dark:border-neutral-800 dark:bg-neutral-900 sm:flex-row sm:items-center sm:justify-between sm:py-3">
+      <p class="text-sm text-text-muted">
+        Get in touch or find me online — I'm always happy to connect.
+      </p>
+      <a
+        href="/contact/"
+        class="unset shrink-0 text-sm font-medium text-primary-main hover:underline">
+        Get in touch →
+      </a>
+    </div>
   </div>
-  <a
-    href="https://x.com/yamanidev"
-    target="_blank"
-    rel="noreferrer"
-    class="unset flex min-w-40 flex-shrink-0 flex-grow items-center justify-center gap-2 rounded-full bg-gray-900 px-4 py-2 text-center font-bold text-white shadow-sm shadow-black transition hover:bg-gray-950">
-    <span>
-      <XLogo width="18" height="18.4" />
-    </span>
-    <span>Follow me</span>
-  </a>
 </div>
