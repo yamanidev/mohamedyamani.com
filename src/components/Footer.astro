@@ -1,6 +1,7 @@
 ---
 import GitHubLogo from "./svg/GitHubLogo.astro";
 import LinkedInLogo from "./svg/LinkedInLogo.astro";
+import RssIcon from "./svg/RssIcon.astro";
 import XLogo from "./svg/XLogo.astro";
 
 const WEBSITE_LINKS = [
@@ -28,10 +29,6 @@ const WEBSITE_LINKS = [
     text: "Contact",
     link: "/contact/",
   },
-  {
-    text: "RSS",
-    link: `${Astro.site}rss.xml`,
-  },
 ];
 
 const SOCIAL_LINKS = [
@@ -49,6 +46,11 @@ const SOCIAL_LINKS = [
     text: "GitHub",
     link: "https://github.com/yamanidev",
     logoComponent: GitHubLogo,
+  },
+  {
+    text: "RSS",
+    link: `${Astro.site}rss.xml`,
+    logoComponent: RssIcon,
   },
 ];
 ---
@@ -105,7 +107,11 @@ const SOCIAL_LINKS = [
           {
             SOCIAL_LINKS.map((socialLink) => (
               <li class="p-0 leading-none">
-                <a href={socialLink.link} class="unset" target="_blank" rel="noopener">
+                <a
+                  href={socialLink.link}
+                  class="unset text-text-muted transition-colors hover:text-primary-main"
+                  target="_blank"
+                  rel="noopener noreferrer">
                   <span class="sr-only">{socialLink.text}</span>
                   <socialLink.logoComponent width="20" height="20" />
                 </a>
