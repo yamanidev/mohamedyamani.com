@@ -1,0 +1,162 @@
+---
+import { marked } from "marked";
+import BaseHead from "../components/BaseHead.astro";
+import PageLayout from "../layouts/PageLayout.astro";
+
+const RELEASES_BASE = "https://github.com/yamanidev/resume-cv/releases/download/latest";
+
+const response = await fetch(`${RELEASES_BASE}/Mohamed_Yamani_resume.md`);
+const markdown = await response.text();
+
+// Strip the document title RenderCV generates — the page already has its own header
+const markdownWithoutTitle = markdown.replace(/^# .+\n/, "");
+const content = marked(markdownWithoutTitle);
+---
+
+<PageLayout>
+  <BaseHead
+    slot="meta"
+    title="Resume | Mohamed Yamani"
+    description="Mohamed Yamani's resume — Full-Stack Developer"
+  />
+  <section slot="main" class="py-10">
+    <div class="mx-auto max-w-3xl px-6 sm:px-8">
+      <div class="mb-8 flex items-center justify-between">
+        <h1 class="font-lora text-2xl font-bold italic sm:text-4xl">Resume</h1>
+        <a
+          href={`${RELEASES_BASE}/Mohamed_Yamani_resume.pdf`}
+          class="unset rounded-md bg-primary-main px-4 py-2 text-sm font-semibold text-white hover:opacity-90"
+          target="_blank"
+          rel="noopener noreferrer">
+          Download PDF
+        </a>
+      </div>
+      <article class="resume-content">
+        <Fragment set:html={content} />
+      </article>
+    </div>
+  </section>
+</PageLayout>
+
+<style>
+  /*
+    :global() pierces Astro's scoping for content injected via set:html.
+    All selectors are scoped under .resume-content to prevent bleeding.
+  */
+
+  /* Override Lora heading font — resume uses Bricolage Grotesque throughout */
+  .resume-content :global(h1),
+  .resume-content :global(h2) {
+    font-family: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  }
+
+  /* Connections list (first ul) — render as a compact horizontal row */
+  .resume-content :global(ul:first-child) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem 0.75rem;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+  }
+
+  .resume-content :global(ul:first-child > li) {
+    position: static;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  /* Remove the global custom bullet for connections */
+  .resume-content :global(ul:first-child > li::before) {
+    display: none;
+  }
+
+  /* Connections links — no animated underline, just color on hover */
+  .resume-content :global(ul:first-child a) {
+    background-image: none;
+    color: var(--color-text-muted);
+  }
+
+  .resume-content :global(ul:first-child a:hover) {
+    color: var(--color-primary-main);
+  }
+
+  /* Section titles: Summary, Experience, Projects, Education */
+  .resume-content :global(h1) {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-primary-main);
+    border-bottom: 1.5px solid var(--color-primary-main);
+    padding-bottom: 0.3rem;
+    margin-top: 2.5rem;
+    margin-bottom: 0.6rem;
+  }
+
+  /* Entry titles: Company/Position, Project names */
+  .resume-content :global(h2) {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-text-bold);
+    margin-top: 1.25rem;
+    margin-bottom: 0.1rem;
+    line-height: 1.4;
+  }
+
+  /* Location, dates, summary text */
+  .resume-content :global(p) {
+    font-size: 0.825rem;
+    color: var(--color-text-muted);
+    margin-top: 0;
+    margin-bottom: 0.1rem;
+    line-height: 1.5;
+  }
+
+  /* Highlight bullet lists */
+  .resume-content :global(ul:not(:first-child)) {
+    padding-left: 0.75rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .resume-content :global(ul:not(:first-child) > li) {
+    position: relative;
+    padding-left: 1.375rem;
+    font-size: 0.825rem;
+    color: var(--color-text-body);
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+    line-height: 1.5;
+  }
+
+  /* Entry links (project links etc.) — no animated underline */
+  .resume-content :global(h2 a) {
+    background-image: none;
+    color: var(--color-text-bold);
+  }
+
+  /* Project link — right-aligned on the same row as the project name (sm+) */
+  @media (min-width: 640px) {
+    /* Reserve right space so project names don't overlap the floated link */
+    .resume-content :global(h2:has(+ p > a:only-child)) {
+      padding-right: 8rem;
+    }
+
+    .resume-content :global(h2 + p:has(> a:only-child)) {
+      float: right;
+      clear: right;
+      /* Pull up to align with the h2 row:
+         h2 line-height (0.9rem × 1.4 = 1.26rem) + h2 margin-bottom (0.1rem) */
+      margin-top: -1.35rem;
+      margin-bottom: 0;
+    }
+
+    /* Clear the float so bullet lists don't wrap around the link */
+    .resume-content :global(h2 + p:has(> a:only-child) + ul) {
+      clear: right;
+    }
+  }
+</style>
