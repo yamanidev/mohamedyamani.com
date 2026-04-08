@@ -57,6 +57,9 @@ importers:
       eslint-plugin-mdx:
         specifier: ^3.3.1
         version: 3.3.1(eslint@9.23.0(jiti@1.21.0))
+      marked:
+        specifier: ^18.0.0
+        version: 18.0.0
       prettier:
         specifier: 3.1.0
         version: 3.1.0
@@ -1994,6 +1997,11 @@ packages:
 
   markdown-table@3.0.3:
     resolution: {integrity: sha512-Z1NL3Tb1M9wH4XESsCDEksWoKTdlUafKc4pt0GRwjUyXaCFZ+dc3g2erqB6zm3szA2IUSi7VnPI+o/9jnxh9hw==}
+
+  marked@18.0.0:
+    resolution: {integrity: sha512-2e7Qiv/HJSXj8rDEpgTvGKsP8yYtI9xXHKDnrftrmnrJPaFNM7VRb2YCzWaX4BP1iCJ/XPduzDJZMFoqTCcIMA==}
+    engines: {node: '>= 20'}
+    hasBin: true
 
   math-intrinsics@1.1.0:
     resolution: {integrity: sha512-/IXtbwEk5HTPyEwyKX6hGkYXxM9nbj64B+ilVJnC/R6B0pH5G4V3b0pVbL7DBj4tkhBAppbQUlf6F6Xl9LHu1g==}
@@ -5745,6 +5753,8 @@ snapshots:
   markdown-extensions@2.0.0: {}
 
   markdown-table@3.0.3: {}
+
+  marked@18.0.0: {}
 
   math-intrinsics@1.1.0: {}
 
